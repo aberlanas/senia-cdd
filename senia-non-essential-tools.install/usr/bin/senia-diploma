@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Simple diplomator script
+# 
+
+show_usage(){
+	echo -e " * [ USAGE ] : "
+	echo -e "\t $(basename $0) --default diploma.png nombres_3ESO.txt"
+	echo -e "\t $(basename $0) SIZE WIDTH HEIGHT COLOR diploma.png nombres_3ESO.txt"
+	exit 1
+}
+
+
+if [ $# -lt 3 -o $# -gt 6 ]; then
+	show_usage
+fi
+
+if [ $1 = "--default" ]; then
+	SIZE=50
+	WIDTH=100
+	HEIGHT=100
+	COLOR="red"
+	shift 1
+else
+	SIZE=$1
+	WIDTH=$2
+	HEIGHT=$3
+	COLOR=$4
+	shift 4
+fi
+
+TEMPLATE="$1"
+TEXTO="$2"
+DIRECTORIO=$(echo "$TEMPLATE" | cut -d "." -f 1)
+
+echo -e " * Working with the next values:"
+echo -e " +SIZE = $SIZE\t +WIDTH = $WIDTH"
+echo -e " +HEIGHT = $HEIGHT\t +TEMPLATE = $TEMPLATE"
+echo -e " +COLOR = $COLOR"
+echo -e " * Destination folder is : $DIRECTORIO" 
+
+mkdir -p $DIRECTORIO
+
+if [ ! -f $TEXTO ]; then
+	echo " El fichero $TEXTO No existe"
+	exit 1
+fi
+
+NUM=0
+cat $TEXTO |  while read linea
+
+    do
+      	NOMIMG=$(echo $linea|tr " " "_")
+     	NOMBRE=$(echo $linea)
+ 	echo " * Working with : $NOMBRE -> $NUM ---> ./$DIRECTORIO/$NUM-$NOMIMG.png"
+	convert -pointsize $SIZE -font Verdana -fill $COLOR -draw "text $WIDTH,$HEIGHT \"$NOMBRE\"" "$TEMPLATE" ./$DIRECTORIO/$NUM-$NOMIMG.png
+	((NUM++))
+    done
+
+
+exit 0

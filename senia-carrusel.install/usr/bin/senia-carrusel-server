@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# List of IPs is a simple way to made 
+# streaming for a single machine.
+LIST_OF_IPS="127.0.0.1"
+CURRENT_IP="127.0.0.1"
+
+FILES="/home/aberlanas/Vídeos/ALaCarrera/ALaCarrera_S02EP04_Sahara.mp4"
+
+# CAMBIAR IP AQUI
+#cvlc -v $FILES --sout udp:$CURRENT_IP:8080 --ttl 12
+#cvlc -vvv $FILES --sout "#transcode{vcodec=mp4v,vb=1024,scale=1}:duplicate{dst=std{access=http,mux=ts,dst=127.0.0.1:8080}}"
+cvlc -vvv $FILES --sout "#transcode{vcodec=mp4v,vb=1024,scale=1}:duplicate{dst=std{access=http,mux=ps,dst=127.0.0.1:8080}}"
+exit 0

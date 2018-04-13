@@ -1,0 +1,556 @@
+senia-cdd (2018.04.13) bionic; urgency=high
+
+  * Updated dependences
+  * First version for bionic
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 13 Apr 2018 11:43:25 +0200
+
+senia-cdd (2018.02.07) xenial; urgency=high
+
+  * Updated with senia-nagios plugin
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 07 Feb 2018 11:35:03 +0100
+
+senia-cdd (2018.01.23) xenial; urgency=high
+
+  * Updated with senia-cron 
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 23 Jan 2018 10:06:37 +0100
+
+senia-cdd (2018.01.22~bionic) bionic; urgency=high
+
+  * Rebuilded for bionic
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 22 Jan 2018 06:39:58 +0100
+
+senia-cdd (2018.01.22) xenial; urgency=high
+
+  * Fixed little bug on senia-startup-conf 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 22 Jan 2018 06:38:43 +0100
+
+senia-cdd (2018.01.21~bionic) bionic; urgency=high
+
+  * Rebuilded for bionic 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 21 Jan 2018 20:13:19 +0100
+
+senia-cdd (2018.01.21) xenial; urgency=high
+
+  * Updated senia-cron with sanity checks for conserjeria 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 21 Jan 2018 20:11:45 +0100
+
+senia-cdd (2018.01.20) xenial; urgency=high
+
+  * Added new binary (senia-cron) to manage crontabs 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 20 Jan 2018 08:35:09 +0100
+
+senia-cdd (2018.01.12~artful) artful; urgency=high
+
+  * Updated version for bionic
+  * Updated version for artful 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 12 Jan 2018 06:51:46 +0100
+
+senia-cdd (2018.01.12) xenial; urgency=high
+
+  * Updated version again 
+  * Added shutter as a dependence
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 12 Jan 2018 06:38:45 +0100
+
+senia-cdd (2018.01.08) xenial; urgency=high
+
+  * Updated version trying to solve the eternal
+    waiting problem in Launchpad. :(
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 08 Jan 2018 18:55:53 +0100
+
+senia-cdd (2018.01.05~artful) artful; urgency=high
+
+  * Updated with new dotfiles to keep safe my mind.
+  * New Wallpaper (Albufera)
+  * New versioning type (year.month.day) 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 05 Jan 2018 07:58:21 +0100
+
+senia-cdd (2018.01.04~artful) artful; urgency=high
+
+  * Updated wallpaper for the new year
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 04 Jan 2018 19:08:14 +0100
+
+senia-cdd (2.1.12) xenial; urgency=high
+
+  * Updated with mailutils as a dependence
+  * Testing with the purpose of send mails with errors to 
+    tic@ieslasenia 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 11 Dec 2017 06:35:41 +0100
+
+senia-cdd (2.1.11) xenial; urgency=high
+
+  * Updated version number for xenial only. 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 11 Dec 2017 06:28:39 +0100
+
+senia-cdd (2.1.10) xenial; urgency=high
+
+  * Added fonts-open-sans to senia-dependences
+  * New background for december
+  * Added ecosenia to all packages
+  * Added a TODO file 
+  * Fixed some lintian problems in artful
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 06 Dec 2017 17:38:50 +0100
+
+senia-cdd (2.1.8) artful; urgency=high
+
+  * Added development tools
+  * For now the major version is for artful, ready for the
+    migration
+  * Updated with perl and tools to permit virtualbox installation
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 18 Nov 2017 16:57:54 +0100
+
+senia-cdd (2.1.6~artful) artful; urgency=high
+
+  * Added asunder to senia-dependences
+  * Added gstreamer-1.0-plugins-*
+  * Added geany
+  * Added script to prevent network problems on startup 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 17 Nov 2017 21:32:25 +0100
+
+senia-cdd (2.1.5~artful) artful; urgency=medium
+
+  * Updated with new version
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 17 Nov 2017 17:52:11 +0100
+
+senia-cdd (2.1.4~zesty) zesty; urgency=high
+
+  * Updated dependeces
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 02 Nov 2017 16:00:45 +0100
+
+senia-cdd (2.1.3) xenial; urgency=high
+
+  * Updated senia-startup-conf with disabled apt timer 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 02 Nov 2017 15:57:54 +0100
+
+senia-cdd (2.1.2~artful) artful; urgency=high
+
+  *  Fixing some issues:
+     - Closes #1
+     - Closes #2 
+     - Closes #3
+     - Closes #4
+  * New wallpaper
+  * New senia-cdd-desktop metapackage
+  * Fixed dependences on senia-cdd-ciclos-it
+  * Ready for artful
+  * Fixed senia-firstboot server ip
+  * Fixed senia-firstboot-aulas 
+  * Added revista to first boot pages on firefox
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 02 Nov 2017 15:15:18 +0100
+
+senia-cdd (2.1.0~beta27) xenial; urgency=high
+
+  * Updated to artful 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 17 Nov 2017 11:50:54 +0100
+
+senia-cdd (2.1.0~beta26) xenial; urgency=high
+
+  * Updated with dependences:
+    - GStreamer 
+    - Fonts 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 17 Nov 2017 10:37:49 +0100
+
+senia-cdd (2.1.0~beta25) xenial; urgency=high
+
+  * Updated again
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 27 Oct 2017 11:44:32 +0200
+
+senia-cdd (2.1.0~beta24) xenial; urgency=high
+
+  * Updated senia-locks with removing old files system 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 27 Oct 2017 11:33:17 +0200
+
+senia-cdd (2.1.0~beta23) xenial; urgency=high
+
+  * Updated dependences
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 23 Oct 2017 16:22:36 +0200
+
+senia-cdd (2.1.0~beta20) xenial; urgency=medium
+
+  * Updated dependences
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 22 Oct 2017 12:27:25 +0200
+
+senia-cdd (2.1.0~beta18) xenial; urgency=high
+
+  * Updated dependences
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 22 Oct 2017 11:22:37 +0200
+
+senia-cdd (2.1.0~beta16) xenial; urgency=high
+
+  [ tic La Senia ]
+  * Removed init script from backgrounds
+  * Created init script in senia-frozen
+
+  [ aberlanas ]
+  * Fixed ip server on firstboot
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 22 Oct 2017 08:34:36 +0200
+
+senia-cdd (2.1.0~beta14) xenial; urgency=high
+
+  * Updated with ecosenia pacakge: 
+    - 30 minutes before suspension
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 21 Oct 2017 18:42:36 +0200
+
+senia-cdd (2.1.0~beta14~zesty) zesty; urgency=high
+
+  *  Updated with cleaning init script on senia-backgrounds
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 19 Oct 2017 12:30:14 +0200
+
+senia-cdd (2.1.0~beta12~artful) artful; urgency=high
+
+  * Updated with Ambiant-MATE theme
+  * Updated with dark theme in terminal
+  * Fixed some lintian errors (now its the time)
+  * Updated with error backgrounds
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 14 Oct 2017 18:07:49 +0200
+
+senia-cdd (2.1.0~beta8) xenial; urgency=high
+
+  * Updated with less chochomora 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 04 Oct 2017 11:43:51 +0200
+
+senia-cdd (2.1.0~beta4) xenial; urgency=high
+
+  * Welcome to the Howling Abyss
+  * Updated SMX User with wireshark
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 29 Sep 2017 12:46:21 +0200
+
+senia-cdd (2.1.0~beta2) xenial; urgency=high
+
+  * Updated with Wallpaper BUG error
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 27 Sep 2017 11:21:03 +0200
+
+senia-cdd (2.0.3) xenial; urgency=high
+
+  * Updated with new package for custom restrictions
+  * New wallpaper for september
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 17 Sep 2017 10:10:30 +0200
+
+senia-cdd (2.0.2) xenial; urgency=high
+
+  * Updated webpage 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 13 Sep 2017 09:16:52 +0200
+
+senia-cdd (2.0.1) xenial; urgency=medium
+
+  * New version, Angel last dput?
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 13 Jul 2017 18:41:51 +0200
+
+senia-cdd (1.0.18) xenial; urgency=medium
+
+  * Fixed typo on senia-firstboot 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 04 Jul 2017 13:19:04 +0200
+
+senia-cdd (1.0.17) xenial; urgency=medium
+
+  * Transition test 2
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Wed, 28 Jun 2017 10:00:57 +0200
+
+senia-cdd (1.0.16) xenial; urgency=medium
+
+  * Transition test 1
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Wed, 28 Jun 2017 07:12:02 +0200
+
+senia-cdd (1.0.15) xenial; urgency=medium
+
+  * Updated senia repositories in firstboot
+
+ -- tic La Senia <ticsenia@ieslasenia.org>  Tue, 27 Jun 2017 17:29:28 +0200
+
+senia-cdd (1.0.14) xenial; urgency=medium
+
+  * Updated author 
+
+ -- tic La Senia <ticsenia@ieslasenia.org>  Tue, 27 Jun 2017 17:20:51 +0200
+
+senia-cdd (1.0.11) xenial; urgency=high
+
+  * New binary for Raspberry
+  * New repository fixer
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 27 Jun 2017 16:17:35 +0200
+
+senia-cdd (1.0.10) xenial; urgency=high
+
+  * Updated senia-cdd
+  * New binary in non-essential-tools
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Wed, 21 Jun 2017 08:08:46 +0200
+
+senia-cdd (1.0.8) xenial; urgency=high
+
+  * New dependence
+  * New Logo
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 16 May 2017 18:58:30 +0200
+
+senia-cdd (1.0.7) xenial; urgency=high
+
+  * With Catalan 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Wed, 10 May 2017 09:30:07 +0200
+
+senia-cdd (1.0.6) xenial; urgency=high
+
+  * Updated with more dependences (screen) 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Wed, 10 May 2017 09:25:23 +0200
+
+senia-cdd (1.0.5) xenial; urgency=high
+
+  * Created package for only-teachers computers 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 05 May 2017 10:42:17 +0200
+
+senia-cdd (1.0.4) xenial; urgency=high
+
+  * Updated background
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 05 May 2017 10:12:37 +0200
+
+senia-cdd (1.0.3) xenial; urgency=high
+
+  * Fixed postinst 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 28 Apr 2017 10:19:38 +0200
+
+senia-cdd (1.0.2) xenial; urgency=high
+
+  * New package - senia-networking to be more 
+    clean with network configuration
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Thu, 27 Apr 2017 07:23:17 +0200
+senia-cdd (1.0.1) xenial; urgency=medium
+
+  * Added desktop
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Wed, 29 Mar 2017 11:57:22 +0200
+
+senia-cdd (1.0) xenial; urgency=medium
+
+  * Added new binary : senia-appinventor
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Wed, 29 Mar 2017 11:51:09 +0200
+
+senia-cdd (0.9.9.9) xenial; urgency=high
+
+  * Updated dependences
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 14 Mar 2017 14:18:13 +0100
+
+senia-cdd (0.9.9.8) xenial; urgency=medium
+
+  * Testing version Again
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 14 Mar 2017 14:00:27 +0100
+
+senia-cdd (0.9.9.7) xenial; urgency=high
+
+  * Testing version
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 14 Mar 2017 12:54:36 +0100
+
+senia-cdd (0.9.9.6) xenial; urgency=high
+
+  * Updated senia-carrusel:
+    - Removed transparent background
+    - Less errors in empty folders
+  * Fixed a lot of lintian errors
+  * New path for backgrounds
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 14 Mar 2017 07:53:31 +0100
+
+senia-cdd (0.9.9.5) xenial; urgency=high
+
+  * Updated postinst to not clean conserjeria
+    and only clean alumno and profe 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 07 Mar 2017 10:33:52 +0100
+
+senia-cdd (0.9.9.4) xenial; urgency=medium
+
+  * Updated Firefox Settings - now 
+    https://moodle.ieslasenia.org/ is the third page
+    on the beginning
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Sun, 05 Mar 2017 19:34:25 +0100
+
+senia-cdd (0.9.9.3) xenial; urgency=high
+
+  * New Firefox settings 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 24 Feb 2017 11:19:21 +0100
+
+senia-cdd (0.9.9.2) xenial; urgency=high
+
+  * New Background 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 24 Feb 2017 11:19:21 +0100
+
+senia-cdd (0.9.9.1) xenial; urgency=high
+
+  * Updated with kubuntu logo -> Senia 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Thu, 23 Feb 2017 22:42:06 +0100
+
+senia-cdd (0.9.9) xenial; urgency=high
+
+  * Updated with APT configuration for unattended
+    upgrades. 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Thu, 23 Feb 2017 22:17:44 +0100
+
+senia-cdd (0.9.8) xenial; urgency=high
+
+  * Updated background to Klee 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Thu, 23 Feb 2017 11:42:27 +0100
+
+senia-cdd (0.9.7) xenial; urgency=high
+
+  * Removed diversions 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Thu, 23 Feb 2017 11:19:10 +0100
+
+senia-cdd (0.9.6) xenial; urgency=medium
+
+  * New pacakge, dependences
+     - vlc
+     - openssh-server
+     - chromium-browser
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Sat, 04 Feb 2017 19:59:14 +0100
+
+senia-cdd (0.9.5.4) xenial; urgency=medium
+
+  * Fixed some bugs
+  * Added new binary
+  * Trying to be more expeditive.
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Sat, 04 Feb 2017 15:34:06 +0100
+
+senia-cdd (0.9.5.3) xenial; urgency=high
+
+  * Fixed some "spaced" bugs
+  * Create new binary from GitHub to solve the photovideo
+    problem. Now use separated script.
+  * New mechanism to remove "temporal files" in video 
+    step creation.
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Mon, 30 Jan 2017 19:11:00 +0100
+
+senia-cdd (0.9.5.2) xenial; urgency=medium
+
+  * Updated version with player and server
+  * New carrusel with notification
+  * Use WORKSPACE variable to set $HOME/carrusel-worskpace
+    as default WORKSPACE instead current folder. 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Sat, 28 Jan 2017 23:23:29 +0100
+
+senia-cdd (0.9.5.1) xenial; urgency=high
+
+  * Testing carrusel
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 27 Jan 2017 10:29:08 +0100
+
+senia-cdd (0.9.5) xenial; urgency=high
+
+  * New default page for browsers
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 20 Jan 2017 09:34:10 +0100
+
+senia-cdd (0.9.4) xenial; urgency=high
+
+  * Updated senia-firstboot with set-repos
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Mon, 19 Dec 2016 17:29:54 +0100
+
+senia-cdd (0.9.1) xenial; urgency=medium
+
+  * Updated with musica-tall
+  * Updated with nagios-plugins
+  * Updated with carrusel
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Mon, 28 Nov 2016 13:06:29 +0100
+
+senia-cdd (0.9) xenial; urgency=high
+
+  * Updated with firstboot
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Mon, 21 Nov 2016 12:54:30 +0100
+
+senia-cdd (0.7) xenial; urgency=medium
+
+  * Updated with new names
+  * New features as : 
+    - rotate images
+    - more pythonic way to go
+    - debug mode
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 04 Oct 2016 08:04:10 +0200
+
+senia-cdd (0.6) trusty; urgency=medium
+
+  * Updated for trusty
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Thu, 29 Sep 2016 08:11:38 +0200
+
+senia-cdd (0.3) xenial; urgency=high
+
+  * Added more stuff for Itaca...
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 27 Sep 2016 06:52:59 +0200
+
+senia-cdd (0.2) xenial; urgency=medium
+
+  * Added some useful scripts to manage itaca forms from hell 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Mon, 26 Sep 2016 18:33:25 +0200
+
+senia-cdd (0.1) xenial; urgency=medium
+
+  * Initial release.
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Sat, 24 Sep 2016 07:35:40 +0200

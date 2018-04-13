@@ -1,0 +1,50 @@
+#!/bin/sh
+# postinst script for senia-background
+#
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+# source debconf library
+. /usr/share/debconf/confmodule
+
+# Source dbconfig-common functions
+#if [ -f /usr/share/dbconfig-common/dpkg/postinst.pgsql  ]; then
+#  . /usr/share/dbconfig-common/dpkg/postinst.pgsql
+#fi
+
+#FILES_TO_DIVERT="/usr/share/xsessions/gnome-flashback-compiz.desktop /usr/share/xsessions/gnome-flashback-metacity.desktop /usr/share/xsessions/ubuntu.desktop"
+
+
+FILES_TO_DIVERT="/usr/share/glib-2.0/schemas/10_unity-settings-daemon.gschema.override"
+
+case $1 in 
+        remove|purge|abort-install|disappear)
+       		for f in $FILES_TO_DIVERT ; do
+	        	rm -f $f
+		        dpkg-divert --package senia-session-cleaner-for-mate --rename --quiet --remove $f 
+		done
+              
+		glib-compile-schemas /usr/share/glib-2.0/schemas/ || true
+                ;;
+        *)
+                echo "Nothing to do"
+                ;; 
+esac
+
+# Other Stuff #
+
+#DEBHELPER#
+

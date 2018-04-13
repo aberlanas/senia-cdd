@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# This script is licensed under GPL v3 or higher
+#
+# Author: Angel Berlanas Vicente 
+#         <angel.berlanas@gmail.com>
+#
+
+# Some useful values
+
+logger -s -t "Senia-Frozen" "Initializing frozen system" 
+source /etc/senia/frozen.d/*
+logger -s -t "Senia-Frozen" "$USERSFROZEN will be frost"
+
+
+for user in $USERSFROZEN; do 
+	echo " * FROSTING : $user "
+	find /home/$user -maxdepth 1 -name ".*" -exec rm -rf {} \;
+	
+done
+
+logger -s -t "Senia-Frozen" "Exiting frozen system" 
+
+exit 0

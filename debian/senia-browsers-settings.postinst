@@ -1,0 +1,38 @@
+#!/bin/sh
+
+
+set -e
+
+ORIG_FILE="/etc/firefox/syspref.js"
+OUR_FILE="/etc/firefox/syspref.senia.js"
+OUR_PACKAGE="senia-browser-settings"
+
+
+
+case $1 in
+        configure)
+                #Senia Firefox link goes here
+                if dpkg-divert --package ${OUR_PACKAGE} --add  --rename  --divert ${ORIG_FILE}.real ${ORIG_FILE} ; then
+                        ln -fs ${OUR_FILE} ${ORIG_FILE}
+                else
+                        echo "Unabe to divert file ${ORIG_FILE}"
+                fi
+
+		# Cleaning firefox profiles
+		find /home/alumno/ -name ".mozilla" -exec rm -rf {} \; || true 
+		find /home/profe/ -name ".mozilla" -exec rm -rf {} \; || true 
+        ;;
+
+        abort-upgrade|abort-remove|abort-deconfigure)
+                echo "postinst called with argument \`$1'" >&2
+                exit 1
+        ;;
+
+        *)
+                echo "postinst called with unknown argument \`$1'" >&2
+                exit 1
+        ;;
+esac
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Appinventor
+Comment=AppInventor Start Daemon
+Exec=/usr/google/appinventor/commands-for-Appinventor/aiStarter
+Icon=epoptes
+Terminal=false
+Type=Application
+Categories=Settings;System;
+# X-GNOME-AutoRestart=true

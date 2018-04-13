@@ -1,0 +1,26 @@
+#!/bin/bash
+if [ $# -ne 4 ]; then
+	echo "$(basename $0) ARCHIVO TIEMPO CORTO LARGO"
+	exit 1
+fi
+
+ARCHIVO="$1"
+TIEMPO="$2"
+CORTO="$3"
+LARGO="$4"
+
+
+echo " [ Cortador ] : Trabajando con el archivo > $ARCHIVO] "
+echo " [ * Cortando por $TIEMPO ]"
+
+
+FADEOUT=$(echo "$TIEMPO+$CORTO-2" | bc)
+
+ffmpeg -i $ARCHIVO -ss $TIEMPO -t $CORTO -af "afade=t=out:st=$FADEOUT:d=5" corto.mp3
+
+
+FADEOUT=$(echo "$TIEMPO+$LARGO-2" | bc)
+
+ffmpeg -i $ARCHIVO -ss $TIEMPO -t $LARGO -af "afade=t=out:st=$FADEOUT:d=5" largo.mp3
+
+exit 0

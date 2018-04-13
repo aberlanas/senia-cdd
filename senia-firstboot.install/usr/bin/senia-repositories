@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# This script is licensed under
+# GPL v3 or higher
+
+DISTRO="$(lsb_release -c|cut -d ":" -f 2 | sed -e "s%[[:blank:]]%%")"
+FILETPL=/usr/share/senia/firstboot/apt/sources.list.tpl
+
+
+
+say_error(){
+	echo "$@"
+	exit 1	
+}
+
+sanity_checks(){
+
+	if [ ! -f "$FILETPL" ] ; then
+		say_error " [ FILE NOT FOUND ] : $FILETPL"
+	fi
+
+	# Prepare environment
+	mkdir -p /etc/apt/
+}
+
+set_repos(){
+	cat $FILETPL | sed -e "s%_@_VERSION_@_%$DISTRO%g"	
+}
+
+update_cache(){
+	apt update
+}
+
+# 
+# Main
+
+sanity_checks
+set_repos
+update_cache
+
+exit 0

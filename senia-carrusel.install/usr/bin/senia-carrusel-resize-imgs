@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Exit if no args 
+if [ $# -ne 1 ]; then
+	echo " * USAGE : $0 FOLDER"
+	exit 1
+fi
+
+
+# SETTINGS
+input_dir="$1"  # Replace this by a path to your folder /path/to/your/folder
+
+rm -rf "$input_dir-resized"
+mkdir $input_dir-resized
+cd $input_dir
+
+
+mogrify -path $input_dir-resized -format "-resized.png" -resize 1920x1080 -quality 100 *.*
+
+

@@ -1,0 +1,168 @@
+#!/bin/bash
+# Usefull script to create videos from 
+#  - webpage links
+#  - photo's folder #WiP
+#  - pdf's folder #TODO
+#  - presentation folder #TODO
+
+# Some usefull variables
+TMPDIR="/tmp/senia-carrusel.default"
+WORKSPACE="$HOME/senia-carrusel-workspace"
+NUMERO=0
+
+#
+# Die method
+#
+die(){
+	echo " * [ ERROR ] : $1"
+	exit 1
+}
+
+
+#
+# Remove spaces
+#
+remove_spaces(){
+	find $1 -name "* *" -type f | rename 's/ /_/g'
+}
+
+#
+# Prepare environment function
+#
+prepare_environment(){
+	TMPDIR="$(mktemp -d /tmp/senia.XXXXX)"
+	echo " * [ Starting ]: Working with: $TMPDIR"
+}
+
+#
+# Cleaning  environment after ends
+#
+cleaning_environment(){
+	DEST=$(date +%F_%H_%m_%S)
+        DEST=$(echo $WORKSPACE/"videos-$DEST")
+	mkdir -p $DEST
+	#TODO comprobar que el directorio no esta vacio
+	# antes de mover  el contenido
+	find $TMPDIR -name "*.mp4" -exec mv {} $DEST \;
+	echo " * [ Cleaning ] : $TMPDIR is removed"
+	zenity --notification --text="Tarea finalizada en $DEST"
+}
+
+#
+# Usefull sanity checks
+#
+sanity_checks(){
+	test -d $WORKSPACE || die " Carrusel Workspace folder not found, please execute with : --prepare"
+	test -f $WORKSPACE/enlaces.txt || die " fichero enlaces.txt no existe" 
+}
+
+create_workspace(){
+	mkdir $WORKSPACE
+	touch $WORKSPACE/enlaces.txt
+	mkdir $WORKSPACE/photos/
+	mkdir $WORKSPACE/pdfs/	
+	mkdir $WORKSPACE/docs/	
+}
+
+
+#
+# MAIN 
+
+if [ "$1" = "--prepare" ] ; then 
+	create_workspace
+	exit 0
+fi
+
+sanity_checks
+prepare_environment
+remove_spaces "$WORKSPACE"
+
+# Procesando los enlaces en primer lugar
+#
+NUMERO="0"
+if [ -z "$WORKSPACE/enlaces.txt" ] ; then
+	die "Fichero vacio"
+fi
+
+for line in $(cat $WORKSPACE/enlaces.txt); do
+	NUMERO=$(echo $NUMERO+1|bc)
+	export DISPLAY=:0.0
+	gnome-web-photo $line $TMPDIR/$NUMERO.png
+	#ffmpeg -f lavfi -i color=s=1440x900:d=10 -loop 1 -i $TMPDIR/$NUMERO.png  -filter_complex "[1:v]scale=-2:1440[fg];  [0:v][fg]overlay=y=-'t*h*0.01':shortest=1[v]" -map "[v]" $TMPDIR/$NUMERO.mkv
+	
+	ffmpeg -y -f lavfi -i color=s=1440x900:d=100 -loop 1 -i $TMPDIR/$NUMERO.png  -filter_complex "[1:v]scale=1440:-1[fg];  [0:v][fg]overlay=y=-'t*h*0.01':shortest=1[v]" -map "[v]" $TMPDIR/$NUMERO-enlaces.mp4
+done
+
+
+#
+# Procesamos las fotos
+
+# Test si hay fotos
+if [ "$(ls -A $WORKSPACE/photos/)" ]; then
+	echo " * [ Photos ] : Working with photos"
+	NUMERO=$(echo $NUMERO+1|bc)
+	senia-carrusel-video-from-fotos $WORKSPACE/photos/ $TMPDIR/$NUMERO-photos.mp4
+else
+    echo " * [ Photos ] : Vacio -> $WORKSPACE/photos"
+fi
+
+#
+# Procesamos los pdfs
+echo " * [ DOCS ] : Working with docs"
+
+for doc in $(ls -1 $WORKSPACE/docs/); do
+	mkdir -p $WORKSPACE/docs/$doc.d/
+	
+	# Pasamos el pdf a pngs
+	soffice --headless --convert-to png $WORKSPACE/docs/$doc --outdir $WORKSPACE/docs/$doc.d/
+	
+	# Recorremos los diferentes pngs para crear los videos
+	for png in $(ls -1 $WORKSPACE/docs/$doc.d/*.png); do
+		
+		NUMERO=$(echo $NUMERO+1|bc)
+		
+		# Cambiamos el fondo a las imagenes con fondo transparente
+		convert $png -background white -alpha remove -flatten -alpha off $png-white.png
+		# Borramos la original
+		mv $png-white.png $png
+		
+		# Creamos el video
+		ffmpeg -y -f lavfi -i color=s=1440x900:d=100 -loop 1 -i $png -filter_complex "[1:v]scale=1440:-1[fg];  [0:v][fg]overlay=y=-'t*h*0.01':shortest=1[v]" -map "[v]" $TMPDIR/$NUMERO-docs.mp4
+	
+	done
+	
+	# Limpiamos el directorio
+	rm -rf "$WORKSPACE/docs/$doc.d/"
+	
+done
+
+#
+# Procesamos los PDFs
+echo " * [ PDFS ] : Working with PDFs"
+
+for pdf in $(ls -1 $WORKSPACE/pdfs/); do
+
+	convert $WORKSPACE/pdfs/$pdf $WORKSPACE/pdfs/$pdf.png
+
+	for png in $(ls -1 $WORKSPACE/pdfs/$pdf*.png); do
+		
+		NUMERO=$(echo $NUMERO+1|bc)
+		
+		# Cambiamos el fondo a las imagenes con fondo transparente
+		convert $png -background white -alpha remove $png-white.png
+		# Borramos la original
+		mv $png-white.png $png
+		# Creamos el video
+		ffmpeg -y -f lavfi -i color=s=1920x1080:d=100 -loop 1 -i $png -filter_complex "[1:v]scale=1920:-1[fg];  [0:v][fg]overlay=y=-'t*h*0.01':shortest=1[v]" -map "[v]" $TMPDIR/$NUMERO-pdf.mp4
+
+		rm $png
+
+	done
+	
+
+done
+
+
+cleaning_environment
+
+exit 0

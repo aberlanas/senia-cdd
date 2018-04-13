@@ -1,0 +1,71 @@
+#!/bin/bash
+
+# Exit if no args 
+if [ $# -ne 2 ]; then
+	echo " * USAGE : $0 FOLDER NombreVideo.mp4"
+	exit 1
+fi
+
+mencoder mf://$1/*.jpg -mf w=1280:h=1024:fps=25:type=png -ovc raw -oac copy -o $2
+
+
+exit 1
+
+# SETTINGS
+input_dir="$1"  # Replace this by a path to your folder /path/to/your/folder
+
+# Quitamos los espacios a los nombres
+find $1 -name "* *" -type f | rename 's/ /_/g'
+
+# Cambiamos el tamanyo a todas las fotos
+senia-carrusel-resize-imgs $input_dir
+
+# Creamos el video
+ffmpeg -y -framerate 1/5 -pattern_type glob -i "$input_dir-resized/*.png" -c:v libx264 -pix_fmt yuv420p $2
+
+# Salimos del script
+echo " * Finished before the previous tasks"
+exit 0
+
+# 
+
+# Esta parte ha sido comentada
+# a la espera de hacer mas pruebas
+files=$(find $input_dir-resized -xtype f) # Change the file type to the correct type of your images
+n_files=$(echo $files| tr " " "\n"| wc -l)
+output_file="$2"           	  # Name of output video
+crossfade=0.9                     # Crossfade duration between two images
+#----------------------------------------------------------------
+
+# Making an ffmpeg script...
+input=""
+filters=" \"color=red:s=1280x720\" "
+output="[0:v]"
+
+i=0
+
+for f in ${files}; do
+  input+=" -loop 1 -t 1 -i \"$f\""
+
+  next=$((i+1))
+  if [ "${i}" -ne "$((n_files-1))" ]; then
+    filters+=" [${next}:v][${i}:v]blend=all_expr='A*(if(gte(T,${crossfade}),1,T/${crossfade}))+B*(1-(if(gte(T,${crossfade}),1,T/${crossfade})))'[b${next}v];"
+  fi
+
+  if [ "${i}" -gt "0" ]; then
+    output+="[b${i}v][${i}:v]"
+  fi
+
+  i=$((i+1))
+  echo $f
+done
+
+output+="concat=n=$((i * 2 - 1)):v=1:a=0,format=yuva422p10le[v]\" -map \"[v]\" ${output_file}"
+
+script="ffmpeg ${input} -filter_complex \"${filters} ${output}"
+
+echo ${script}
+
+# Run it
+eval "${script}"
+

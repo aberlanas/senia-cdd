@@ -1,0 +1,176 @@
+Source: senia-cdd
+Section: metapackages
+Priority: optional
+Maintainer: tic La Senia <tic@ieslasenia.org>
+Build-Depends: debhelper (>=9), unzip, python3-dev, python-dev, dh-python
+Standards-Version: 3.9.8
+
+Package: senia-backgrounds
+Architecture: all
+Depends: ${misc:Depends}, mate-desktop-environment, lightdm-gtk-greeter, plymouth-theme-ubuntu-mate-logo, ubuntu-mate-themes
+Description: senia wallpapers and settings
+ Customized backgrounds for SENIA IES
+
+Package: senia-frozen-users
+Architecture: all
+Depends: ${misc:Depends}, lsb-base
+Description: Senia settings to frozen some users
+ For now this package frozen only "alumno", but 
+ could be changed.
+
+Package: senia-locks
+Architecture: all
+Depends: ${misc:Depends},senia-backgrounds
+Description: senia locks settings for Mate
+ Some useful locks for MATE environment 
+ in order to use them with senia-backgrounds
+ and settings.
+
+Package: senia-session-cleaner-for-mate
+Architecture: all
+Depends: ${misc:Depends}
+Description: Senia-cdd session cleaner
+ Disable all other sessions for Senia 
+
+Package: senia-browsers-settings
+Architecture: all
+Depends: ${misc:Depends}
+Description: Senia-cdd settings for browsers
+ Settings custom web page
+
+Package: senia-browsers-settings-incognito
+Architecture: all
+Depends: ${misc:Depends}
+Description: Always in incognito for browsers
+ Enables always private browsing on firefox
+ Settings custom web page
+
+Package: senia-cdd-aulas
+Architecture: all
+Depends: ${misc:Depends},senia-browsers-settings-incognito, senia-cdd, senia-browsers-settings, senia-locks
+Description: Metapackage for aulas and clients.
+ Restrictions and so on for aulas.
+
+Package: senia-cdd-desktop
+Architecture: all
+Depends: ${misc:Depends},senia-cdd, senia-browsers-settings, senia-locks, senia-non-essential-tools
+Description: Metapackage for Desktop 
+ Restrictions and Some useful settings for Desktops
+
+
+Package: senia-cdd-ciclos-it
+Architecture: all
+Depends: ${misc:Depends}, mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, openjdk-9-jdk-headless, senia-cdd, epoptes-client, adduser, senia-locks, senia-browsers-settings
+Description: Senia package selection for IT FP
+ Some packages to use in SMX and DAW
+  * Remain at "at hand" the next packages:
+  * atom
+  * virtualbox
+  * packettracer
+  * eclipse-neon
+
+Package: senia-cdd-ciclos-afi
+Architecture: all
+Depends: ${misc:Depends}, senia-cdd, senia-locks, senia-browsers-settings
+Description: Senia package selection for AFI FP
+ Some packages to use in GA and AFI
+
+Package: senia-cdd-aulas-inf
+Architecture: all
+Depends: ${misc:Depends}, senia-frozen-users, senia-cdd
+Conflicts: senia-browsers-settings, senia-browsers-settings-incognito, senia-locks
+Description: Senia package selection for Inf
+ Some packages to use in Inf (ESO and BATX)
+
+Package: senia-cdd
+Architecture: all
+Depends: ${misc:Depends},senia-backgrounds, senia-session-cleaner-for-mate, senia-firstboot, senia-dependences, senia-networking, senia-languages, senia-startup-conf 
+Description: IES La Senia CDD
+ All the stuff
+
+Package: senia-non-essential-tools
+Architecture: all
+Depends: ${misc:Depends},${python:Depends}, ${python3:Depends}, python3-xlrd,python-opencv,python3-pyside.qtgui, python3-pyside.qtcore, python-pil, git-buildpackage, openssh-server
+Description: But highly recommended
+ IES La Senia development packages and tools packages
+
+Package: senia-firstboot
+Architecture: all
+Depends: ${misc:Depends}, nagios-nrpe-server, ocsinventory-agent
+Recommends: vim
+Description: Senia Firstboot for cloned systems
+ Firstboot script made by David and Fons to solve 
+ the braindamage of Angel Berlanas.
+
+Package: senia-nagios-plugins
+Architecture:all
+Depends: ${misc:Depends},nagios-nrpe-server
+Description: Senia plugins for Nagios
+ Some nagios plugins to solve Senia 
+ Monitoring
+
+Package: senia-carrusel
+Architecture:all
+Depends: ${misc:Depends},ffmpeg, gnome-web-photo, mencoder
+Description: Senia package for carrusel
+ Some stuff to solve the Senia problem
+ with Videos and TV
+ 
+Package: senia-dependences
+Architecture:all
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, caja-open-terminal, tmux, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, geany, geany-plugins, asunder, gcc, make, perl, fonts-open-sans, senia-settings-ecosenia, mailutils, shutter
+Description: Senia Metapackage of dependences
+ Some packages  to group dependences
+
+Package: senia-startup-conf
+Architecture:all
+Depends: ${misc:Depends},unattended-upgrades, lsb-base
+Description: Senia APT and StartUp configuration
+ Senia APT upgrades
+
+Package: senia-appinventor
+Architecture:all
+Depends: ${misc:Depends}
+Description: Senia package for AppInventor 
+ and StartUp configuration
+
+Package: senia-networking
+Architecture: all
+Depends: ${misc:Depends}, ethtool
+Description: Senia package for Networking 
+ and WakeOnLan
+
+Package: senia-languages
+Architecture: all
+Depends: ${misc:Depends}, language-pack-gnome-ca, libreoffice-l10n-ca, libreoffice-help-ca, language-pack-gnome-ca-base, language-pack-gnome-ca, language-pack-ca-base, language-pack-ca, firefox-locale-ca, gimp-help-ca ,gnome-getting-started-docs-ca, hunspell-ca, hyphen-ca ,language-pack-ca, mythes-ca, wcatalan, gnome-getting-started-docs-es, gimp-help-en, gimp-help-es, thunderbird-locale-ca
+Description: Senia languages meta
+ Some languages
+
+Package: senia-profes-only
+Architecture: all
+Depends: ${misc:Depends}, senia-cdd
+Description: Senia configuration for only-teachers
+ computers and so on
+
+Package: senia-settings-ecosenia
+Architecture: all
+Depends: ${misc:Depends},senia-backgrounds
+Description: Senia configuration for ECO Senia
+ Suspend, it tools to manage power
+ and so on
+
+Package: senia-carrusel-raspberry-pi
+Architecture: all
+Depends: ${misc:Depends}
+Description: Senia player carrusel for RaspberryPI
+ This package provides some useful binaries for use 
+ Raspberry Pi machine as a carrusel player
+
+Package: senia-cron
+Architecture: all
+Depends: ${misc:Depends}
+Description: Senia shutdown plans
+ This package provides some useful binaries for use 
+ crontab to shutdown machines
+
+

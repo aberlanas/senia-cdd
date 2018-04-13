@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Simple script to enable wakeonlan on if-up
+
+logger -t senia-networking "Setting $IFACE enable to be wake-up"
+
+ethtool -s $IFACE wol g || logger -t senia-networking "Setting $IFACE enable to be wake-up ... FAILED"
+
+exit 0
+

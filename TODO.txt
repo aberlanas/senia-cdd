@@ -1,0 +1,30 @@
+# TODO FILE
+
+## Some things to do
+
+W: senia-cdd source: out-of-date-standards-version 3.9.8 (current is 4.1.1)
+E: senia-cdd-ciclos-it: depends-on-obsolete-package depends: mysql-server => default-mysql-server
+W: senia-firstboot: binary-without-manpage usr/bin/senia-firstboot
+W: senia-firstboot: binary-without-manpage usr/bin/senia-firstboot-aula
+W: senia-firstboot: binary-without-manpage usr/bin/senia-repositories
+W: senia-non-essential-tools: binary-without-manpage usr/bin/senia-diploma
+W: senia-non-essential-tools: binary-without-manpage usr/bin/senia-image-toolbox
+W: senia-non-essential-tools: binary-without-manpage usr/bin/senia-musica-tall
+W: senia-non-essential-tools: binary-without-manpage usr/bin/senia-procesador-listados
+W: senia-startup-conf: maintainer-script-calls-systemctl postinst:33
+W: senia-startup-conf: maintainer-script-calls-systemctl postinst:36
+W: senia-startup-conf: maintainer-script-calls-systemctl postinst:39
+W: senia-frozen-users: init.d-script-missing-start etc/init.d/senia-frozen-users 2 3 4
+W: senia-frozen-users: binary-without-manpage usr/bin/senia-frozen
+E: senia-appinventor: udev-rule-in-etc etc/udev/rules.d/99-senia-appinventor.rules
+W: senia-carrusel-raspberry-pi: binary-without-manpage usr/bin/senia-carrusel-raspi
+W: senia-networking: script-not-executable etc/network/if-up.d/wake-up
+W: senia-carrusel: binary-without-manpage usr/bin/senia-carrusel
+W: senia-carrusel: binary-without-manpage usr/bin/senia-carrusel-player
+W: senia-carrusel: binary-without-manpage usr/bin/senia-carrusel-resize-imgs
+W: senia-carrusel: binary-without-manpage usr/bin/senia-carrusel-server
+W: senia-carrusel: binary-without-manpage usr/bin/senia-carrusel-video-from-fotos
+
+## Done
+
+ 

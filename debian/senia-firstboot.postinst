@@ -1,0 +1,42 @@
+#!/bin/sh
+
+
+set -e
+
+
+case $1 in
+        configure)
+                #Senia repositories
+		echo " * Senia repos: Testing if is enabled ppa-ticsenia"
+		rc=0
+		
+		echo " * [ Senia Repositoris : Xenial ]"
+		test -f /etc/apt/sources.list.d/ticsenia-ubuntu-ppa-xenial.list	||rc=1
+		
+		echo " * [ Senia Repositoris : Bionic ]"
+		test -f /etc/apt/sources.list.d/ticsenia-ubuntu-ppa-bionic.list	||rc=1
+		
+		if [ $rc -eq 1 ]; then
+			echo " * Adding new PPA for TIC Senia ..."
+			add-apt-repository -y ppa:ticsenia/ppa
+			
+			echo " * Removing aberlanas PPA '_'"
+			rm -f /etc/apt/sources.list.d/angel-berlanas-*
+
+			echo " * UPDATE APT IS NEEDED * "
+		fi
+        ;;
+
+        abort-upgrade|abort-remove|abort-deconfigure)
+                echo "postinst called with argument \`$1'" >&2
+                exit 1
+        ;;
+
+        *)
+                echo "postinst called with unknown argument \`$1'" >&2
+                exit 1
+        ;;
+esac
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,2 @@
+## Reglas para Appinventor
+SUBSYSTEM=="usb",ATTR {idVendor} == "0BB4", MODE = "0666", GROUP = "plugdev"

@@ -1,0 +1,8 @@
+[org.gnome.desktop.wm.keybindings]
+switch-input-source=['<Super>space']
+switch-input-source-backward=['<Shift><Super>space']
+
+
+[com.canonical.unity-greeter]
+draw-user-backgrounds=false
+background='/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png'

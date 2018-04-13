@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+
+
+# Firefox ESR 
+
+ORIG_FILE="/etc/firefox/syspref.js"
+OUR_FILE="/etc/firefox/syspref.senia.js"
+OUR_PACKAGE="senia-browser-settings"
+
+
+
+case $1 in 
+        remove|purge|abort-install|disappear)
+                if [ -f ${ORIG_FILE}.real ] ; then
+                        rm -f ${ORIG_FILE}
+                        dpkg-divert --package  ${OUR_PACKAGE} --rename --quiet --remove ${ORIG_FILE}|| true
+                fi
+                
+                ;;
+        *)
+                echo "Nothing to do"
+                ;; 
+esac
+
+# Other Stuff #
+
+#DEBHELPER#
+

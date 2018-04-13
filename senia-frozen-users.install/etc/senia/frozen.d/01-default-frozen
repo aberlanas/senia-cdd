@@ -1,0 +1,16 @@
+#
+# DEFAULT CONFFILE FOR FROZEN
+#
+
+# This is the first time that  
+# user is initialized, please use it as 
+# follow in the next lines
+USERSFROZEN=""
+
+#
+#
+# This is the correct way to use
+# USERSFROZEN
+USERSFROZEN="$USERSFROZEN alumno"
+
+## 
