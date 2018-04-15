@@ -8,7 +8,7 @@ picture-options='stretched'
 [org/mate/pluma]
 auto-indent=true
 insert-spaces=true
-color-scheme='Ambiant-MATE'
+color-scheme='Ambiant-MATE-Dark'
 
 [org/mate/caja/desktop]
 computer-icon-visible=true
@@ -31,12 +31,13 @@ mode='blank-only'
 themes='[]'
 
 [org/mate/desktop/interface]
+gtk-color-scheme='unset'
 gtk-theme='Radiant-MATE'
-icon-theme='matefaenza'
+icon-theme='matefaenzadark'
 
 [org/mate/marco/general]
 num-workspaces=2
-theme='Radiant-MATE'
+theme='Radiant-MATE-Dark'
 compositing-manager=false
 
 [org/mate/panel/general]
