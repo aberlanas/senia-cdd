@@ -32,12 +32,12 @@ themes='[]'
 
 [org/mate/desktop/interface]
 gtk-color-scheme='unset'
-gtk-theme='Radiant-MATE'
+gtk-theme='Ambiant-MATE-Dark'
 icon-theme='matefaenzadark'
 
 [org/mate/marco/general]
 num-workspaces=2
-theme='Radiant-MATE-Dark'
+theme='Ambiant-MATE-Dark'
 compositing-manager=false
 
 [org/mate/panel/general]
