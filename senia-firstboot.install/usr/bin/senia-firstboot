@@ -55,6 +55,8 @@ TPL_PATH="/usr/share/senia/firstboot/templates"
 FILE_HOSTNAME="/etc/hostname"
 TPL_HOSTNAME="$TPL_PATH/hostname.tpl"
 TPL_HOSTS="$TPL_PATH/Hosts.tpl"
+TPL_NETPLAN="$TPL_PATH/netplan.tpl"
+
 TMP_DIR=$(mktemp -d /tmp/firstboot.XXXXXX)
 HOST=""
 IFACE=$(ip addr | grep ^2 | cut -d " " -f2 | tr ":" " "| sed -e "s/ //g")
@@ -88,7 +90,13 @@ set_IP(){
 	systemctl disable network-manager.service || echo "No he podido hacer esta operacion (Desabilitado)"
 	systemctl stop network-manager.service || echo "No he podido hacer esta operacion (Parar)"
 	cp "$TPL_PATH/interfaces.final" /etc/network/interfaces
+	# Setting IP as the old way
 	sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g;s/_@_MYMASK_@_/$MYMASK/g;s/_@_MYGW_@_/$MYGW/g" "$TPL_PATH/interface.tpl" > "/etc/network/interfaces.d/$IFACE.cfg"
+	# Setting netplan
+	echo " * Setting IP on netplan"
+	sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g;s/_@_MYMASK_@_/$MYMASK/g;s/_@_MYGW_@_/$MYGW/g" "$TPL_NETPLAN" > /etc/netplan/02-senia-network.yaml
+	netplan apply
+
 	systemctl start networking
 }
 

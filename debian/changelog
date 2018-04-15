@@ -1,3 +1,12 @@
+senia-cdd (2018.04.15) bionic; urgency=high
+
+  * Updated with netplan
+  * Updated with mate setup
+  * Configuration for panel
+  * Updated dconf
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 15 Apr 2018 08:10:18 +0200
+
 senia-cdd (2018.04.13) bionic; urgency=high
 
   * Updated dependences
