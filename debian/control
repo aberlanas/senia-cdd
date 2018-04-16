@@ -60,7 +60,7 @@ Description: Metapackage for Desktop
 
 Package: senia-cdd-ciclos-it
 Architecture: all
-Depends: ${misc:Depends}, mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, openjdk-9-jdk-headless, senia-cdd, epoptes-client, adduser, senia-locks, senia-browsers-settings
+Depends: ${misc:Depends}, mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, openjdk-9-jdk-headless, senia-cdd, epoptes-client, adduser, senia-locks, senia-browsers-settings, gtkterm
 Description: Senia package selection for IT FP
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:
@@ -84,7 +84,7 @@ Description: Senia package selection for Inf
 
 Package: senia-cdd
 Architecture: all
-Depends: ${misc:Depends},senia-backgrounds, senia-session-cleaner-for-mate, senia-firstboot, senia-dependences, senia-networking, senia-languages, senia-startup-conf 
+Depends: ${misc:Depends},senia-backgrounds, senia-session-cleaner-for-mate, senia-firstboot, senia-dependences, senia-networking, senia-languages, senia-startup-conf, senia-cron
 Description: IES La Senia CDD
  All the stuff
 
@@ -115,10 +115,16 @@ Depends: ${misc:Depends},ffmpeg, gnome-web-photo, mencoder
 Description: Senia package for carrusel
  Some stuff to solve the Senia problem
  with Videos and TV
- 
+
+Package: senia-inventory-client
+Architecture:all
+Depends:  ${misc:Depends}
+Description: senia configuration for inventory
+ Some configuration... 
+
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, caja-open-terminal, tmux, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, geany, geany-plugins, asunder, gcc, make, perl, fonts-open-sans, senia-settings-ecosenia, mailutils, shutter
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, caja-open-terminal, tmux, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, geany, geany-plugins, asunder, gcc, make, perl, fonts-open-sans, senia-settings-ecosenia, mailutils, shutter, libreoffice-dmaths, senia-inventory-client
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 
@@ -148,7 +154,7 @@ Description: Senia languages meta
 
 Package: senia-profes-only
 Architecture: all
-Depends: ${misc:Depends}, senia-cdd
+Depends: ${misc:Depends}
 Description: Senia configuration for only-teachers
  computers and so on
 
