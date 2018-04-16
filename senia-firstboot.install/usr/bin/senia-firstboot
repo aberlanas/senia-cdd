@@ -32,6 +32,7 @@ if [ $# -eq 2 ] ; then
 elif [ $# -ne 5 ] ; then
 	echo " [ USAGE ] : "
 	echo "     $0 NAME IP MASK GW SERVERIP"
+	echo " Ex: $0 develmachine 192.168.42.22 24 192.168.42.1 192.168.4.254"
 	exit 1
 fi
 
@@ -41,7 +42,7 @@ MYIP="$2"
 
 if [ "$DEFAULTMODE" = "yes" ]; then
 	echo " * Setting Default values ..."
-	MYMASK="255.255.254.0"
+	MYMASK="23"
 	MYGW="172.29.0.1"
 	SERVERIP="172.29.0.254"
 else
@@ -85,13 +86,17 @@ set_nrpe(){
 
 set_IP(){
 	# Set IP
-	ifdown $IFACE
+	ifdown $IFACE || echo " * Something has wrong but $IFACE could be ready in few moments"
 	systemctl stop networking
 	systemctl disable network-manager.service || echo "No he podido hacer esta operacion (Desabilitado)"
 	systemctl stop network-manager.service || echo "No he podido hacer esta operacion (Parar)"
 	cp "$TPL_PATH/interfaces.final" /etc/network/interfaces
+	
 	# Setting IP as the old way
-	sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g;s/_@_MYMASK_@_/$MYMASK/g;s/_@_MYGW_@_/$MYGW/g" "$TPL_PATH/interface.tpl" > "/etc/network/interfaces.d/$IFACE.cfg"
+	# For now this will be disabled 
+	# to save the mental sanity of developers
+	# sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g;s/_@_MYMASK_@_/$MYMASK/g;s/_@_MYGW_@_/$MYGW/g" "$TPL_PATH/interface.tpl" > "/etc/network/interfaces.d/$IFACE.cfg"
+	
 	# Setting netplan
 	echo " * Setting IP on netplan"
 	sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g;s/_@_MYMASK_@_/$MYMASK/g;s/_@_MYGW_@_/$MYGW/g" "$TPL_NETPLAN" > /etc/netplan/02-senia-network.yaml

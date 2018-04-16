@@ -1,3 +1,10 @@
+senia-cdd (2018.04.16.2) bionic; urgency=high
+
+  * Updated with netmask on CIDR format on senia-firstboot
+  * Removed old way (for now on network/interfaces)
+
+ -- tic <tic@asus-portatil>  Mon, 16 Apr 2018 10:43:11 +0200
+
 senia-cdd (2018.04.16.1) bionic; urgency=high
 
   * Added senia-inventory as a binary (xenial)
