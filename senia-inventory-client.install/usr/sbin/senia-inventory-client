@@ -1,0 +1,60 @@
+#!/bin/bash
+
+SERVER_NAME="tic.ieslasenia.org"
+FOLDER_NAME="/repositori/rsync/fusioninventory/"
+DEBS="fusioninventory-agent-latest.deb  fusioninventory-agent-task-deploy-latest.deb  fusioninventory-agent-task-esx-latest.deb  fusioninventory-agent-task-network-latest.deb"
+
+show_usage(){
+	echo " [ USAGE ] $(basename $0) [OPTIONS]"
+	echo "	- Options : 	"
+	echo "			[ -i | --install ] : Installation"
+	echo "   		[ -c | --configure ] : Set the configuration"
+	echo "  		[ -t | --test ] : Test environment and config "
+	exit 1
+}
+
+sanity_checks(){
+	echo " * Some Sanity checks"
+	mkdir /tmp/senia-inventory/
+}
+
+
+do_install(){
+	echo " * Installation Process "
+	for d in $DEBS; do
+		wget ${SERVER_NAME}${FOLDER_NAME}${d} -O /tmp/senia-inventory/${d}
+	done
+	
+	dpkg -i /tmp/senia-inventory/*.deb
+	apt -f install
+}
+
+set_config_basic(){
+	cp /usr/share/senia-inventory-client/cfgs/senia-basic-agent.cfg /etc/fusioninventory/agent.cfg	
+}
+
+set_service(){
+	systemctl restart fusioninventory-agent
+	pkill -USR1 -f -P 1 fusioninventory-agent
+}	
+
+
+ACTION=$1
+
+case $ACTION in
+	-i|--install)
+		sanity_checks
+		do_install
+		set_config_basic
+		set_service
+	;;
+	-c|--configure)
+		set_config_basic
+		set_service
+	;;
+	*)
+		show_usage
+	;;
+
+esac
+	exit 0
