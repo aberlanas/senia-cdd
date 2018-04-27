@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+
+show_usage(){
+	echo " [ USAGE ] : $(basename $0) [listar|syncar [destino]]"
+	echo -e "\t 	listar : Lista ficheros rsyncable "
+	echo -e "\t 	syncar : Syncroniza el destino en el current directory"
+	echo -e "\t 	\tejemplo :  $(basename $0) syncar burlington"
+
+}
+
+listar(){
+	echo " * [ Disponibles Rsync of La Senia ] *"
+	wget http://172.29.0.254/repositori/rsync/ -O /tmp/index.html > /dev/null 2>/dev/null
+	cat /tmp/index.html | grep href | grep folder | sed -e "s%.*href=\"%%g" | cut -d "/" -f1
+}
+
+syncar(){
+	rsync -avx tic@172.29.0.254:/srv/repositori/rsync/$1 $1
+}
+
+
+case $1 in 
+
+	listar)
+		listar
+		;;
+	syncar)
+		syncar "$2"
+		;;
+	*)
+		show_usage
+		;;
+esac
+exit 0

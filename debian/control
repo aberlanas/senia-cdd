@@ -7,7 +7,7 @@ Standards-Version: 3.9.8
 
 Package: senia-backgrounds
 Architecture: all
-Depends: ${misc:Depends}, mate-desktop-environment, lightdm-gtk-greeter, plymouth-theme-ubuntu-mate-logo, ubuntu-mate-themes
+Depends: ${misc:Depends}, mate-desktop-environment, lightdm-gtk-greeter, plymouth-theme-ubuntu-mate-logo, ubuntu-mate-themes, papirus-icon-theme, pocillo-icon-theme, ubuntu-budgie-themes
 Description: senia wallpapers and settings
  Customized backgrounds for SENIA IES
 
