@@ -8,7 +8,7 @@ picture-options='stretched'
 [org/mate/pluma]
 auto-indent=true
 insert-spaces=true
-color-scheme='Ambiant-MATE-Dark'
+color-scheme='Pocillo'
 
 [org/mate/caja/desktop]
 computer-icon-visible=true
@@ -31,13 +31,13 @@ mode='blank-only'
 themes='[]'
 
 [org/mate/desktop/interface]
-gtk-color-scheme='unset'
-gtk-theme='Ambiant-MATE-Dark'
-icon-theme='matefaenzadark'
+gtk-color-scheme='menu_bg:#ffffff'
+gtk-theme='Pocillo'
+icon-theme='ePapirus'
 
 [org/mate/marco/general]
 num-workspaces=2
-theme='Ambiant-MATE-Dark'
+theme='Pocillo-light'
 compositing-manager=false
 
 [org/mate/panel/general]
@@ -54,3 +54,6 @@ hinting='slight'
 rgba-order='rgb'
 antialiasing='rgba'
 dpi='96'
+
+[org/mate/desktop/peripherals/mouse]
+cursor-theme='breeze_cursors'
