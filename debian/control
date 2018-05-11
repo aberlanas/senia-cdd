@@ -158,6 +158,13 @@ Depends: ${misc:Depends}
 Description: Senia configuration for only-teachers
  computers and so on
 
+Package: senia-kiosko
+Architecture: all
+Depends: ${misc:Depends}, senia-cdd
+Conflicts: senia-profes-only
+Description: Senia configuration for Kiosko
+ computers and Diagnostics Tests 
+
 Package: senia-settings-ecosenia
 Architecture: all
 Depends: ${misc:Depends},senia-backgrounds

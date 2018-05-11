@@ -1,3 +1,9 @@
+senia-cdd (2018.05.11) bionic; urgency=high
+
+  * Updated with kiosko
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 11 May 2018 10:32:04 +0200
+
 senia-cdd (2018.04.27.1) bionic; urgency=medium
 
   * Updated with senia-rsync
