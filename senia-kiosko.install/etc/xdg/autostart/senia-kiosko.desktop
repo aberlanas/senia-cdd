@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Kiosko Senia
+Comment=Kiosko Senia
+Icon=blueman
+Exec=/usr/bin/senia-kiosko-browser
+Terminal=false
+Type=Application
+Categories=
+NotShowIn=LXDE
+X-Ubuntu-Gettext-Domain=blueman
