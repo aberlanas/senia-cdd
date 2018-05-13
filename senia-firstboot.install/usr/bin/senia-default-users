@@ -2,8 +2,10 @@
 
 DEFAULTRC=0
 
-if [ $1 = "--force" ]; then
+if [ ! -z "$1" ]; then
+    if [ "$1" = "--force" ]; then
 	DEFAULTRC=1
+    fi
 fi
 
 echo  " * Senia : Adding User profe"
