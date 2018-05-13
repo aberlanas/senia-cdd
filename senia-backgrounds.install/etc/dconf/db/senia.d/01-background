@@ -38,7 +38,7 @@ icon-theme='ePapirus'
 [org/mate/marco/general]
 num-workspaces=2
 theme='Pocillo-light'
-compositing-manager=false
+compositing-manager=true
 
 [org/mate/panel/general]
 locked-down=false
