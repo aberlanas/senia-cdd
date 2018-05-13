@@ -1,0 +1,45 @@
+#!/bin/bash
+
+DEFAULTRC=0
+
+if [ $1 = "--force" ]; then
+	DEFAULTRC=1
+fi
+
+echo  " * Senia : Adding User profe"
+echo  " *  - Testing if exists"
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q profe|| rc=1
+
+if [ $rc -eq 1 ]; then
+
+   echo " - The user profe not exists : creating..."
+   adduser --quiet --disabled-password --shell /bin/bash --home /home/profe --gecos Profe profe
+   echo "profe:profe" | chpasswd
+
+else
+	echo " - The user profe exists in system...nothing to do"
+fi
+
+echo  " * Senia : Adding User alumno "
+echo  " *  - Testing if alumno exists"
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q alumno || rc=1
+
+if [ $rc -eq 1 ]; then
+
+   echo " - The user profe not exists : creating..."
+   adduser --quiet --disabled-password --shell /bin/bash --home /home/alumno --gecos Alumno alumno
+   echo "alumno:alumno" | chpasswd
+
+else
+
+   echo " - The user alumno exists in system...nothing to do"
+
+fi
+
+
+
+exit 0

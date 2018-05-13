@@ -3,26 +3,11 @@
 
 set -e
 
-seniaAddUser(){
-    echo " * Senia : Adding User $1"
-    echo " *  - Testing if exists"
-    rc=0
-    cat /etc/passwd | grep -q $1|| rc=1
-    if [ $rc -eq 1 ]; then
-	echo " - The user $1 not exists : creating..."
-	adduser --quiet --disabled-password --shell /bin/bash --home /home/$1 --gecos "$1" $1
-	echo -e "$1\n$1\n" | sudo passwd $1
-    else
-	echo " - The user $1 exists in system...nothing to do"
-    fi
-}
-
 case $1 in
         configure)
             #Senia repositories
 	    echo " * [ SENIA CDD ] : Senia Users"
-	    seniaAddUser profe
-	    seniaAddUser alumno
+	    senia-default-users || true
         ;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
