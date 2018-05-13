@@ -1,3 +1,16 @@
+senia-cdd (2018.05.13) bionic; urgency=high
+
+  * Updated with several changes:
+    - Cleaning for lintian
+    - Removed binaries
+    - Added senia-default-users as a binary
+    - Fixed theme on May
+    - Testing compositing manager
+    - Fixed ppa testing repos
+    - More minor changes 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 13 May 2018 10:22:40 +0200
+
 senia-cdd (2018.05.12) bionic; urgency=high
 
   * Updated with senia users on postinst
