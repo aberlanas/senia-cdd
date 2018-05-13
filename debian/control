@@ -103,13 +103,6 @@ Description: Senia Firstboot for cloned systems
  Firstboot script made by David and Fons to solve 
  the braindamage of Angel Berlanas.
 
-Package: senia-nagios-plugins
-Architecture:all
-Depends: ${misc:Depends},nagios-nrpe-server
-Description: Senia plugins for Nagios
- Some nagios plugins to solve Senia 
- Monitoring
-
 Package: senia-carrusel
 Architecture:all
 Depends: ${misc:Depends},ffmpeg, gnome-web-photo, mencoder
