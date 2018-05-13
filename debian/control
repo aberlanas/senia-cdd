@@ -60,7 +60,7 @@ Description: Metapackage for Desktop
 
 Package: senia-cdd-ciclos-it
 Architecture: all
-Depends: ${misc:Depends}, mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, openjdk-9-jdk-headless, senia-cdd, epoptes-client, adduser, senia-locks, senia-browsers-settings, gtkterm
+Depends: ${misc:Depends}, default-mysq-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, openjdk-9-jdk-headless, senia-cdd, epoptes-client, adduser, senia-locks, senia-browsers-settings, gtkterm
 Description: Senia package selection for IT FP
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:
