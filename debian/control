@@ -84,7 +84,7 @@ Description: Senia package selection for Inf
 
 Package: senia-cdd
 Architecture: all
-PreDepends: senia-firstboot
+Pre-Depends: senia-firstboot
 Depends: ${misc:Depends},senia-backgrounds, senia-session-cleaner-for-mate, senia-dependences, senia-networking, senia-languages, senia-startup-conf, senia-cron
 Description: IES La Senia CDD
  All the stuff
