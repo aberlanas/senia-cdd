@@ -1,3 +1,9 @@
+senia-cdd (2018.05.15) bionic; urgency=high
+
+  * Updated with xdotool
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 15 May 2018 06:58:34 +0200
+
 senia-cdd (2018.05.13) bionic; urgency=high
 
   * Updated with several changes:

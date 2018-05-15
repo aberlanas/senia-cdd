@@ -154,7 +154,7 @@ Description: Senia configuration for only-teachers
 
 Package: senia-kiosko
 Architecture: all
-Depends: ${misc:Depends}, senia-cdd
+Depends: ${misc:Depends}, senia-cdd, xdotool 
 Conflicts: senia-profes-only
 Description: Senia configuration for Kiosko
  computers and Diagnostics Tests 
