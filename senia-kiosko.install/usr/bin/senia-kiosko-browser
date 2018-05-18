@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-URLKIOSKO="http://forms.edu.gva.es/limesurvey/index.php/823645"
+URLKIOSKO="http://avalua.edu.gva.es"
 
 logger -t " Senia Kiosko " " Starting FirefoX  : $URLKIOSKO"
 firefox -private "${URLKIOSKO}" & 
