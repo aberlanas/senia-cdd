@@ -1,3 +1,9 @@
+senia-cdd (2018.05.19) bionic; urgency=high
+
+  * Updated dependences
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 22 May 2018 10:37:30 +0200
+
 senia-cdd (2018.05.18) bionic; urgency=high
 
   * Updated for evaluacion diagnostica 
