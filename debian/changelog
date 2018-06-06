@@ -1,3 +1,10 @@
+senia-cdd (2018.06.06) bionic; urgency=high
+
+  * Updated dependences to solve the problem 
+    with Packet Tracer.
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 06 Jun 2018 09:56:33 +0200
+
 senia-cdd (2018.05.22) bionic; urgency=high
 
   * Updated dependences
