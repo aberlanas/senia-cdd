@@ -1,3 +1,9 @@
+senia-cdd (2018.06.26.1) bionic; urgency=high
+
+  * Updated with senia-cluster
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 26 Jun 2018 10:02:02 +0200
+
 senia-cdd (2018.06.26) bionic; urgency=high
 
   * Updated with new Background 

@@ -1,0 +1,70 @@
+#!/bin/bash
+
+SERVER="http://tic.ieslasenia.org"
+REMOTEPATH="repositori/cluster/etc.clusters"
+REMOTEVERSION=""
+LOCALVERSION="00000000"
+
+if [ $(id -u) -ne 0 ]; then
+	echo " [ ERROR ]: You need execution privileges to run this program"
+	echo " [ YOU SHALL NOT PASS! ]"
+	echo " Please run : "
+	echo " sudo $(basename $0)"
+	exit 1
+fi
+
+
+download(){
+
+    wget ${SERVER}/${REMOTEPATH} -O /tmp/clusters 2>/dev/null
+
+}
+
+show_file(){
+
+    cat /tmp/clusters
+
+}
+
+getRemoteVersion(){
+
+    rc=0
+    test -f /tmp/clusters || rc=1
+    if [ ${rc} -eq 0 ]; then
+        REMOTEVERSION=$(head -n 1  /tmp/clusters |cut -d " " -f 3)    
+    else
+        echo " * [ Senia-Cluster] : No hay version remota"
+        exit 0
+    fi
+}
+
+getLocalVersion(){
+
+    rc=0
+    test -f /etc/clusters || rc=1
+    if [ ${rc} -eq 0 ]; then
+        LOCALVERSION=$(head -n 1 /etc/clusters |cut -d " " -f 3)    
+    else   
+        echo " * [ Senia-Cluster] : LOCALVERSION : ${LOCALVERSION}"
+    fi
+}
+
+
+#
+# MAIN 
+#
+
+download
+#show_file
+
+getLocalVersion
+getRemoteVersion
+
+if [ ${REMOTEVERSION} -gt ${LOCALVERSION} ]; then
+    echo " * [ Senia-Cluster] : ACTUALIZA QUE NO ES POCO "
+    cp /tmp/clusters /etc/clusters
+else   
+    echo "  * [ Senia-Cluster] : VERSION LOCAL ACTUALIZADA - Nada que hacer "
+fi
+
+exit 0
