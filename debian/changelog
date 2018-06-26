@@ -1,3 +1,9 @@
+senia-cdd (2018.06.26) bionic; urgency=high
+
+  * Updated with new Background 
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 26 Jun 2018 07:07:58 +0200
+
 senia-cdd (2018.06.06) bionic; urgency=high
 
   * Updated dependences to solve the problem 
