@@ -1,3 +1,9 @@
+senia-cdd (2018.07.07) bionic; urgency=medium
+
+  * Updated dependences in senia-cdd-ciclos-it
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 07 Jul 2018 17:30:26 +0200
+
 senia-cdd (2018.06.26.1) bionic; urgency=high
 
   * Updated with senia-cluster
