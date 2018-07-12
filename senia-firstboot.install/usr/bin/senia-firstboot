@@ -98,6 +98,10 @@ set_IP(){
 	# sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g;s/_@_MYMASK_@_/$MYMASK/g;s/_@_MYGW_@_/$MYGW/g" "$TPL_PATH/interface.tpl" > "/etc/network/interfaces.d/$IFACE.cfg"
 	
 	# Setting netplan
+	echo " * Removing configuration for network-manager"
+	YAMLNETMANAGER="/etc/netplan/01-network-manager-all.yaml"
+	[ ! -f ${YAMLNETMANAGER} ] || rm -f ${YAMLNETMANAGER}
+	
 	echo " * Setting IP on netplan"
 	sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g;s/_@_MYMASK_@_/$MYMASK/g;s/_@_MYGW_@_/$MYGW/g" "$TPL_NETPLAN" > /etc/netplan/02-senia-network.yaml
 	netplan apply
