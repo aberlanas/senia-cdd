@@ -8,4 +8,5 @@ network:
         addresses:
           - 8.8.8.8
           - 1.0.0.1
+      #dhcp4: true
 
