@@ -1,3 +1,13 @@
+senia-cdd (2018.07.12) bionic; urgency=high
+
+  * Using netplan a full
+  * Added a simple comments for dhcp4 in 
+    netplan file, to be uncomment in Panic 
+    Mode.
+  * Updated USAGE on Senia Firstboot
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 12 Jul 2018 06:38:46 +0200
+
 senia-cdd (2018.07.07) bionic; urgency=medium
 
   * Updated dependences in senia-cdd-ciclos-it
