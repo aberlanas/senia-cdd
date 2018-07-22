@@ -9,6 +9,9 @@
   "author": "Angel Berlanas Vicente",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.16.0"
+    "commander": "^2.16.0",
+    "fs": "0.0.1-security",
+    "xml2js": "^0.4.19",
+    "xml2json": "^0.11.2"
   }
 }
