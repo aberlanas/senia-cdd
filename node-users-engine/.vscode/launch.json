@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Iniciar programa",
-            "program": "${workspaceFolder}/node-users-engine.js info /home/aberlanas/Descargas/llxgesc.dat"
+            "program": "${workspaceFolder}/node-users-engine.js"
         }
     ]
 }

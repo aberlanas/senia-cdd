@@ -6,15 +6,11 @@ var fs = require('fs');
 var parser = require('xml2json');
 
 const info = (filename) => {
-
-    console.log("Hello " +String(filename));
-    console.log(filename.filename);
     fs.readFile(filename.filename, function(err,data){
       var centre = parser.toJson(data);
-      
+      var JCentre = JSON.parse(centre);
+      console.log(JCentre);
     });
-    
-
 }
 
 
