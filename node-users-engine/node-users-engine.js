@@ -5,7 +5,7 @@
 var fs = require('fs');
 var parser = require('xml2json');
 
-const info = (filename) => {
+function info (filename) {
     fs.readFile(filename.filename, function(err,data){
       var centre = parser.toJson(data);
       var JCentre = JSON.parse(centre);
@@ -13,15 +13,17 @@ const info = (filename) => {
     });
 }
 
+function alumnes = (filename) => {
+  console.log("Patata");
+}
 
-const program = require('commander');
+var program = require('commander');
+
 program
   .version('0.1')
-  .command('info <filename>')
-  .alias('i')
-  .description('Engine CLI for Users and Groups')
-  .action((filename) => {
-    info({filename});
-  });
-program.parse(process.argv);
+  .option('-i, --info [filename]',"Engine CLI for Users and Groups")
+  .option('-a, --alumnes <filename>',"Show Alumnes")
+  .parse(process.argv);
 
+
+if (program.info) info(program.filename);
