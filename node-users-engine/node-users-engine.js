@@ -26,6 +26,19 @@ function alumnes (centre) {
     
 }
 
+
+function printAlumnes(alumnes,mode="simple"){
+    alumnes.forEach(function(alumne){
+        if (mode == "simple"){
+            console.log(" * "+alumne.nom+","+alumne.cognoms+ " - "+alumne.nia);
+        }
+        if (mode == "csv"){
+            
+            console.log(alumne.nom+","+alumne.cognoms+ ","+alumne.nia);
+        }
+    });
+}
+
 function alumneRepetido(vAlum,alum){
     var esta = false;
     vAlum.forEach(function(aux){
@@ -78,7 +91,8 @@ if (program.alumnes) {
     alumnes(centre);
     var unicos = trimAlumnes(centre);
     console.log(centre.centre.alumnes.alumne.length);
-    //console.log(unicos);
+    printAlumnes(unicos);
+    printAlumnes(unicos,"csv");
     process.exit(0);
 
 }
