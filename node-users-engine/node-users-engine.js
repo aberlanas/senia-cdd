@@ -20,8 +20,31 @@ function info (centre) {
 
 function alumnes (centre) {
   
-    centre.centre.alumnes.alumne.forEach(function(alum){ console.log(alum.nom+" - "+alum.nia)});  
+    centre.centre.alumnes.alumne.forEach(function(alum){ 
+        console.log(alum.nom+" - "+alum.nia);
+    });  
     
+}
+
+function alumneRepetido(vAlum,alum){
+    var esta = false;
+    vAlum.forEach(function(aux){
+        if (alum.nia == aux.nia){
+            esta = true;
+        }
+    });
+    return esta;
+}
+
+function trimAlumnes(centre){
+    var alumnesAuxTrim = [];
+    centre.centre.alumnes.alumne.forEach(function(cAlumne){
+       if (!alumneRepetido(alumnesAuxTrim,cAlumne)){
+            alumnesAuxTrim.push(cAlumne)
+        }
+       });
+    console.log(" * Procesados :"+alumnesAuxTrim.length);
+    return alumnesAuxTrim;
 }
   
 var program = require('commander');
@@ -53,6 +76,9 @@ if (program.info){
 if (program.alumnes) {
 
     alumnes(centre);
+    var unicos = trimAlumnes(centre);
+    console.log(centre.centre.alumnes.alumne.length);
+    //console.log(unicos);
     process.exit(0);
 
 }
