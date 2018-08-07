@@ -5,27 +5,25 @@
 var fs = require('fs');
 var parser = require('xml2json');
 
-function info (filename) {
+function initCentre(filename){
+
     var data = fs.readFileSync(filename);
-    var centre = parser.toJson(data);
-    var JCentre = JSON.parse(centre);
-    console.log(JCentre);
-    
+    var dCentre = parser.toJson(data);
+    var auxCentre = JSON.parse(dCentre);
+    return auxCentre; 
+
 }
 
-function alumnes (filename) {
+function info (centre) {
+   console.log(centre);
+}
+
+function alumnes (centre) {
   
-    var data = fs.readFileSync(filename);
-    var centre = parser.toJson(data);
-    var JCentre = JSON.parse(centre);
-    JCentre.centre.alumnes.forEach(alumne => {
-      console.log(alumne.nom);  
-    });
+    centre.centre.alumnes.alumne.forEach(function(alum){ console.log(alum.nom+" - "+alum.nia)});  
     
 }
   
-}
-
 var program = require('commander');
 
 
@@ -37,22 +35,24 @@ program
   .parse(process.argv);
 
 
-  var filename = "";
-  
-  if(program.file){
+var filename = "";
+var centre = null;
+
+if(program.file){
+
     filename = program.file;
-  }
+    centre = initCentre(filename);
+
+}
 
 if (program.info){
-
-  info(filename);
-  process.exit(0);
-
+    info(centre);
+    process.exit(0);
 }
 
 if (program.alumnes) {
 
-  alumnes(filename);
-  process.exit(0);
+    alumnes(centre);
+    process.exit(0);
 
 }
