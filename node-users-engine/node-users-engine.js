@@ -1,9 +1,21 @@
 #!/usr/bin/env node
 
-'use strict';
+// This Script is licensed under
+// GPL v3 or higher
 
+// Author: Angel Berlanas Vicente
+//         <angel.berlanas@gmail.com>
+//
+
+//
+// Imports
+
+'use strict';
 var fs = require('fs');
 var parser = require('xml2json');
+
+
+// Init 
 
 function initCentre(filename){
 
@@ -49,9 +61,9 @@ function alumneRepetido(vAlum,alum){
     return esta;
 }
 
-function trimAlumnes(centre){
+function trimAlumnes(alumnes){
     var alumnesAuxTrim = [];
-    centre.centre.alumnes.alumne.forEach(function(cAlumne){
+    alumnes.forEach(function(cAlumne){
        if (!alumneRepetido(alumnesAuxTrim,cAlumne)){
             alumnesAuxTrim.push(cAlumne)
         }
@@ -60,19 +72,39 @@ function trimAlumnes(centre){
     return alumnesAuxTrim;
 }
   
+
+function filterAlumnesByGroup(alumnes,group){
+    var alumnesAux = [];
+    alumnes.forEach(function(cAlumne){
+        //TODO
+        if (cAlumne.
+    }
+}
+
+function getAlumnes(centre){
+    // For now this seems redundant buy I think 
+    // will be usefull in the future
+    return centre.centre.alumnes.alumne;
+}
+
 var program = require('commander');
 
 
 program
   .version('0.1')
   .option('-f, --file [filename]',"File of Users and Groups")
-  .option('-i, --info',"Engine CLI for Users and Groups")
+  .option('-i, --info',"IES Info")
+  .option('-G, --listgroups',"List all Groups")
+  .option('-g, --group',"List all Groups")
+  .option('-c, --csv',"CSV output")
   .option('-a, --alumnes',"Show Alumnes")
+  .option('-R, --raw', "Show whitout filters") 
   .parse(process.argv);
 
 
 var filename = "";
 var centre = null;
+var outputMode = "simple"
 
 if(program.file){
 
@@ -81,6 +113,8 @@ if(program.file){
 
 }
 
+if(program.csv) outputMode = "csv";
+
 if (program.info){
     info(centre);
     process.exit(0);
@@ -88,11 +122,22 @@ if (program.info){
 
 if (program.alumnes) {
 
-    alumnes(centre);
-    var unicos = trimAlumnes(centre);
-    console.log(centre.centre.alumnes.alumne.length);
-    printAlumnes(unicos);
-    printAlumnes(unicos,"csv");
-    process.exit(0);
+    var alumnes = getAlumnes(centre); 
 
+    if (program.raw){
+
+        printAlumnes(alumnes);
+    }
+    else{
+       
+        alumnes = trimAlumnes(alumnes);
+        
+        if (program.group){
+                    alumnes = filterAlumnesByGroup(alumnes);
+        }
+        
+        printAlumnes(alumnes,outputMode);
+    }
+    
+    process.exit(0);
 }
