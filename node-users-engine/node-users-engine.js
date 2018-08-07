@@ -77,7 +77,7 @@ function filterAlumnesByGroup(alumnes,group){
     var alumnesAux = [];
     alumnes.forEach(function(cAlumne){
         //TODO
-        if (cAlumne.
+        //if (cAlumne.
     }
 }
 
