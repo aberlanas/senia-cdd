@@ -30,6 +30,82 @@ function info (centre) {
    console.log(centre);
 }
 
+// 
+// GRUPS
+//
+
+function printGrups(grups,mode="simple"){
+    
+    grups.forEach(function(grup){
+        if (mode == "simple"){
+            console.log(" * " + grup.nom + " : " + grup.codi);
+        }else if (mode == "csv"){
+            console.log(grup.nom + ";" + grup.codi);
+        }
+    });
+
+}
+
+function getGroupCodi(nom,grups){
+
+    var codi = "";
+
+    grups.forEach(function(grup){
+        if(grup.nom == nom) codi = grup.codi
+    });
+
+    return codi;
+   
+}
+
+//
+// ASSIGNATURES 
+//
+
+function printAssignatures(assignatures,mode="simple"){
+
+    assignatures.forEach(function(assignatura){
+        console.log(" * "+assignatura.codi+" : "+assignatura.nom);
+    });
+
+}
+
+function getAssignaturaName(assignatures,codi){
+    var nom="";
+    assignatures.forEach(function(assignatura){
+        if (assignatura.codi ==codi){
+             nom = assignatura.nom;
+        }
+    });
+    return nom;
+}
+
+//
+// PROFESSORS
+//
+
+
+
+function printProfessors(professors,mode="simple"){
+    professors.forEach(function(professor){
+        if (mode == "simple"){
+            console.log(" * "+professor.nom+","+professor.cognoms);
+            console.log(" ---> Tutor ");
+            console.log(" ---> Modulos ");
+            console.log(" \n===== XXXX ===== \n"); 
+        }
+        if (mode == "csv"){
+            
+            console.log(professor.nom+";"+professor.cognoms+ ";"+professor.document);
+        }
+    });
+}
+
+
+//
+// ALUMNES
+//
+
 function alumnes (centre) {
   
     centre.centre.alumnes.alumne.forEach(function(alum){ 
@@ -46,10 +122,11 @@ function printAlumnes(alumnes,mode="simple"){
         }
         if (mode == "csv"){
             
-            console.log(alumne.nom+","+alumne.cognoms+ ","+alumne.nia);
+            console.log(alumne.nom+";"+alumne.cognoms+ ";"+alumne.nia);
         }
     });
 }
+
 
 function alumneRepetido(vAlum,alum){
     var esta = false;
@@ -68,24 +145,60 @@ function trimAlumnes(alumnes){
             alumnesAuxTrim.push(cAlumne)
         }
        });
-    console.log(" * Procesados :"+alumnesAuxTrim.length);
     return alumnesAuxTrim;
 }
   
 
-function filterAlumnesByGroup(alumnes,group){
+function filterAlumnesByGroup(alumnes,grupCodi){
     var alumnesAux = [];
+
     alumnes.forEach(function(cAlumne){
-        //TODO
-        //if (cAlumne.
-    }
+         if (cAlumne.grup == grupCodi){
+             alumnesAux.push(cAlumne)
+         }
+    }); 
+    return alumnesAux;
 }
+
+
+//
+// Professors 
+//
+
+
+
+
+
+
+
+
+//
+// This part could be extracted as an API 
+//
+
 
 function getAlumnes(centre){
     // For now this seems redundant buy I think 
     // will be usefull in the future
     return centre.centre.alumnes.alumne;
 }
+
+function getGrups(centre){
+    // For now this seems redundant
+    return centre.centre.grups.grup;
+}
+
+
+function getProfessors(centre){
+    return centre.centre.professors.professor;
+}
+
+function getAssignatures(centre){
+    return centre.centre.assignatures.assignatura;
+}
+
+
+// Start the CLI itself (MAIN)
 
 var program = require('commander');
 
@@ -94,18 +207,29 @@ program
   .version('0.1')
   .option('-f, --file [filename]',"File of Users and Groups")
   .option('-i, --info',"IES Info")
-  .option('-G, --listgroups',"List all Groups")
-  .option('-g, --group',"List all Groups")
+  .option('-G, --listGroups',"List all Groups")
+  .option('-A, --listAlumnes',"Show All Alumnes")
+  .option('-P, --listProfessors'," Show All Professors")
+  .option('-M, --listMateries'," Show All Assignatures")
+  .option('-g, --group [group]',"List all teachers| materies | alumnes of this group")
   .option('-c, --csv',"CSV output")
-  .option('-a, --alumnes',"Show Alumnes")
   .option('-R, --raw', "Show whitout filters") 
   .parse(process.argv);
 
 
+// Some variables and configs (default values)
+//
 var filename = "";
 var centre = null;
 var outputMode = "simple"
 
+
+// Logic and options 
+//
+// Common values, options that could be enabled 
+// or disabled and affect all the logic of the 
+// program.
+// 
 if(program.file){
 
     filename = program.file;
@@ -115,12 +239,26 @@ if(program.file){
 
 if(program.csv) outputMode = "csv";
 
+
+
+// Mutual Exclude Options
+
+
 if (program.info){
     info(centre);
     process.exit(0);
 }
 
-if (program.alumnes) {
+
+if (program.listGroups){
+
+    var grups  = getGrups(centre);
+    printGrups(grups,outputMode);
+    process.exit(0);
+}
+
+
+if (program.listAlumnes) {
 
     var alumnes = getAlumnes(centre); 
 
@@ -133,11 +271,32 @@ if (program.alumnes) {
         alumnes = trimAlumnes(alumnes);
         
         if (program.group){
-                    alumnes = filterAlumnesByGroup(alumnes);
+                    // Only using grups if needed 
+                    var grups = getGrups(centre);
+                    var grupCodi = getGroupCodi(program.group,grups);
+
+                    alumnes = filterAlumnesByGroup(alumnes,grupCodi);
         }
         
         printAlumnes(alumnes,outputMode);
     }
     
     process.exit(0);
+}
+
+if (program.listProfessors){
+    
+    var professors = getProfessors(centre);
+    printProfessors(professors,outputMode);
+    process.exit(0);
+
+}
+
+
+if (program.listMateries){
+
+    var assignatures = getAssignatures(centre);
+    printAssignatures(assignatures,outputMode);
+    process.exit(0);
+
 }
