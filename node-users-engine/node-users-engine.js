@@ -46,8 +46,21 @@ function printGrups(grups,mode="simple"){
 
 }
 
-function getGroupCodi(nom,grups){
+function getGroupNom(codi){
+    var grups = getGrups(centre);
+    var nom = "";
 
+    grups.forEach(function(grup){
+        if(grup.codi == codi) nom = grup.nom
+    });
+
+    return nom;
+ 
+}
+
+function getGroupCodi(nom){
+
+    var grups = getGrups(centre);
     var codi = "";
 
     grups.forEach(function(grup){
@@ -70,10 +83,12 @@ function printAssignatures(assignatures,mode="simple"){
 
 }
 
-function getAssignaturaName(assignatures,codi){
+function getAssignaturaName(codi){
+    
+    var assignatures = getAssignatures(centre);
     var nom="";
     assignatures.forEach(function(assignatura){
-        if (assignatura.codi ==codi){
+        if (codi.endsWith(assignatura.codi)){
              nom = assignatura.nom;
         }
     });
@@ -90,8 +105,32 @@ function printProfessors(professors,mode="simple"){
     professors.forEach(function(professor){
         if (mode == "simple"){
             console.log(" * "+professor.nom+","+professor.cognoms);
-            console.log(" ---> Tutor ");
+           
+            if (JSON.stringify(professor.tutor) != "{}" ){
+                console.log(" ---> Tutor : "+professor.tutor +" ( "+getGroupNom(professor.tutor)+" )");
+            }
             console.log(" ---> Modulos ");
+            if (professor.grupoassignatura != undefined ){
+                
+                var gruposSet = new Set();
+                
+                professor.grupoassignatura.forEach(function(grupo){
+
+                   var aux = grupo.split("#")[1];
+                   gruposSet.add(aux);
+
+                });
+                
+                // Dejamos la logica anterior por si acaso
+                //professor.grupoassignatura.forEach(function(grupo){
+                gruposSet.forEach(function(grupo){
+                   console.log(" - "+grupo+" - " +getAssignaturaName(grupo));
+                });
+            }else{
+                console.log(" No hay modulos asignados ");
+            }
+
+            //console.log(JSON.stringify(professor));
             console.log(" \n===== XXXX ===== \n"); 
         }
         if (mode == "csv"){
@@ -194,6 +233,7 @@ function getProfessors(centre){
 }
 
 function getAssignatures(centre){
+    //console.log(JSON.stringify(centre.centre.assignatures.assignatura));
     return centre.centre.assignatures.assignatura;
 }
 
@@ -273,7 +313,7 @@ if (program.listAlumnes) {
         if (program.group){
                     // Only using grups if needed 
                     var grups = getGrups(centre);
-                    var grupCodi = getGroupCodi(program.group,grups);
+                    var grupCodi = getGroupCodi(program.group);
 
                     alumnes = filterAlumnesByGroup(alumnes,grupCodi);
         }
