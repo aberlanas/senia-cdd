@@ -15,6 +15,50 @@ var fs = require('fs');
 var parser = require('xml2json');
 
 
+
+
+// 
+// TOOLS  
+//
+function getCleanedString(cadena){
+   // Definimos los caracteres que queremos eliminar
+   var specialChars = "!@#$^&%*()+=-[]\/{}|:<>?,.";
+
+   // Los eliminamos todos
+   for (var i = 0; i < specialChars.length; i++) {
+       cadena= cadena.replace(new RegExp("\\" + specialChars[i], 'gi'), '');
+   }   
+
+   // Lo queremos devolver limpio en minusculas
+   cadena = cadena.toLowerCase();
+
+   // Quitamos espacios y los sustituimos por _ porque nos gusta mas asi
+   cadena = cadena.replace(/ /g,"_");
+
+   // Quitamos acentos y "ñ". Fijate en que va sin comillas el primer parametro
+   cadena = cadena.replace(/á/gi,"a");
+   cadena = cadena.replace(/à/gi,"a");
+   cadena = cadena.replace(/é/gi,"e");
+   cadena = cadena.replace(/è/gi,"e");
+   cadena = cadena.replace(/í/gi,"i");
+   cadena = cadena.replace(/ó/gi,"o");
+   cadena = cadena.replace(/ò/gi,"o");
+   cadena = cadena.replace(/ú/gi,"u");
+   cadena = cadena.replace(/ñ/gi,"n");
+   return cadena;
+}
+
+// TODO Arreglar los apellidos
+function capitalizeFirstLetter(string) {
+    var aux  = string.toLowerCase();
+    var finals = "";
+    aux.split(" ").forEach(function(aux2){
+        finals+=aux2.charAt(0).toUpperCase() + aux2.slice(1);
+    });
+    return finals;
+}
+
+
 // Init 
 
 function initCentre(filename){
@@ -153,11 +197,18 @@ function alumnes (centre) {
     
 }
 
+function getUsername(alumne){
+    var aux = "";
+    aux = alumne.cognoms.split(" ")[0]+"."+alumne.nom.split(" ")[0];
+    aux = getCleanedString(aux);
+    return aux;
+
+}
 
 function printAlumnes(alumnes,mode="simple"){
     // Header for csv files
     if (mode == "moodle"){
-        console.log("username,firstname,lastname,email,
+        console.log("username;password;firstname;lastname;email;city;country");
     }
 
 
@@ -171,6 +222,11 @@ function printAlumnes(alumnes,mode="simple"){
         }
         if (mode == "moodle"){
 
+            var username = getUsername(alumne);
+            var correo = username+"@tucorreo.org";
+            var nom = capitalizeFirstLetter(alumne.nom);
+            var cognoms = capitalizeFirstLetter(alumne.cognoms);
+            console.log(username+";"+"senia2018"+";"+nom+";"+cognoms+";"+correo+";"+"Paiporta"+";"+"ES");
         }
     });
 }
