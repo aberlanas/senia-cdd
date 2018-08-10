@@ -155,6 +155,12 @@ function alumnes (centre) {
 
 
 function printAlumnes(alumnes,mode="simple"){
+    // Header for csv files
+    if (mode == "moodle"){
+        console.log("username,firstname,lastname,email,
+    }
+
+
     alumnes.forEach(function(alumne){
         if (mode == "simple"){
             console.log(" * "+alumne.nom+","+alumne.cognoms+ " - "+alumne.nia);
@@ -162,6 +168,9 @@ function printAlumnes(alumnes,mode="simple"){
         if (mode == "csv"){
             
             console.log(alumne.nom+";"+alumne.cognoms+ ";"+alumne.nia);
+        }
+        if (mode == "moodle"){
+
         }
     });
 }
@@ -199,14 +208,16 @@ function filterAlumnesByGroup(alumnes,grupCodi){
     return alumnesAux;
 }
 
+function filterAlumnesByCurso(alumnes,cursCodi){
+    var alumnesAux = [];
 
-//
-// Professors 
-//
-
-
-
-
+    alumnes.forEach(function(cAlumne){
+         if (cAlumne.grup.startsWith(cursCodi)){
+             alumnesAux.push(cAlumne)
+         }
+    }); 
+    return alumnesAux;
+}
 
 
 
@@ -252,7 +263,9 @@ program
   .option('-P, --listProfessors'," Show All Professors")
   .option('-M, --listMateries'," Show All Assignatures")
   .option('-g, --group [group]',"List all teachers| materies | alumnes of this group")
+  .option('-C, --curso [curso]',"List all teachers| materies | alumnes of this curso")
   .option('-c, --csv',"CSV output")
+  .option('-m, --moodle',"Moodle CSV output")
   .option('-R, --raw', "Show whitout filters") 
   .parse(process.argv);
 
@@ -278,7 +291,7 @@ if(program.file){
 }
 
 if(program.csv) outputMode = "csv";
-
+if(program.moodle) outputMode = "moodle";
 
 
 // Mutual Exclude Options
@@ -311,13 +324,18 @@ if (program.listAlumnes) {
         alumnes = trimAlumnes(alumnes);
         
         if (program.group){
-                    // Only using grups if needed 
-                    var grups = getGrups(centre);
-                    var grupCodi = getGroupCodi(program.group);
+            // Only using grups if needed 
+            var grups = getGrups(centre);
+            var grupCodi = getGroupCodi(program.group);
 
-                    alumnes = filterAlumnesByGroup(alumnes,grupCodi);
+            alumnes = filterAlumnesByGroup(alumnes,grupCodi);
         }
         
+        if (program.curso){
+            var cursCodi = program.curso;
+            alumnes = filterAlumnesByCurso(alumnes,cursCodi);
+        }
+
         printAlumnes(alumnes,outputMode);
     }
     
