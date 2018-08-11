@@ -48,13 +48,23 @@ function getCleanedString(cadena){
    return cadena;
 }
 
-// TODO Arreglar los apellidos
 function capitalizeFirstLetter(string) {
+
     var aux  = string.toLowerCase();
     var finals = "";
-    aux.split(" ").forEach(function(aux2){
-        finals+=aux2.charAt(0).toUpperCase() + aux2.slice(1);
-    });
+    var vaux = aux.split(" ");
+    
+    if (vaux.length > 1){
+        for (var x = 0; x<vaux.length ;x++){
+            finals+=vaux[x].charAt(0).toUpperCase() + vaux[x].slice(1);
+            if ( x<vaux.length-1){
+                finals+=" ";
+            }
+        }
+    }
+    else{
+        finals+=aux.charAt(0).toUpperCase() + aux.slice(1);
+    }
     return finals;
 }
 
@@ -119,10 +129,20 @@ function getGroupCodi(nom){
 // ASSIGNATURES 
 //
 
+//TODO categorias crearlas primero
 function printAssignatures(assignatures,mode="simple"){
 
+    if (mode == "moodle"){
+        console.log("shortname, fullname,category");
+
+    }
     assignatures.forEach(function(assignatura){
+        if ( mode == "moodle"){
+            var categoria="1";
+            console.log(assignatura.codi+","+assignatura.nom+","+categoria);
+        }else{
         console.log(" * "+assignatura.codi+" : "+assignatura.nom);
+        }
     });
 
 }
@@ -198,9 +218,21 @@ function alumnes (centre) {
 }
 
 function getUsername(alumne){
+    
     var aux = "";
     aux = alumne.cognoms.split(" ")[0]+"."+alumne.nom.split(" ")[0];
+
     aux = getCleanedString(aux);
+
+    if (uniqueV.includes(aux)){
+        // Por ahora anyado el segundo apellido y ya
+        // se podria hacer con un numerico pero no me queda
+        // claro cual seria la mejor solucion.
+        aux = alumne.cognoms.split(" ")[0]+"."+alumne.cognoms.split(" ")[1]+"."+alumne.nom.split(" ")[0];
+        aux = getCleanedString(aux);
+        }
+
+    uniqueV.push(aux);
     return aux;
 
 }
@@ -210,6 +242,7 @@ function printAlumnes(alumnes,mode="simple"){
     if (mode == "moodle"){
         console.log("username;password;firstname;lastname;email;city;country");
     }
+
 
 
     alumnes.forEach(function(alumne){
@@ -320,6 +353,7 @@ program
   .option('-M, --listMateries'," Show All Assignatures")
   .option('-g, --group [group]',"List all teachers| materies | alumnes of this group")
   .option('-C, --curso [curso]',"List all teachers| materies | alumnes of this curso")
+  .option('-u, --unique',"UniqueNames for alumnes and teachers")
   .option('-c, --csv',"CSV output")
   .option('-m, --moodle',"Moodle CSV output")
   .option('-R, --raw', "Show whitout filters") 
@@ -331,7 +365,8 @@ program
 var filename = "";
 var centre = null;
 var outputMode = "simple"
-
+var unique = false;
+var uniqueV = [];
 
 // Logic and options 
 //
@@ -371,6 +406,10 @@ if (program.listAlumnes) {
 
     var alumnes = getAlumnes(centre); 
 
+    if (program.unique){
+        unique = true;
+    }
+
     if (program.raw){
 
         printAlumnes(alumnes);
@@ -378,7 +417,7 @@ if (program.listAlumnes) {
     else{
        
         alumnes = trimAlumnes(alumnes);
-        
+
         if (program.group){
             // Only using grups if needed 
             var grups = getGrups(centre);
