@@ -15,8 +15,6 @@ var fs = require('fs');
 var parser = require('xml2json');
 
 
-
-
 // 
 // TOOLS  
 //
@@ -89,13 +87,20 @@ function info (centre) {
 //
 
 function printGrups(grups,mode="simple"){
-    
+   
+    if (mode == "moodle"){
+        console.log("name;description");
+    }
+
     grups.forEach(function(grup){
         if (mode == "simple"){
             console.log(" * " + grup.nom + " : " + grup.codi);
         }else if (mode == "csv"){
             console.log(grup.nom + ";" + grup.codi);
+        }else if (mode == "moodle"){
+            console.log("Clase de "+grup.nom+";"+"Alumnado de "+grup.nom+" ("+grup.codi+")");
         }
+
     });
 
 }
