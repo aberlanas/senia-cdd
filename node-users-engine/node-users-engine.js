@@ -86,22 +86,48 @@ function info (centre) {
 // GRUPS
 //
 
+function createCohort(nom,codi,idPrefix){
+    var cohortAux = {};
+    cohortAux.nom = nom;
+    cohortAux.codi = codi;
+    cohortAux.idPrefix =  customIdPrefix+"."+codi;
+    cohortsV.push(cohortAux);
+    return cohortAux;
+}
+
+
 function printGrups(grups,mode="simple"){
    
     if (mode == "moodle"){
-        console.log("name;description");
+        console.log("name;idnumber;description");
     }
+    
+    // Variable para el autoincremental del idNumber
+    var incrementalId = 0;
 
     grups.forEach(function(grup){
+        
         if (mode == "simple"){
             console.log(" * " + grup.nom + " : " + grup.codi);
-        }else if (mode == "csv"){
-            console.log(grup.nom + ";" + grup.codi);
-        }else if (mode == "moodle"){
-            console.log("Clase de "+grup.nom+";"+"Alumnado de "+grup.nom+" ("+grup.codi+")");
+        }
+        else if (mode == "csv"){
+            console.log(grup.nom + ";"+year+";" + grup.codi);
+        }
+        else if (mode == "moodle"){
+         
+            var cohortAux = createCohort(grup.nom,grup.codi,incrementalId);
+            
+            incrementalId++;
+
+            console.log("Clase de "+cohortAux.nom+";"+cohortAux.idPrefix+";"+"Alumnado de "+cohortAux.nom+" ("+cohortAux.codi+")");
         }
 
     });
+
+    // Si queremos que se guarden las cohortes escribir el JSON de las cohortes
+    if (saveCohorts){
+        console.log(JSON.stringify(cohortsV));
+    }
 
 }
 
@@ -242,10 +268,31 @@ function getUsername(alumne){
 
 }
 
+function getIdCohort(grupCodi){
+
+    var idCohort = "";
+
+    storedCohorts.forEach(function(sCohort){
+        if (sCohort.codi == grupCodi){
+            idCohort = sCohort.idPrefix;
+        }
+    });
+
+    return idCohort;
+}
+
+
 function printAlumnes(alumnes,mode="simple"){
     // Header for csv files
+    
+    var csvheader  = "";
     if (mode == "moodle"){
-        console.log("username;password;firstname;lastname;email;city;country");
+    
+        csvheader = "username;password;firstname;lastname;email;city;country";
+        if ( usingStoredCohorts ){
+            csvheader = csvheader + ";cohort1";
+        }
+        console.log(csvheader);
     }
 
 
@@ -259,12 +306,33 @@ function printAlumnes(alumnes,mode="simple"){
             console.log(alumne.nom+";"+alumne.cognoms+ ";"+alumne.nia);
         }
         if (mode == "moodle"){
+            
+            var line = "";
 
             var username = getUsername(alumne);
+            line += username+";";
+
             var correo = username+"@tucorreo.org";
+            line += correo+";";
+
             var nom = capitalizeFirstLetter(alumne.nom);
+            line += nom+";";
+
             var cognoms = capitalizeFirstLetter(alumne.cognoms);
-            console.log(username+";"+"senia2018"+";"+nom+";"+cognoms+";"+correo+";"+"Paiporta"+";"+"ES");
+            line += cognoms+";";
+
+            if (usingStoredCohorts){
+
+                var cohort = getIdCohort(alumne.grup);
+
+                line += cohort+";";
+            }
+
+            // For now this is hardcoded
+            line += "Paiporta;";
+            line += "ES";
+
+            console.log(line);
         }
     });
 }
@@ -361,6 +429,9 @@ program
   .option('-u, --unique',"UniqueNames for alumnes and teachers")
   .option('-c, --csv',"CSV output")
   .option('-m, --moodle',"Moodle CSV output")
+  .option('-s, --save'," Generate output for JSON too")
+  .option('-I, --customIdPrefix [customIdPrefix]', "Generate Cohorts ID with this prefix")
+  .option('-w, --withCohorts [cohortsFile]', "Generate Cohorts ID from this file")
   .option('-R, --raw', "Show whitout filters") 
   .parse(process.argv);
 
@@ -372,6 +443,11 @@ var centre = null;
 var outputMode = "simple"
 var unique = false;
 var uniqueV = [];
+var cohortsV = [];
+var customIdPrefix = null;
+var saveCohorts = false;
+var storedCohorts = {};
+var usingStoredCohorts = false;
 
 // Logic and options 
 //
@@ -402,6 +478,15 @@ if (program.info){
 if (program.listGroups){
 
     var grups  = getGrups(centre);
+
+    if (program.customIdPrefix){
+        customIdPrefix = program.customIdPrefix;
+    }
+
+    if (program.save){
+        saveCohorts = true;
+    }
+
     printGrups(grups,outputMode);
     process.exit(0);
 }
@@ -413,6 +498,11 @@ if (program.listAlumnes) {
 
     if (program.unique){
         unique = true;
+    }
+    
+    if (program.withCohorts){
+        storedCohorts = JSON.parse(fs.readFileSync(program.withCohorts,'utf8'));
+        usingStoredCohorts = true;
     }
 
     if (program.raw){
