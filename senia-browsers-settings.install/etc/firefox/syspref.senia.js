@@ -1,14 +1,14 @@
 // Senia settings
-lockPref("browser.startup.homepage", "https://docent.edu.gva.es/md-front/www/ | http://ieslasenia.org | http://revista.ieslasenia.org/ |  https://moodle.ieslasenia.org/ | 172.29.0.245 ");
+pref("browser.startup.homepage", "https://docent.edu.gva.es/md-front/www/ | http://ieslasenia.org | http://revista.ieslasenia.org/ |  https://moodle.ieslasenia.org/ | 172.29.0.245 ",locked);
 
 
-lockPref("pref.privacy.disable_button.view_passwords", true); //Disable the "Show Passwords" Button
-lockPref("privacy.donottrackheader.enabled", true); //no targeted ads
-lockPref("privacy.item.formdata", true); //clear saved form data
-lockPref("privacy.item.offlineApps", true); //clear offline apps data
-lockPref("security.enable_ssl3", true); //Use SSL 3.0
-lockPref("security.enable_tls", true); //Use TLS 1.0
+pref("pref.privacy.disable_button.view_passwords", true, locked); //Disable the "Show Passwords" Button
+pref("privacy.donottrackheader.enabled", true, locked); //no targeted ads
+pref("privacy.item.formdata", true, locked); //clear saved form data
+pref("privacy.item.offlineApps", true, locked); //clear offline apps data
+pref("security.enable_ssl3", true, locked); //Use SSL 3.0
+pref("security.enable_tls", true, locked); //Use TLS 1.0
 
 
 // Settings for PDFs
-lockPref("browser.helperApps.neverAsk.openFile",false);
+pref("browser.helperApps.neverAsk.openFile",false, locked);
