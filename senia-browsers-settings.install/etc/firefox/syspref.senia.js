@@ -11,4 +11,5 @@ pref("security.enable_tls", true, locked); //Use TLS 1.0
 
 
 // Settings for PDFs
-pref("browser.helperApps.neverAsk.openFile",false, locked);
+pref("browser.helperApps.neverAsk.openFile","", locked);
+pref("pdfjs.disabled",true,locked);

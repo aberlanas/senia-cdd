@@ -1,3 +1,13 @@
+senia-cdd (2018.09.06) bionic; urgency=high
+
+  * Updated a lot of things!
+  * Firefox new prefs format
+  * Added new page to default set of pages
+  * Try to run automatic-upgrades
+  * Some usefull  tools added to the repo 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 06 Sep 2018 07:15:47 +0200
+
 senia-cdd (2018.07.12) bionic; urgency=high
 
   * Using netplan a full
