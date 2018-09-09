@@ -312,6 +312,9 @@ function printAlumnes(alumnes,mode="simple"){
             var username = getUsername(alumne);
             line += username+";";
 
+            // For now password are always the same
+            line += username+";";
+            
             var correo = username+"@tucorreo.org";
             line += correo+";";
 
