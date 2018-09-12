@@ -23,13 +23,13 @@ reset(){
 sirena_conserjeria(){
 	
 	echo " * [ Senia Cron ] Installing Sirenas "
-	cronta ${CRONTAB_PATH}/conserjeria_sirena.txt
+	crontab ${CRONTAB_PATH}/conserjeria_sirena.txt
 }
 
 shutdown_aulas(){
 
 	echo " * [ Senia Cron ] Installing aulas shutdown: 15:10 22:00 "
-	crontab ${CRONTAB_PATH}/crontab_shutdown_15_22.txt
+	crontab ${CRONTAB_PATH}/crontab_shutdown_15_21.txt
 }
 
 shutdown_inf(){
@@ -45,15 +45,15 @@ case "$1" in
             	reset
             ;;
         shutdown_aulas)
-		shutdown_aulas
+		    shutdown_aulas
             ;;
 	shutdown_inf)
-		shutdown_inf
-		;;
+		    shutdown_inf
+		    ;;
         *)
-            echo $"Usage: $0 {reset|shutdown_aulas|shutdown_inf}"
+            echo "Usage: $0 {reset|shutdown_aulas|shutdown_inf}"
             exit 1
-
+            ;;
 esac
 
 

@@ -324,16 +324,20 @@ function printAlumnes(alumnes,mode="simple"){
             var cognoms = capitalizeFirstLetter(alumne.cognoms);
             line += cognoms+";";
 
-            if (usingStoredCohorts){
 
-                var cohort = getIdCohort(alumne.grup);
-
-                line += cohort+";";
-            }
 
             // For now this is hardcoded
             line += "Paiporta;";
             line += "ES";
+
+            if (usingStoredCohorts){
+
+                // now this is the grup
+                //var cohort = getIdCohort(alumne.grup);
+                var cohort = alumne.grup;
+
+                line += cohort+";";
+            }
 
             console.log(line);
         }
