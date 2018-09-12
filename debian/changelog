@@ -1,3 +1,11 @@
+senia-cdd (2018.09.12) bionic; urgency=high
+
+  * New Wallpaper september
+  * Added cron system for packaging
+  * Updated with new hours 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 12 Sep 2018 07:54:13 +0200
+
 senia-cdd (2018.09.06) bionic; urgency=high
 
   * Updated a lot of things!
