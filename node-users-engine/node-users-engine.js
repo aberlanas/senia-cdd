@@ -315,20 +315,25 @@ function printAlumnes(alumnes,mode="simple"){
             // For now password are always the same
             line += username+";";
             
-            var correo = username+"@tucorreo.org";
-            line += correo+";";
-
             var nom = capitalizeFirstLetter(alumne.nom);
             line += nom+";";
 
             var cognoms = capitalizeFirstLetter(alumne.cognoms);
             line += cognoms+";";
 
-
+            var correo = username+"@tucorreo.org";
+            line += correo+";";
 
             // For now this is hardcoded
             line += "Paiporta;";
-            line += "ES";
+            line += "ES;";
+            if (usingStoredCohorts){
+                
+                // For now is the group
+                // var cohort = getIdCohort(alumne.grup);
+                var cohort = alumne.grup;
+                line += cohort;
+            }
 
             if (usingStoredCohorts){
 
@@ -438,7 +443,7 @@ program
   .option('-m, --moodle',"Moodle CSV output")
   .option('-s, --save'," Generate output for JSON too")
   .option('-I, --customIdPrefix [customIdPrefix]', "Generate Cohorts ID with this prefix")
-  .option('-w, --withCohorts [cohortsFile]', "Generate Cohorts ID from this file")
+  .option('-w, --withCohorts', "Generate with Cohorts")
   .option('-R, --raw', "Show whitout filters") 
   .parse(process.argv);
 
@@ -508,7 +513,7 @@ if (program.listAlumnes) {
     }
     
     if (program.withCohorts){
-        storedCohorts = JSON.parse(fs.readFileSync(program.withCohorts,'utf8'));
+        //storedCohorts = JSON.parse(fs.readFileSync(program.withCohorts,'utf8'));
         usingStoredCohorts = true;
     }
 
