@@ -335,15 +335,7 @@ function printAlumnes(alumnes,mode="simple"){
                 line += cohort;
             }
 
-            if (usingStoredCohorts){
-
-                // now this is the grup
-                //var cohort = getIdCohort(alumne.grup);
-                var cohort = alumne.grup;
-
-                line += cohort+";";
-            }
-
+        
             console.log(line);
         }
     });
