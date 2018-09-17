@@ -28,7 +28,7 @@ sirena_conserjeria(){
 
 shutdown_aulas(){
 
-	echo " * [ Senia Cron ] Installing aulas shutdown: 15:10 22:00 "
+	echo " * [ Senia Cron ] Installing aulas shutdown: 15:05 21:00 "
 	crontab ${CRONTAB_PATH}/crontab_shutdown_15_21.txt
 }
 

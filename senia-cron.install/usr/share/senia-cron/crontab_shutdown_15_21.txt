@@ -8,5 +8,5 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
-00 15 * * * /sbin/shutdown -h now
+05 15 * * * /sbin/shutdown -h now
 00 21 * * * /sbin/shutdown -h now

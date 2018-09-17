@@ -1,2 +1,2 @@
 // Default always incognito navigation
-lockPref("browser.privatebrowsing.autostart",true);
+pref("browser.privatebrowsing.autostart",true,locked);
