@@ -1,3 +1,10 @@
+senia-cdd (2018.09.17.1) bionic; urgency=high
+
+  * Updated Dependences
+  * Updated senia-locks
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 17 Sep 2018 19:24:46 +0200
+
 senia-cdd (2018.09.17) bionic; urgency=high
 
   * Updated Firefox settings for incognito

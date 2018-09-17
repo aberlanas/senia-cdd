@@ -46,6 +46,9 @@ case "$1" in
 		logger -s -t senia-locks "Removing 02-settings-terminal"
 		rm -f /etc/dconf/db/senia.d/locks/02-settings-terminal
 	fi
+    logger -s -t senia-locks " * Senia settings"
+    cp -r /usr/share/senia-locks/locks/* /etc/dconf/db/senia.d/locks/
+    dconf update
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)
