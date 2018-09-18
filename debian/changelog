@@ -1,3 +1,12 @@
+senia-cdd (2018.09.18) bionic; urgency=high
+
+  * Changed to Compiz instead Marco default 
+    compositor to enable resizing in libreoffice
+    and other GTK apps.
+  * Restored the "porqueno" system in themes 
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 18 Sep 2018 07:58:20 +0200
+
 senia-cdd (2018.09.17.1) bionic; urgency=high
 
   * Updated Dependences

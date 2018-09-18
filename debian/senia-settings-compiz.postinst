@@ -30,26 +30,7 @@ case "$1" in
   configure)
     # Set up our config for dconf
 	# Dirty hack
-  	if [ -f /etc/dconf/db/senia.d/locks/00-default-background ]; then
-		logger -s -t senia-locks "Removing 00-default-background"
-		rm  -f /etc/dconf/db/senia.d/locks/00-default-background
-	fi
-	if [ -f /etc/dconf/db/senia.d/locks/01-background ]; then
-		logger -s -t senia-locks "Removing 01-background"
-		rm -f /etc/dconf/db/senia.d/locks/01-background
-	fi
-	if [ -f /etc/dconf/db/senia.d/locks/01-default-themes ]; then
-		logger -s -t senia-locks "Removing 01-default-themes"
-		rm -f /etc/dconf/db/senia.d/locks/01-default-themes
-	fi
-	if [ -f /etc/dconf/db/senia.d/locks/02-settings-terminal ]; then
-		logger -s -t senia-locks "Removing 02-settings-terminal"
-		rm -f /etc/dconf/db/senia.d/locks/02-settings-terminal
-	fi
-    logger -s -t senia-locks " * Senia settings"
-    mkdir -p /etc/dconf/db/senia.d/locks/
-    cp -r /usr/share/senia-locks/locks/* /etc/dconf/db/senia.d/locks/
-    dconf update
+	dconf update
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)
