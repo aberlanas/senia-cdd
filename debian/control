@@ -11,6 +11,12 @@ Depends: ${misc:Depends}, mate-desktop-environment, lightdm-gtk-greeter, plymout
 Description: senia wallpapers and settings
  Customized backgrounds for SENIA IES
 
+Package: senia-settings-compiz
+Architecture: all
+Depends: ${miscDepends}, compiz
+Description: Senia settings for compiz
+ Customized senia settings for compiz as WM
+
 Package: senia-frozen-users
 Architecture: all
 Depends: ${misc:Depends}, lsb-base
