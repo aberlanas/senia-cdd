@@ -9,6 +9,7 @@ silent-bell=true
 
 [org/mate/marco/general]
 num-workspaces=2
+allow-tiling=true
 
 [org/mate/desktop/session/required-components]
 windowmanager='compiz'
@@ -16,9 +17,11 @@ windowmanager='compiz'
 [org/compiz/profiles/mate/plugins/core]
 hsize=2
 vsize=1
+
 [org/compiz]
 current-profile='mate'
 
 [org/compiz/profiles/mate/plugins/composite]
 refresh-rate=50
+
 
