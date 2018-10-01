@@ -41,7 +41,11 @@ theme='Pocillo-light'
 compositing-manager=true
 
 [org/mate/panel/general]
-locked-down=false
+locked-down=true
+
+
+[org/mate/panel/toplevels/top/background]
+type='none'
 
 [org/mate/power-manager]
 backlight-battery-reduce=false

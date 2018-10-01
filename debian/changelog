@@ -1,3 +1,10 @@
+senia-cdd (2018.10.1) bionic; urgency=medium
+
+  * Updated with dependences for language
+  * More NationalSozialism
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 01 Oct 2018 19:02:19 +0200
+
 senia-cdd (2018.09.18) bionic; urgency=high
 
   * Changed to Compiz instead Marco default 
