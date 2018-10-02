@@ -1,3 +1,9 @@
+senia-cdd (2018.10.3) bionic; urgency=high
+
+  * Updated background
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 02 Oct 2018 12:09:32 +0200
+
 senia-cdd (2018.10.2) bionic; urgency=high
 
   * Updated with dependences for language
