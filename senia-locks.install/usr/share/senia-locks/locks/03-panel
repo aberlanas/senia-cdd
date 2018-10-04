@@ -1,1 +1,7 @@
 /org/mate/panel/toplevels/top/background/type
+/org/mate/panel/toplevels/top/orientation
+
+/org/mate/panel/toplevels/bottom/background/type
+/org/mate/panel/toplevels/bottom/orientation
+
+/org/mate/desktop/background/show-desktop-icons

@@ -47,6 +47,15 @@ locked-down=true
 [org/mate/panel/toplevels/top/background]
 type='none'
 
+[org/mate/panel/toplevels/top]
+orientation='top'
+
+[org/mate/panel/toplevels/bottom/background]
+type='none'
+
+[org/mate/panel/toplevels/bottom]
+orientation='bottom'
+
 [org/mate/power-manager]
 backlight-battery-reduce=false
 
