@@ -26,16 +26,16 @@ sirena_conserjeria(){
 	crontab ${CRONTAB_PATH}/conserjeria_sirena.txt
 }
 
-shutdown_aulas(){
+shutdown_15_21(){
 
 	echo " * [ Senia Cron ] Installing aulas shutdown: 15:05 21:00 "
 	crontab ${CRONTAB_PATH}/crontab_shutdown_15_21.txt
 }
 
-shutdown_inf(){
+shutdown_21(){
 	
-	echo " * [ Senia Cron ] Installing aulas INF shutdown: 21:40 "
-	crontab  ${CRONTAB_PATH}/crontab_shutdown_21_40.txt	
+	echo " * [ Senia Cron ] Installing aulas INF shutdown: 21:00 "
+	crontab  ${CRONTAB_PATH}/crontab_shutdown_21_00.txt	
 }
 
 sanity_checks
@@ -44,14 +44,14 @@ case "$1" in
         reset)
             	reset
             ;;
-        shutdown_aulas)
-		    shutdown_aulas
+        shutdown_15_21)
+		    shutdown_15_21
             ;;
-	shutdown_inf)
+	shutdown_21)
 		    shutdown_inf
 		    ;;
         *)
-            echo "Usage: $0 {reset|shutdown_aulas|shutdown_inf}"
+            echo "Usage: $0 {reset|shutdown_15_21|shutdown_21}"
             exit 1
             ;;
 esac
