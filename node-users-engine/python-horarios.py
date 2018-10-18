@@ -21,8 +21,10 @@ def read_all(f):
         tree = ElementTree.parse(f)
 
     for prof in tree.iter('docente');
+
     for node in tree.iter('horario_ocupacion'):
         print(node.attrib)
+        for 
         print(node.attrib['plantilla'])
 
 
