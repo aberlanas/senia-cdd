@@ -1,7 +1,13 @@
+senia-cdd (2018.10.4.29) bionic; urgency=high
+
+  * New November wallpaper
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 29 Oct 2018 15:44:30 +0100
+
 senia-cdd (2018.10.4.1) bionic; urgency=high
 
   * Fixed a little bug for inf
-  * Now senia-cron is more clear 
+  * Now senia-cron is more clear
 
  -- tic La Senia <tic@ieslasenia.org>  Thu, 04 Oct 2018 06:41:49 +0200
 

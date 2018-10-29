@@ -50,30 +50,33 @@ def read_all(f):
         print(profesor.dni)
     '''
 
-    
-    for node in tree.iter('horario_ocupacion'):
+    for dia in ["L","M","X","J","V"]:
 
+        for node in tree.iter('horario_ocupacion'):
+
+            if (dia == node.attrib['dia_semana']):
         
-        if ( node.attrib['codigo']== "821898618" or node.attrib['codigo']== "3249454" ):
-            docenteid = node.attrib['docente']
-            docenteAux = Profesor()
-
-            for aux in listaProfes:
-                if ( aux.dni == docenteid):
-                    docenteAux.dni = aux.dni
-                    docenteAux.nombre= aux.nombre
-                    docenteAux.apellido1 = aux.apellido1
-                    docenteAux.apellido2 = aux.apellido2
-
-        
-            print(" * -  " + node.attrib['dia_semana'] + " - " + node.attrib['sesion_orden'] + " ... " +docenteAux.nombre )
             
-            #print(node.attrib)
+                if ( node.attrib['ocupacion']== "821898618" or node.attrib['ocupacion']== "3249454" ):
+                    docenteid = node.attrib['docente']
+                    docenteAux = Profesor()
+                
+                    for aux in listaProfes:
+                        if ( aux.dni == docenteid):
+                            docenteAux.dni = aux.dni
+                            docenteAux.nombre= aux.nombre
+                            docenteAux.apellido1 = aux.apellido1
+                            docenteAux.apellido2 = aux.apellido2
+
+                   
+                    print(" * -  " + node.attrib['dia_semana'] + " - " + node.attrib['sesion_orden'] + " ... " +docenteAux.nombre + " Guardia" )
+                
+                #print(node.attrib)
     
 
 if __name__ == "__main__":
 
     sanity_checks()
     read_all(fileDb)
-    read_ocupaciones(fileDb)
+    #read_ocupaciones(fileDb)
     sys.exit(0)
