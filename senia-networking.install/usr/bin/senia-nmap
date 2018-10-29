@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+# Sanity checks
+if [ $# -eq 0 ]; then
+    echo " * [ USAGE ] : $(basename $0) 172.29.0.*"
+    exit 1
+fi
+
+
+# Some values
+
+
+echo " * Senia Nmap ... logging machines"
+nmap -sP "$1" > /tmp/senia-nmap.log
+
+echo " * Only ips "
+cat /tmp/senia-nmap.log | grep "$1" | sed -e "s%.* for %%g;s%.*(%%g;s%)%%g"|tr "\n" " "
+echo ""
+
+exit 0
