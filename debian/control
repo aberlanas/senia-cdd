@@ -141,7 +141,7 @@ Description: Senia package for AppInventor
 
 Package: senia-networking
 Architecture: all
-Depends: ${misc:Depends}, ethtool
+Depends: ${misc:Depends}, ethtool, nmap
 Description: Senia package for Networking 
  and WakeOnLan
 

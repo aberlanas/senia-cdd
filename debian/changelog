@@ -1,3 +1,9 @@
+senia-cdd (2018.11.09) bionic; urgency=high
+
+  * Updated nmap
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 09 Nov 2018 09:14:43 +0100
+
 senia-cdd (2018.10.29.1) bionic; urgency=high
 
   * New binary for senia-nmap

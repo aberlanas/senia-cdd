@@ -1,5 +1,5 @@
 [org/mate/terminal/profiles/default]
-use-theme-colors=false
+use-theme-colors=true
 background-color='#FFFFFFFFFFFF'
 foreground-color='#000000000000'
 

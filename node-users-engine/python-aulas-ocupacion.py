@@ -37,8 +37,8 @@ class Grupo:
                 self.color=color
 
 
-horarios_file='/home/aberlanas/Descargas/horariosclase.xml'
-profes_file='/home/aberlanas/Descargas/profesxml.xml'
+horarios_file='/home/tic/Descargas/horariosclase.xml'
+profes_file='/home/tic/Descargas/profesxml.xml'
 
 wb = Workbook()
 ws = wb.active
@@ -46,7 +46,6 @@ ws = wb.active
 # TODO mejorar esto como parametro
 tree = ET.parse(horarios_file)
 root = tree.getroot()
-
 
 tree_profes = ET.parse(profes_file)
 root_profes= tree_profes.getroot()
@@ -112,9 +111,75 @@ for horario_grupo in root.findall("horarios_grupo"):
 # Asignamos ahora todos los colores a los grupos
 for grup in set_grupos:
         random_color = ''.join([random.choice('0123456789ABCDEF') for j in range(6)])
+
+        if(grup.startswith("1ESOA")):
+                # RED 4422
+                random_color = "1ABC9C"
+                
+        elif(grup.startswith("1ESOB")):
+                # RED 4422
+                random_color = "16A085"
+                
+        elif(grup.startswith("1ESOC")):
+                # RED 4422
+                random_color = "27AE60"
+                
+        elif(grup.startswith("1ESOD")):
+                # RED 4422
+                random_color = "2ECC71"
+
+        elif(grup.startswith("2ESOA")):
+                # RED 4422
+                random_color = "F1C40F"
+                
+        elif(grup.startswith("2ESOB")):
+                # RED 4422
+                random_color = "F39C12"
+                
+        elif(grup.startswith("2ESOC")):
+                # RED 4422
+                random_color = "E67E22"
+        elif(grup.startswith("2ESOD")):
+                # RED 4422
+                random_color = "D35400"
+
+
+
+        elif(grup.startswith("3ESOA")):
+                # RED 4422
+                random_color = "BDC3C7"
+                
+        elif(grup.startswith("3ESOB")):
+                # RED 4422
+                random_color = "95A5A6"
+                
+        elif(grup.startswith("3ESOC")):
+                # RED 4422
+                random_color = "7F8C8D"
+        elif(grup.startswith("3ESOD")):
+                # RED 4422
+                random_color = "34495E"
+
+               
+        elif(grup.startswith("4ESO")):
+                # RED 8822
+                random_color = random_color
+
+        elif(grup.startswith("1BAHA") or grup.startswith("2BAHA")):
+                # RED 4422
+                random_color = random_color
+
+        elif(grup.startswith("2C") or grup.startswith("1C")):
+                # RED 4422
+                random_color = random_color
+                
+                
         grupo = Grupo(grup,random_color)
         set_grupos_color.add(grupo)
-        
+
+for grupo_colorines in set_grupos_color:
+        print(grupo_colorines.grupo+" -> "+grupo_colorines.color)
+       
 # Lista de sesiones por dia
 sesiones_lunes = []
 sesiones_martes = []
