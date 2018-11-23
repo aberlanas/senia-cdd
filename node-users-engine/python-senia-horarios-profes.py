@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
+#
+#
 
+# Dependencias : python3-openpyxl
 
 
 import os
@@ -100,6 +103,7 @@ for columna in range(2,100):
             profe_aux.listaSesiones.append(sesion_aux)
             
 
+# Ahora rellenamos el excel
 for profe in profesores:
     print("++++++++++++++++++")
     print(" * "+profe.nombre+" . "+ profe.apellido+":"+str(len(profe.listaSesiones)))
@@ -107,14 +111,51 @@ for profe in profesores:
     # Create sheet
     ws_dest_profe = wb_dest.create_sheet(profe.nombre+"."+profe.apellido)
 
+    # Profesor
+    celda=ws_dest_profe.cell(column=1,row=1)
+    celda.value=profe.nombre+"."+profe.apellido
+    celda.style='Headline 1'
+
+    ws_dest_profe.column_dimensions["A"].width=25
+
+    for col in ["B","C","D","E","F"]:
+        ws_dest_profe.column_dimensions[col].width=15
+        ws_dest_profe.column_dimensions[col].alignment = Alignment(horizontal='center')
+        ws_dest_profe.column_dimensions[col].alignment = Alignment(vertical='center')
+
+    for row in range(1,20):
+        ws_dest_profe.row_dimensions[row].height=40
+        
+    
+    # Horas
+    columna=1
+    fila=2
+    for hora in range(1,19):
+        celda = ws_dest_profe.cell(column=columna,row=fila)
+        celda.value=fila-1
+        celda.style='Headline 2'
+        fila=fila+1
+
+    # Dias
+    fila=2
     columna=2
     for dia in ["L","M","X","J","V"]:
         celda = ws_dest_profe.cell(column=columna,row=1)
         celda.value=dia
-        columna=columna+1
+
+        celda.style='Headline 1'
+        celda.alignment=Alignment(vertical="center")
+        celda.alignment=Alignment(horizontal="center")
+
     
-    for sesion in profe.listaSesiones:
-        print(sesion.dia_semana+","+sesion.sesion_orden+","+sesion.aula+","+sesion.grupo+","+sesion.materia)
+        for sesion in profe.listaSesiones:
+            print(sesion.dia_semana+","+sesion.sesion_orden+","+sesion.aula+","+sesion.grupo+","+sesion.materia)
+            if (sesion.dia_semana==dia):
+                celda_sesion=ws_dest_profe.cell(column=columna,row=int(sesion.sesion_orden)+1)
+                celda_sesion.value="["+sesion.aula+"]\n"+sesion.grupo+":\n"+sesion.materia
+
+        # Incrementamos la columna
+        columna=columna+1
 
 wb_dest.save("patatasfritas.xlsx")
 
