@@ -13,7 +13,6 @@ from openpyxl.styles import Border, Side, PatternFill, Font, GradientFill, Align
 from openpyxl import load_workbook
 import openpyxl
 
-
 print(" * Welcome to python horarios")
 
 class Sesion:
@@ -37,7 +36,7 @@ class Profesor:
         self.listaSesiones = []
 
 # Cargamos el fichero de origen
-horarios_file="patatadecolores.xlsx"
+horarios_file="ocupacionporaulas.xlsx"
 horarios_profes="patatasfritas.xlsx"
 
 wb_orig = load_workbook(filename = horarios_file)
@@ -62,6 +61,11 @@ def busca_y_anyade(nombre,apellido):
         return aux_profe
 
 
+
+
+
+
+
 ## 
 for columna in range(2,100):
     for fila in range(2,100):
@@ -84,16 +88,21 @@ for columna in range(2,100):
 
             ## Dirty hack?
             p_nombre_aux = datos_celda[2]
-            if p_nombre_aux == "Mª":
-                p_nombre_aux += datos_celda[3]
-                p_apellidos_aux = datos_celda[4]
-            else:
-                p_apellidos_aux = datos_celda[3]
 
+            p_apellidos_aux =""
+            longitud = len(datos_celda)
+            long_aux = 3
+            while(long_aux < longitud):
+                
+                p_apellidos_aux+=datos_celda[long_aux]
+                long_aux=long_aux+1
+            
+            
+            
             p_grupo = datos_celda[0]
             p_materia = datos_celda[1]
             
-            aula = ws_orig.cell(column=columna,row=1).value.rstrip()
+            aula = ws_orig.cell(column=columna,row=1).value.split("[")[0].rstrip()
 
             print(dia_hora+":"+hora_hora+" -> "+aula)
 
@@ -101,7 +110,11 @@ for columna in range(2,100):
 
             sesion_aux = Sesion(dia_hora,hora_hora,aula,p_grupo,p_materia)
             profe_aux.listaSesiones.append(sesion_aux)
-            
+
+# Estilos
+thin = Side(border_style="thin", color="000000")
+border = Border(top=thin, left=thin, right=thin, bottom=thin)
+al = Alignment(horizontal="center", vertical="center")
 
 # Ahora rellenamos el excel
 for profe in profesores:
@@ -114,9 +127,9 @@ for profe in profesores:
     # Profesor
     celda=ws_dest_profe.cell(column=1,row=1)
     celda.value=profe.nombre+"."+profe.apellido
-    celda.style='Headline 1'
+    celda.style='Headline 3'
 
-    ws_dest_profe.column_dimensions["A"].width=25
+    ws_dest_profe.column_dimensions["A"].width=15
 
     for col in ["B","C","D","E","F"]:
         ws_dest_profe.column_dimensions[col].width=15
@@ -130,9 +143,10 @@ for profe in profesores:
     # Horas
     columna=1
     fila=2
-    for hora in range(1,19):
+    horas_docencia =["8:00-8:55","8:55-9:50","9:50-10:45","10:45-11:05","11:05-12:00","12:00-12:55","12:55-13:50","13:50-14:10","14:10-15:05","15:05-16:00","16:00-16:55","16:55-17:15","17:15-18:10","18:10-19:05","19:05-20:00","20:00-20:55"]
+    for hora in horas_docencia:
         celda = ws_dest_profe.cell(column=columna,row=fila)
-        celda.value=fila-1
+        celda.value=hora
         celda.style='Headline 2'
         fila=fila+1
 
@@ -154,9 +168,20 @@ for profe in profesores:
                 celda_sesion=ws_dest_profe.cell(column=columna,row=int(sesion.sesion_orden)+1)
                 celda_sesion.value="["+sesion.aula+"]\n"+sesion.grupo+":\n"+sesion.materia
 
+        for celda_tabla_n in range(2,18):
+            celda_tabla = ws_dest_profe.cell(column=columna,row=celda_tabla_n)
+            celda_tabla.border = border
+            celda_tabla.alignment = al
+
+        
         # Incrementamos la columna
         columna=columna+1
 
+    ws_dest_profe.page_margins.top=1
+    ws_dest_profe.page_margins.bottom=1
+    ws_dest_profe.page_margins.left=0.5
+    ws_dest_profe.page_margins.right=0.5
+    
 wb_dest.save("patatasfritas.xlsx")
 
 
