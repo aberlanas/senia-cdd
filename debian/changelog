@@ -1,6 +1,7 @@
-senia-cdd (2018.11.30.2) bionic; urgency=high
+senia-cdd (2018.11.31) bionic; urgency=high
 
-  * Testing wallpaper
+   * Testing wallpaper
+   * lame as dependence
 
  -- tic La Senia <tic@ieslasenia.org>  Fri, 30 Nov 2018 18:44:21 +0100
 
