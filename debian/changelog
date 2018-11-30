@@ -1,3 +1,10 @@
+senia-cdd (2018.11.30) bionic; urgency=high
+
+  * Updated wallpaper
+  * Updated senia-firstboot-aulas
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 30 Nov 2018 18:12:53 +0100
+
 senia-cdd (2018.11.09) bionic; urgency=high
 
   * Updated nmap
