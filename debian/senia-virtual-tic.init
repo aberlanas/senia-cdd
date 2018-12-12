@@ -1,0 +1,34 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          frozen-users
+# Required-Start:    $remote_fs $local_fs $network $named $time $syslog
+# Required-Stop:     $remote_fs $local_fs $network $named $time $syslog
+# Default-Start:     5
+# Default-Stop:      0 1 6
+# Description:       Frozen user configuration
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+start() {
+	cp /usr/share/applications/senia-virtual-tic.desktop /home/tic/Escritorio/ || true
+}
+
+stop() {
+  echo 'Service stopped' >&2
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart|force-reload)
+    stop
+    start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart|force-reload|uninstall}"
+esac
