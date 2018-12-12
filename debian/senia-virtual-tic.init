@@ -12,6 +12,7 @@
 
 start() {
 	cp /usr/share/applications/senia-virtual-tic.desktop /home/tic/Escritorio/ || true
+	chmod +x /home/tic/Escritorio/senia-virtual-tic.desktop
 }
 
 stop() {
