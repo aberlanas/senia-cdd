@@ -9,8 +9,13 @@
 
 
 fix_menu(){
-	echo "rm -rf $HOME/.config/"
-	echo "mate-session-save"
+	zenity --info --text="Su sesion se reiniciara"
+	rm -rf $HOME/.config
+	mkdir -p $HOME/.config/ubuntu-mate/welcome/
+	cat << EOF > $HOME/.config/ubuntu-mate/welcome/preferences.json
+{"autostart": false, "hide_non_free": false}
+EOF
+	mate-session-save --force-logout
 }
 
 clean_firefox(){

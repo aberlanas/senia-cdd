@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Coordinador TIC Virtual
+Comment=Algunos problemas habituales
+GenericName=Coordinador TIC Virtual
+Type=Application
+Exec=senia-virtual-tic
+Icon=senia-virtual-tic.install/usr/share/senia-virtual-tic/senia-virtual-tic.jpg
+Terminal=false
+StartupNotify=true
+Categories=Accesories;
+MimeType=text/plain;
