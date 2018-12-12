@@ -1,3 +1,10 @@
+senia-cdd (2018.12.12) bionic; urgency=high
+
+   * Added new binary: Virtual TIC, a useful tool
+     to provide some functionality.
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 12 Dec 2018 10:17:48 +0100
+
 senia-cdd (2018.11.31) bionic; urgency=high
 
    * Testing wallpaper

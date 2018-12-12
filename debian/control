@@ -24,6 +24,12 @@ Description: Senia settings to frozen some users
  For now this package frozen only "alumno", but 
  could be changed.
 
+Package: senia-virtual-tic
+Architecture: all
+Depends: ${misc:Depends}, zenity
+Description: A simple Virtual TIC
+  One TIC for all things...
+  
 Package: senia-locks
 Architecture: all
 Depends: ${misc:Depends},senia-backgrounds
