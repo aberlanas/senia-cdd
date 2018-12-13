@@ -1,3 +1,9 @@
+senia-cdd (2018.12.13) bionic; urgency=high
+
+  * Added senia-virtual-tic as dependence for all classroom senias
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 13 Dec 2018 08:36:54 +0100
+
 senia-cdd (2018.12.12) bionic; urgency=high
 
    * Added new binary: Virtual TIC, a useful tool

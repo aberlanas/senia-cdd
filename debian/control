@@ -59,7 +59,7 @@ Description: Always in incognito for browsers
 
 Package: senia-cdd-aulas
 Architecture: all
-Depends: ${misc:Depends},senia-browsers-settings-incognito, senia-cdd, senia-browsers-settings, senia-locks
+Depends: ${misc:Depends},senia-browsers-settings-incognito, senia-cdd, senia-browsers-settings, senia-locks, senia-virtual-tic
 Description: Metapackage for aulas and clients.
  Restrictions and so on for aulas.
 

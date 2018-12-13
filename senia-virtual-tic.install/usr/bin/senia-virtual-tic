@@ -1,12 +1,7 @@
 #!/bin/bash
 
-#/var/lib/polkit-1/localauthority
-#[Mounting, checking, etc. of internal drives]
-#Identity=unix-group:admin;unix-group:sudo
-#Action=org.freedesktop.udisks.filesystem-*;org.freedesktop.udisks.drive-ata-smart*;org.freedesktop.udisks2.filesystem-mount-system;org.freedesktop.udisks2.encrypted-unlock-system;org.freedesktop.udisks2.filesystem-fstab;
-#ResultActive=yes
-
-
+PATH_TO_POLKIT="/var/lib/polkit-1/localauthority/90-mandatory.d"
+PATH_TO_RSRC="/usr/share/senia-virtual-tic/rsrc/" 
 
 fix_menu(){
 	zenity --info --text="Su sesion se reiniciara"
@@ -24,6 +19,12 @@ clean_firefox(){
 	
 }
 
+fix_usb(){
+    cp ${PATH_TO_RSRC}/senia-polkit.pkla  ${PATH_TO_POLKIT}/
+    zenity --info --text "Es necesario reniciar el equipo"
+    reboot
+}
+
 
 ans=$(zenity  --list  --text "Parece que está teniendo problemas, en que le puedo ayudar?" --radiolist  --column "Elija una" --column "Acción" TRUE "El Menu no está" FALSE "Limpia el Firefox" FALSE "Los USBs me piden contrasenya")
 
@@ -32,12 +33,17 @@ echo $ans
 case "$ans" in
 	"El Menu no está")
 		fix_menu
-	;;
+	        ;;
+        
 	"Limpia el Firefox")
 		clean_firefox
-	;;
+	        ;;
+        
+        "Los USBs me piden contrasenya")
+            fix_usb
+            ;;
 	*)
-		echo "holis"
+		echo "Desconocido"
 	;;
 esac
 
