@@ -1,6 +1,8 @@
-senia-cdd (2018.12.13.1) bionic; urgency=high
+senia-cdd (2018.12.13.2) bionic; urgency=high
 
   * Fixed window size for virtual-tic
+  * Fixed dependence 
+  * Fixed init script for virtual-tic
 
  -- tic La Senia <tic@ieslasenia.org>  Thu, 13 Dec 2018 11:25:07 +0100
 

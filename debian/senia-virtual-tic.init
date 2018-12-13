@@ -11,8 +11,9 @@
 . /lib/lsb/init-functions
 
 start() {
+	mkdir -p /home/profe/Escritorio || true 
 	cp /usr/share/applications/senia-virtual-tic.desktop /home/profe/Escritorio/ || true
-	chmod +x /home/profe/Escritorio/senia-virtual-tic.desktop
+	chmod +x /home/profe/Escritorio/senia-virtual-tic.desktop || true
 }
 
 stop() {
