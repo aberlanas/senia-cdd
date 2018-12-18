@@ -36,8 +36,8 @@ class Profesor:
         self.listaSesiones = []
 
 # Cargamos el fichero de origen
-horarios_file="ocupacionporaulas.xlsx"
-horarios_profes="patatasfritas.xlsx"
+horarios_file="ocupacion.xlsx"
+horarios_profes="patatasfritasconmostaza.xlsx"
 
 wb_orig = load_workbook(filename = horarios_file)
 ws_orig = wb_orig.active

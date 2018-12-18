@@ -1,4 +1,4 @@
-senia-cdd (2018.12.13.2) bionic; urgency=high
+senia-cdd (2018.12.18) bionic; urgency=high
 
   * Fixed window size for virtual-tic
   * Fixed dependence 
