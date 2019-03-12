@@ -1,3 +1,9 @@
+senia-cdd (2019.03.12) bionic; urgency=high
+
+  * Updated senia cdd with proxy 
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 12 Mar 2019 13:10:51 +0100
+
 senia-cdd (2019.03.04) bionic; urgency=high
 
   * Updated background

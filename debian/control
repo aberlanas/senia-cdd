@@ -69,9 +69,17 @@ Depends: ${misc:Depends},senia-cdd, senia-browsers-settings, senia-locks, senia-
 Description: Metapackage for Desktop 
  Restrictions and Some useful settings for Desktops
 
+
+Package: senia-proxy-settings
+Architecture: all
+Depends: ${misc:Depends}
+Description: First version for Proxy
+ Proxy Settings for IES La Senia
+
+
 Package: senia-cdd-ciclos-it
 Architecture: all
-Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-locks, senia-browsers-settings, gtkterm
+Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-locks, senia-browsers-settings, gtkterm, senia-proxy-settings
 Description: Senia package selection for IT FP
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:
