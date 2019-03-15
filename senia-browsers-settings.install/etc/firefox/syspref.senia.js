@@ -10,6 +10,9 @@ pref("security.enable_ssl3", true, locked); //Use SSL 3.0
 pref("security.enable_tls", true, locked); //Use TLS 1.0
 
 
+// Settings for proxy
+pref("network.proxy.type",5,locked); 
+
 // Settings for PDFs
 pref("browser.helperApps.neverAsk.openFile","", locked);
 pref("pdfjs.disabled",true,locked);

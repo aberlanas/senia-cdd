@@ -1,3 +1,9 @@
+senia-cdd (2019.03.16) bionic; urgency=high
+
+  * Fixed settings for proxy in firefox
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 15 Mar 2019 09:24:14 +0100
+
 senia-cdd (2019.03.15) bionic; urgency=high
 
   * Fixed little bug 
