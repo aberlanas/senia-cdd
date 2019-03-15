@@ -32,11 +32,12 @@ case "$1" in
     echo " * Senia Proxy ... : Enabling"
     rc=0
     cat /etc/environment| grep -q ^http_proxy || rc=1
+    cat /etc/environment| grep -q "254.3128" || rc=1
     if [ ${rc} -eq 1 ]; then
-	echo 'http_proxy="http://192.168.4.254.3128/"' >> /etc/environment
-	echo 'HTTP_PROXY="http://192.168.4.254.3128/"' >> /etc/environment
-	echo 'HTTPS_PROXY="http://192.168.4.254.3128/"' >> /etc/environment
-	echo 'https_proxy="http://192.168.4.254.3128/"' >> /etc/environment
+	echo 'http_proxy="http://192.168.4.254:3128/"' >> /etc/environment
+	echo 'HTTP_PROXY="http://192.168.4.254:3128/"' >> /etc/environment
+	echo 'HTTPS_PROXY="http://192.168.4.254:3128/"' >> /etc/environment
+	echo 'https_proxy="http://192.168.4.254:3128/"' >> /etc/environment
     fi	    
   ;;
 
