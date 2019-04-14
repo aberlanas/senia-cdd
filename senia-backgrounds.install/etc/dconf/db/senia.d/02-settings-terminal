@@ -1,7 +1,7 @@
 [org/mate/terminal/profiles/default]
-use-theme-colors=true
-background-color='#FFFFFFFFFFFF'
-foreground-color='#000000000000'
+use-theme-colors=false
+background-color='#000000000000'
+foreground-color='#FFFFFFFFFFFF'
 
 [org/mate/terminal/profiles/default]
 silent-bell=true

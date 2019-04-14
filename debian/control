@@ -7,7 +7,7 @@ Standards-Version: 3.9.8
 
 Package: senia-backgrounds
 Architecture: all
-Depends: ${misc:Depends}, mate-desktop-environment, lightdm-gtk-greeter, plymouth-theme-ubuntu-mate-logo, ubuntu-mate-themes, papirus-icon-theme, pocillo-icon-theme, ubuntu-budgie-themes, blackbird-gtk-theme, greybird-gtk-theme
+Depends: ${misc:Depends}, lightdm-gtk-greeter, papirus-icon-theme, pocillo-icon-theme, ubuntu-budgie-themes, blackbird-gtk-theme, greybird-gtk-theme
 Description: senia wallpapers and settings
  Customized backgrounds for SENIA IES
 
@@ -137,7 +137,7 @@ Description: senia configuration for inventory
 
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, caja-open-terminal, tmux, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, geany, geany-plugins, asunder, gcc, make, perl, fonts-open-sans, senia-settings-ecosenia, mailutils, shutter, libreoffice-dmaths, senia-inventory-client, gpm, gimp, libqt5webkit5, libqt5multimedia5, libqt5xml5, libqt5script5, libqt5scripttools5, kdenlive, clusterssh, mate-tweak, dconf-editor, emacs25, lame, senia-virtual-tic
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, caja-open-terminal, tmux, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, geany, geany-plugins, asunder, gcc, make, perl, fonts-open-sans, senia-settings-ecosenia, mailutils, shutter, libreoffice-dmaths, senia-inventory-client, gpm, gimp, libqt5webkit5, libqt5multimedia5, libqt5xml5, libqt5script5, libqt5scripttools5, kdenlive, clusterssh, dconf-editor, lame, senia-virtual-tic
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 

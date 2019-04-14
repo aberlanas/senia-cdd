@@ -1,3 +1,9 @@
+senia-cdd (2019.04.14) bionic; urgency=high
+
+  * Removing dependences for MATE-> go to LliureX 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 14 Apr 2019 09:52:41 +0200
+
 senia-cdd (2019.03.16) bionic; urgency=high
 
   * Fixed settings for proxy in firefox
