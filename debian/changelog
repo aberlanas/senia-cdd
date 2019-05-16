@@ -1,3 +1,10 @@
+senia-cdd (2019.05.16) bionic; urgency=high
+
+  * Fixed senia-firstboot-aulas
+  * Added exfat support 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 16 May 2019 10:05:55 +0200
+
 senia-cdd (2019.04.14) bionic; urgency=high
 
   * Removing dependences for MATE-> go to LliureX 

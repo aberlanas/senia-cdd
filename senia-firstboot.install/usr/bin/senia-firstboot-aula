@@ -60,7 +60,7 @@ case $AULA in
 		MYGW="192.168.4.254"
 		MYMASK="24"
 		MYNAME="aula4-client$NUMAULA"
-		MYIP="192.168.4.$NUMAUL"
+		MYIP="192.168.4.$NUMAULA"
 	;;
 	*)
 		echo " * UNKNOW AULA "
