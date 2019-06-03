@@ -1,4 +1,10 @@
-senia-cdd (2019.05.16) bionic; urgency=high
+senia-cdd (2019.06.04) bionic; urgency=high
+
+  * Updated senia proxy to be disabled 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 03 Jun 2019 16:00:01 +0200
+
+senia-cdd (2019.06.03) bionic; urgency=high
 
   * Fixed senia-firstboot-aulas
   * Added exfat support 
