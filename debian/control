@@ -11,12 +11,6 @@ Depends: ${misc:Depends}
 Description: senia wallpapers and settings
  Customized backgrounds for SENIA IES
 
-Package: senia-settings-compiz
-Architecture: all
-Depends: ${misc:Depends}, compiz
-Description: Senia settings for compiz
- Customized senia settings for compiz as WM
-
 Package: senia-frozen-users
 Architecture: all
 Depends: ${misc:Depends}, lsb-base
