@@ -7,7 +7,7 @@ Standards-Version: 3.9.8
 
 Package: senia-backgrounds
 Architecture: all
-Depends: ${misc:Depends}, lightdm-gtk-greeter, papirus-icon-theme, pocillo-icon-theme, ubuntu-budgie-themes, blackbird-gtk-theme, greybird-gtk-theme
+Depends: ${misc:Depends} 
 Description: senia wallpapers and settings
  Customized backgrounds for SENIA IES
 
