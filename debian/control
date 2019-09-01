@@ -13,7 +13,7 @@ Description: senia wallpapers and settings
 
 Package: senia-settings-compiz
 Architecture: all
-Depends: ${miscDepends}, compiz
+Depends: ${misc:Depends}, compiz
 Description: Senia settings for compiz
  Customized senia settings for compiz as WM
 
@@ -26,9 +26,9 @@ Description: Senia settings to frozen some users
 
 Package: senia-virtual-tic
 Architecture: all
-Depends: ${misc:Depends}, zenity
-Description: A simple Virtual TIC
-  One TIC for all things...
+Depends: ${misc:Depends}, zenity, lsb-base
+Description: Simple Virtual TIC Desktop App
+ One TIC for all things, useful commands...
   
 Package: senia-locks
 Architecture: all
