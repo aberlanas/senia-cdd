@@ -59,13 +59,13 @@ Description: Always in incognito for browsers
 
 Package: senia-cdd-aulas
 Architecture: all
-Depends: ${misc:Depends},senia-browsers-settings-incognito, senia-cdd, senia-browsers-settings, senia-locks, senia-virtual-tic
+Depends: ${misc:Depends},senia-browsers-settings-incognito, senia-cdd, senia-browsers-settings, senia-virtual-tic
 Description: Metapackage for aulas and clients.
  Restrictions and so on for aulas.
 
 Package: senia-cdd-desktop
 Architecture: all
-Depends: ${misc:Depends},senia-cdd, senia-browsers-settings, senia-locks, senia-non-essential-tools
+Depends: ${misc:Depends},senia-cdd, senia-browsers-settings, senia-non-essential-tools
 Description: Metapackage for Desktop 
  Restrictions and Some useful settings for Desktops
 
@@ -79,7 +79,7 @@ Description: First version for Proxy
 
 Package: senia-cdd-ciclos-it
 Architecture: all
-Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-locks, senia-browsers-settings, gtkterm, senia-proxy-settings
+Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings
 Description: Senia package selection for IT FP
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:
@@ -90,21 +90,21 @@ Description: Senia package selection for IT FP
 
 Package: senia-cdd-ciclos-afi
 Architecture: all
-Depends: ${misc:Depends}, senia-cdd, senia-locks, senia-browsers-settings
+Depends: ${misc:Depends}, senia-cdd, senia-browsers-settings
 Description: Senia package selection for AFI FP
  Some packages to use in GA and AFI
 
 Package: senia-cdd-aulas-inf
 Architecture: all
 Depends: ${misc:Depends}, senia-frozen-users, senia-cdd
-Conflicts: senia-browsers-settings, senia-browsers-settings-incognito, senia-locks
+Conflicts: senia-browsers-settings, senia-browsers-settings-incognito 
 Description: Senia package selection for Inf
  Some packages to use in Inf (ESO and BATX)
 
 Package: senia-cdd
 Architecture: all
 Pre-Depends: senia-firstboot
-Depends: ${misc:Depends},senia-backgrounds, senia-session-cleaner-for-mate, senia-dependences, senia-networking, senia-languages, senia-startup-conf, senia-cron
+Depends: ${misc:Depends},senia-backgrounds, senia-dependences, senia-networking, senia-languages, senia-startup-conf, senia-cron
 Description: IES La Senia CDD
  All the stuff
 
@@ -124,7 +124,7 @@ Description: Senia Firstboot for cloned systems
 
 Package: senia-carrusel
 Architecture:all
-Depends: ${misc:Depends},ffmpeg, gnome-web-photo, mencoder
+Depends: ${misc:Depends},ffmpeg, mencoder
 Description: Senia package for carrusel
  Some stuff to solve the Senia problem
  with Videos and TV
