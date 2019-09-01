@@ -1,3 +1,9 @@
+senia-cdd (2019.09.02) bionic; urgency=high
+
+  * Removing all mate stuff
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 01 Sep 2019 11:07:21 +0200
+
 senia-cdd (2019.09.01) bionic; urgency=high
 
   * Ready for 2019-2020 course.
