@@ -1,0 +1,2 @@
+senia-networking: binary-without-manpage usr/bin/senia-cluster
+senia-networking: binary-without-manpage usr/bin/senia-nmap

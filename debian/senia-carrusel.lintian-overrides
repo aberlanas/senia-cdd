@@ -1,0 +1,5 @@
+senia-carrusel: binary-without-manpage usr/bin/senia-carrusel
+senia-carrusel: binary-without-manpage usr/bin/senia-carrusel-player
+senia-carrusel: binary-without-manpage usr/bin/senia-carrusel-resize-imgs
+senia-carrusel: binary-without-manpage usr/bin/senia-carrusel-server
+senia-carrusel: binary-without-manpage usr/bin/senia-carrusel-video-from-fotos
