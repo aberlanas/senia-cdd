@@ -29,15 +29,8 @@ case "$1" in
 
   configure)
     # Set up our config for dconf
-	# Dirty hack
-	touch /usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png
-	dconf update
-	touch /usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png
-	echo " * [ Installing - Backgrounds Senia]"
-	if [ -f /etc/dconf/db/senia.d/01-background.dpkg-old ]; then
-		echo " * Cleaning Backgrounds problem"
-		rm -f /etc/dconf/db/senia.d/01-background.dpkg-old 
-	fi
+    echo "Configured empty"
+    exit 0
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)

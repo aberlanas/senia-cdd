@@ -1,3 +1,9 @@
+senia-cdd (2019.09.03) bionic; urgency=high
+
+  * Updated postinst to not use dconf
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 01 Sep 2019 12:31:41 +0200
+
 senia-cdd (2019.09.02) bionic; urgency=high
 
   * Removing all mate stuff
