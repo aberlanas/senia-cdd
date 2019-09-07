@@ -1,3 +1,9 @@
+senia-cdd (2019.09.08) UNRELEASED; urgency=medium
+
+  * UNRELEASED
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 07 Sep 2019 07:57:29 +0200
+
 senia-cdd (2019.09.07) bionic; urgency=high
 
   * Updated another postinst to not use dconf (ecosenia) 
