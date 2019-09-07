@@ -30,7 +30,8 @@ case "$1" in
   configure)
     # Set up our config for dconf
 	# Dirty hack
-	dconf update
+	echo " * FOR NOW "
+	echo "dconf update"
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)
