@@ -84,7 +84,7 @@ Description: Senia package selection for Inf
 Package: senia-cdd
 Architecture: all
 Pre-Depends: senia-firstboot
-Depends: ${misc:Depends},senia-backgrounds, senia-dependences, senia-networking, senia-languages, senia-startup-conf, senia-cron
+Depends: ${misc:Depends},senia-backgrounds, senia-dependences, senia-networking, senia-languages, senia-startup-conf, senia-cron, nagios-nrpe-server, ocsinventory-agent
 Description: IES La Senia CDD
  All the stuff
 
@@ -96,7 +96,7 @@ Description: But highly recommended
 
 Package: senia-firstboot
 Architecture: all
-Depends: ${misc:Depends}, nagios-nrpe-server, ocsinventory-agent
+Depends: ${misc:Depends}
 Recommends: vim
 Description: Senia Firstboot for cloned systems
  Firstboot script made by David and Fons to solve 
@@ -117,7 +117,7 @@ Description: senia configuration for inventory
 
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, tmux, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, asunder, gcc, make, perl, fonts-open-sans, senia-settings-ecosenia, mailutils, libreoffice-dmaths, senia-inventory-client, gpm, gimp, libqt5webkit5, libqt5multimedia5, libqt5xml5, libqt5script5, libqt5scripttools5, kdenlive, clusterssh, dconf-editor, lame, senia-virtual-tic, exfat-fuse, exfat-utils
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, tmux, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, asunder, gcc, make, perl, fonts-open-sans, senia-settings-ecosenia, mailutils, libreoffice-dmaths, senia-inventory-client, gpm, gimp, libqt5webkit5, libqt5multimedia5, libqt5xml5, libqt5script5, libqt5scripttools5, kdenlive, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 

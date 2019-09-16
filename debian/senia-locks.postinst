@@ -49,7 +49,7 @@ case "$1" in
     logger -s -t senia-locks " * Senia settings"
     mkdir -p /etc/dconf/db/senia.d/locks/
     cp -r /usr/share/senia-locks/locks/* /etc/dconf/db/senia.d/locks/
-    dconf update
+    dconf update || true
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)
