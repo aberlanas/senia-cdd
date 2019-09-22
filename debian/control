@@ -11,6 +11,11 @@ Depends: ${misc:Depends}
 Description: senia wallpapers and settings
  Customized backgrounds for SENIA IES
 
+Package: senia-locks
+Architecture: all
+Depends: ${misc:Depends}
+Description: Senia Locks for Mate Desktop 
+
 Package: senia-frozen-users
 Architecture: all
 Depends: ${misc:Depends}, lsb-base

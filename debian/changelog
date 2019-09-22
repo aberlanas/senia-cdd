@@ -1,3 +1,10 @@
+senia-cdd (2019.09.22) bionic; urgency=high
+
+  * Reanimated senia backgrounds
+  * Reanimated senia-locks 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 22 Sep 2019 17:19:41 +0200
+
 senia-cdd (2019.09.16) bionic; urgency=high
 
   * Updated senia-firstboot dependences
