@@ -1,7 +1,8 @@
-senia-cdd (2019.09.22) bionic; urgency=high
+senia-cdd (2019.09.23) bionic; urgency=high
 
   * Reanimated senia backgrounds
   * Reanimated senia-locks 
+  * Fixed dependences
 
  -- tic La Senia <tic@ieslasenia.org>  Sun, 22 Sep 2019 17:19:41 +0200
 
