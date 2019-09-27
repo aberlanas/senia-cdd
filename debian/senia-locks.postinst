@@ -50,6 +50,13 @@ case "$1" in
     mkdir -p /etc/dconf/db/senia.d/locks/
     cp -r /usr/share/senia-locks/locks/* /etc/dconf/db/senia.d/locks/
     echo " * Antes : dconf update "
+    if [ -x /usr/bin/dconf ]; then
+	echo " * Dconf exists...else must be run"
+	dconf update
+    else
+	echo " Dconf not exists...nothing to do"	    
+    fi    
+
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)

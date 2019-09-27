@@ -31,6 +31,13 @@ case "$1" in
     # Set up our config for dconf
 	# Dirty hack
 	rm -f /etc/dconf/db/senia.d/locks/* || echo " * error : something goes wrong"
+    	if [ -x /usr/bin/dconf ]; then
+	echo " * Dconf exists...else must be run"
+	dconf update
+    else
+	echo " Dconf not exists...nothing to do"	    
+    fi    
+
 	dconf update || true
   ;;
 
