@@ -89,7 +89,7 @@ Description: Senia package selection for Inf
 Package: senia-cdd
 Architecture: all
 Pre-Depends: senia-firstboot
-Depends: ${misc:Depends},senia-backgrounds, senia-dependences, senia-networking, senia-languages, senia-startup-conf, senia-cron, nagios-nrpe-server, ocsinventory-agent
+Depends: ${misc:Depends},senia-backgrounds, senia-dependences, senia-networking, senia-languages, senia-startup-conf, senia-cron, nagios-nrpe-server
 Description: IES La Senia CDD
  All the stuff
 
