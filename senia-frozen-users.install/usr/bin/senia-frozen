@@ -10,12 +10,13 @@
 
 logger -s -t "Senia-Frozen" "Initializing frozen system" 
 source /etc/senia/frozen.d/*
+USERSFROZEN="$USERSFROZEN alumno"
 logger -s -t "Senia-Frozen" "$USERSFROZEN will be frost"
 
 
 for user in $USERSFROZEN; do 
 	echo " * FROSTING : $user "
-	find /home/$user -maxdepth 1 -name ".*" -exec rm -rf {} \;
+	find /home/$user -maxdepth 1 -name ".*" -exec rm -rf {} \; || logger -s -t "Senia-Frozen" "Error : $user Folder not found"
 	
 done
 

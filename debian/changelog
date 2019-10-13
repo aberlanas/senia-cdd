@@ -1,3 +1,11 @@
+senia-cdd (2019.10.13) bionic; urgency=high
+
+  * Added chromium-browser to dependences.
+  * Restored frozen-users with only alumno.
+  * Fixed senia-firstboot-aulas with the new IPs. 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 13 Oct 2019 08:25:39 +0200
+
 senia-cdd (2019.09.24) bionic; urgency=high
 
   * Reanimated senia-dconf

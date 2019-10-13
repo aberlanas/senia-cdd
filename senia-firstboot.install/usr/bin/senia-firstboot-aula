@@ -23,7 +23,7 @@ fi
 # Test arguments
 if [ $# -ne 2 ] ; then
 	echo " [ USAGE ] : $(basename $0) [aula1|aula2|aula3|aula4] NUM_PC"
-	echo " [ example ] : $(basename $0) aula2 01"
+	echo " [ example ] : $(basename $0) aula2 1"
 	exit 1
 fi
 
@@ -38,14 +38,14 @@ case $AULA in
 		MYGW="192.168.1.254"
 		MYMASK="24"
 		MYNAME="aula1-client$NUMAULA"
-		MYIP="192.168.0.$NUMAULA"
+		MYIP="192.168.1.$NUMAULA"
 	;;
 	aula2)
 		echo " * Using settings for aula2 *"
-		MYGW="192.168.2.254"
+		MYGW="10.2.2.254"
 		MYMASK="24"
 		MYNAME="aula2-client$NUMAULA"
-		MYIP="192.168.2.$NUMAULA"
+		MYIP="10.2.2.$NUMAULA"
 
 	;;
 	aula3)
