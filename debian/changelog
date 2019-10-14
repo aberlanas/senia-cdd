@@ -1,3 +1,9 @@
+senia-cdd (2019.10.14) bionic; urgency=high
+
+  * Added virtual-tic + scanner
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 14 Oct 2019 12:45:39 +0200
+
 senia-cdd (2019.10.13) bionic; urgency=high
 
   * Added chromium-browser to dependences.
