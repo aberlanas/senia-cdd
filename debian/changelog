@@ -1,3 +1,9 @@
+senia-cdd (2019.10.16) bionic; urgency=high
+
+  * 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 14 Oct 2019 13:44:21 +0200
+
 senia-cdd (2019.10.15) bionic; urgency=high
 
   * Cleaning Dependences...for now senia-cdd can live without senia-languages
