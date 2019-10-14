@@ -13,7 +13,9 @@
 start() {
 	mkdir -p /home/profe/Escritorio || true 
 	cp /usr/share/applications/senia-virtual-tic.desktop /home/profe/Escritorio/ || true
+	cp /usr/share/applications/senia-scanner.desktop /home/profe/Escritorio/ || true
 	chmod +x /home/profe/Escritorio/senia-virtual-tic.desktop || true
+	chmod +x /home/profe/Escritorio/senia-scanner.desktop || true
 }
 
 stop() {
