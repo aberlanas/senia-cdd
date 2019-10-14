@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Escaner IES La Senia
+Comment=Escaner IES La Senia
+GenericName=Escaner IES La Senia
+Type=Application
+Exec=www-browser 172.29.0.245
+Icon=/usr/share/senia-virtual-tic/senia-scanner.png
+Terminal=false
+StartupNotify=true
+Categories=System;
+MimeType=text/plain;
