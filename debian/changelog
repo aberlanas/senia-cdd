@@ -1,3 +1,10 @@
+senia-cdd (2019.10.15) bionic; urgency=high
+
+  * Cleaning Dependences...for now senia-cdd can live without senia-languages
+    and senia-backgrounds. 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 14 Oct 2019 13:18:28 +0200
+
 senia-cdd (2019.10.14) bionic; urgency=high
 
   * Added virtual-tic + scanner
