@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-for f in $(ls *.sort); do
+for f in $(ls 2019_Grupos/*.txt); do
 
 	echo " * PROBANDO CON  $f"
 	NUMLINES="$(cat $f|wc -l)"
