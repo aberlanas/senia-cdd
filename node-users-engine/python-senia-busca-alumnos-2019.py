@@ -76,9 +76,10 @@ if __name__ == "__main__":
             #print(aluAux.getNombre())
             #print(alumno.attrib)
     
+    ejNombre = ""
     ejDocumento = ""
-    ejDia="J"
-    ejSesion='2'
+    ejDia="L"
+    ejSesion='5'
     docenteCurrent=""
     grupoAux = ""
     
