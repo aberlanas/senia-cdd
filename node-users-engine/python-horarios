@@ -1,11 +1,16 @@
 #!/usr/bin/python3
 
 
+# Obtendra los horarios del fichero que se
+# le indique como primer parametro.
+
+# Tipicamente imexalum.xml
+
 import os
 import sys
 from xml.etree import ElementTree
 
-fileDb="/home/tic/Descargas/imexalum.xml"
+fileDb="imexalum.xml"
 listaProfes=[]
 
 class Profesor:
@@ -22,8 +27,9 @@ class Profesor:
         self.dni = dni
 
 def sanity_checks():
-    if (os.path.exists(fileDb)):
-        print(" * File Exists!")
+    if (sys.argv[1] != ""):
+        print(" Dame un a")
+        fileDb=sys.argv[1] 
     else:
         print(" * Dame un ficherin ")
         sys.exit(1)
@@ -77,6 +83,8 @@ def read_all(f):
 if __name__ == "__main__":
 
     sanity_checks()
+    print(" * "+fileDb)
     read_all(fileDb)
     #read_ocupaciones(fileDb)
+
     sys.exit(0)
