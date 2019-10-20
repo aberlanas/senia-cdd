@@ -3,6 +3,7 @@
 import os
 import sys
 import xml.etree.ElementTree as ET
+from datetime import datetime
 
 class Profesor:
 
@@ -19,6 +20,15 @@ class Profesor:
 
     def getDni(self):
         return self.documento
+    
+    def getNombre(self):
+        return (self.nombre)
+    
+    def getApellidos(self):
+        return (self.apellido1+" "+self.apellido2)
+    
+    def getNombreCompleto(self):
+        return (" [PROFESOR] " + self.nombre + ", "+self.apellido1+" "+self.apellido2);
     
 class Alumno:
 
@@ -46,11 +56,20 @@ class Alumno:
     
     def getNombreCompleto(self):
         return (self.nombre + ", "+self.apellido1+" "+self.apellido2);
+    
+    
+def dow(dayNumber):
+    days=["L","M","X","J","V","Saturday","Sunday"]
+    return days[dayNumber]
 
 if __name__ == "__main__":
     fileDb="imexalum.xml"
     plantilla="758772746"
+
+    dia=dow(datetime.today().weekday())
     
+    print(dia)
+    sys.exit()
     tree = ET.parse(fileDb)
     # En centro tenemos todo el IES
     centro = tree.getroot()
