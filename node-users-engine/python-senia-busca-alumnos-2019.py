@@ -5,6 +5,11 @@ import sys
 import xml.etree.ElementTree as ET
 from datetime import datetime
 
+from flask import Flask, request
+from flask_restful import Resource, Api
+from json import dumps
+#from flask.ext.jsonpify import jsonify
+
 class Profesor:
 
     nombre = ""
@@ -28,7 +33,7 @@ class Profesor:
         return (self.apellido1+" "+self.apellido2)
     
     def getNombreCompleto(self):
-        return (" [PROFESOR] " + self.nombre + ", "+self.apellido1+" "+self.apellido2);
+        return (" [ PROFESOR ] : " + self.nombre + ", "+self.apellido1+" "+self.apellido2);
     
 class Alumno:
 
@@ -37,13 +42,15 @@ class Alumno:
     apellido2 = ""
     documento =""
     grupo = ""
+    nia = ""
     
-    def __init__(self,documento="",nombre="",apellido1="",apellido2="",grupo=""):
+    def __init__(self,documento="",nombre="",apellido1="",apellido2="",grupo="",nia=""):
         self.nombre = nombre
         self.apellido1 = apellido1
         self.apellido2 = apellido2
         self.documento = documento
         self.grupo = grupo
+        self.nia = nia
         
     def getDni(self):
         return self.documento
@@ -55,7 +62,7 @@ class Alumno:
         return (self.apellido1+" "+self.apellido2)
     
     def getNombreCompleto(self):
-        return (self.nombre + ", "+self.apellido1+" "+self.apellido2);
+        return ( " [ ALUMNO ] : "+ self.nombre + ", "+self.apellido1+" "+self.apellido2);
     
     
 def dow(dayNumber):
@@ -67,9 +74,7 @@ if __name__ == "__main__":
     plantilla="758772746"
 
     dia=dow(datetime.today().weekday())
-    
-    print(dia)
-    sys.exit()
+
     tree = ET.parse(fileDb)
     # En centro tenemos todo el IES
     centro = tree.getroot()
@@ -78,7 +83,7 @@ if __name__ == "__main__":
     
     centroDocentes = []
     centroAlumnos = []
-    
+    centroSesiones = []
     
     ## Replenish docentes
     for item in centro.iter('docente'):
@@ -90,26 +95,35 @@ if __name__ == "__main__":
     ## Replenish alumnos
     for item in centro.iter("alumnos"):
         for alumno in item.getchildren():
-            aluAux = Alumno(alumno.get("documento"),alumno.get("nombre"),alumno.get("apellido1"),alumno.get("apellido2"),alumno.get("grupo"))
+            aluAux = Alumno(alumno.get("documento"),alumno.get("nombre"),alumno.get("apellido1"),alumno.get("apellido2"),alumno.get("grupo"),alumno.get("NIA"))
             centroAlumnos.append(aluAux)
             #print(aluAux.getNombre())
             #print(alumno.attrib)
     
+    
+    
+    
+    
+    
+    # Buscar
+    '''
     ejNombre = ""
-    ejDocumento = ""
-    ejDia="L"
-    ejSesion='5'
+    ejNia = "10689831"
+    ejDia="X"
+    ejSesion='3'
     docenteCurrent=""
     grupoAux = ""
     
+
+    
     for alumnoAux in centroAlumnos:
         #print(alumnoAux.nombre)
-        if alumnoAux.documento == ejDocumento:
+        if alumnoAux.nia == ejNia:
             grupoAux = alumnoAux.grupo
             print(alumnoAux.getNombreCompleto())
-            
+       
     
-    print(grupoAux)
+    print(" [ GRUPO ] : " +grupoAux)
     # Horarios Grupos
     for item in centro.iter("horarios_grupo"):
         for horario in item.getchildren():
@@ -118,15 +132,16 @@ if __name__ == "__main__":
     
     for docAux in centroDocentes:
         if (docAux.getDni() == docenteCurrent):
-            print(docAux.nombre + " " + docAux.apellido1 + " " + docAux.apellido2);
+            print(docAux.getNombreCompleto());
     
-    
+    '''
     '''
     # Grupos
     for item in centro.iter("grupos"):
         for grupo in item.getchildren():
             print(grupo.attrib)
     ''' 
+    
     '''
     # Horarios ocupaciones
     for item in centro.iter("horarios_ocupaciones"):

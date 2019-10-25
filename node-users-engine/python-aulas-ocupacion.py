@@ -37,8 +37,8 @@ class Grupo:
                 self.color=color
 
 
-horarios_file='/home/tic/Descargas/horariosclase.xml'
-profes_file='/home/tic/Descargas/profesxml.xml'
+horarios_file='/home/aberlanas/Descargas/imexalum.xml'
+profes_file='/home/aberlanas/Descargas/imexalum.xml'
 
 wb = Workbook()
 ws = wb.active
@@ -79,6 +79,37 @@ set_grupos_color=set()
 lista_sesiones = []
 set_aulas=set()
 
+def busca_aulas_vacias():
+    
+    # Creamos un excel
+    wb_vacia = Workbook()
+    ws_vacia = wb_vacia.active
+    
+    # Aulas sesiones
+    columna_vacia=1
+    fila_vacia=1
+    for dia in [ "L","M","X","J","V"]:
+        for hora in ["1","2","3","5","6","7","9"]:
+            print(" * [ Sesion: "+dia+":"+str(hora)+" ]")
+            
+            aulas_vacias=""
+            for aula in set_aulas:
+                libre=True
+                
+                for sesion in lista_sesiones:
+                    #print(sesion.dia_semana+":"+sesion.sesion_orden+"->"+sesion.aula)
+                    if (sesion.dia_semana==dia and sesion.sesion_orden==hora and sesion.aula==aula):
+                        libre=False
+                if (libre):
+                    print(aula)
+                    aulas_vacias+=aula
+            ws_vacia.cell(column=columna_vacia,row=fila_vacia,value=aulas_vacias)
+            fila_vacia=fila_vacia+1
+            
+        columna_vacia=columna_vacia+1
+    
+    wb_vacia.save("patatas_vacias.xlsx")
+
 def busca_grupo_color(grupo_nombre):
         auxcolor = "BBBBBB"
         for grupo in set_grupos_color:
@@ -100,7 +131,7 @@ def rellena_celda_sesion(columna,fila,sesion):
 for horario_grupo in root.findall("horarios_grupo"):
         for item in horario_grupo.iter():
                 for campo in item:
-                        if (str(campo.attrib['plantilla'])=="659391170"):
+                        if (str(campo.attrib['plantilla'])=="758772746"):
                                 sesion = Sesion(campo.attrib['dia_semana'],campo.attrib['sesion_orden'],campo.attrib['aula'],campo.attrib['docente'],	campo.attrib['grupo'],campo.attrib['contenido'])
                                 
                                 
@@ -127,6 +158,10 @@ for grup in set_grupos:
         elif(grup.startswith("1ESOD")):
                 # RED 4422
                 random_color = "2ECC71"
+                
+        elif(grup.startswith("1ESOE")):
+                # RED 4422
+                random_color = "2C0071"
 
         elif(grup.startswith("2ESOA")):
                 # RED 4422
@@ -143,7 +178,9 @@ for grup in set_grupos:
                 # RED 4422
                 random_color = "D35400"
 
-
+        elif(grup.startswith("2ESOE")):
+                # RED 4422
+                random_color = "D35400"
 
         elif(grup.startswith("3ESOA")):
                 # RED 4422
@@ -159,7 +196,9 @@ for grup in set_grupos:
         elif(grup.startswith("3ESOD")):
                 # RED 4422
                 random_color = "34495E"
-
+        elif(grup.startswith("3ESOP")):
+                # RED 4422
+                random_color = "FABADA"
                
         elif(grup.startswith("4ESO")):
                 # RED 8822
@@ -272,5 +311,9 @@ for aula in set_aulas:
 
 
 wb.save("patata.xlsx")
+
+
+busca_aulas_vacias()
+
 
 sys.exit(0)
