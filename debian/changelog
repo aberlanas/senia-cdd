@@ -1,4 +1,4 @@
-senia-cdd (2020.01.15) bionic; urgency=high
+senia-cdd (2020.01.25) bionic; urgency=high
 
   * Back to basics.
   * Maths user.
@@ -9,14 +9,14 @@ senia-cdd (2020.01.15) bionic; urgency=high
 
 senia-cdd (2019.10.17) bionic; urgency=high
 
-  * Updated dependences 
+  * Updated dependences
 
  -- tic La Senia <tic@ieslasenia.org>  Mon, 14 Oct 2019 13:44:21 +0200
 
 senia-cdd (2019.10.15) bionic; urgency=high
 
   * Cleaning Dependences...for now senia-cdd can live without senia-languages
-    and senia-backgrounds. 
+    and senia-backgrounds.
 
  -- tic La Senia <tic@ieslasenia.org>  Mon, 14 Oct 2019 13:18:28 +0200
 
@@ -30,7 +30,7 @@ senia-cdd (2019.10.13) bionic; urgency=high
 
   * Added chromium-browser to dependences.
   * Restored frozen-users with only alumno.
-  * Fixed senia-firstboot-aulas with the new IPs. 
+  * Fixed senia-firstboot-aulas with the new IPs.
 
  -- tic La Senia <tic@ieslasenia.org>  Sun, 13 Oct 2019 08:25:39 +0200
 
