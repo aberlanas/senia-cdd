@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This script is licensed under GPL v3
+# or higher.
+
 DEFAULTRC=0
 
 if [ ! -z "$1" ]; then
@@ -8,7 +11,7 @@ if [ ! -z "$1" ]; then
     fi
 fi
 
-echo  " * Senia : Adding User profe"
+echo  " * [ Senia Default Users ] : Adding User [ profe ] "
 echo  " *  - Testing if exists"
 
 rc=$DEFAULTRC
@@ -16,32 +19,43 @@ cat /etc/passwd | grep -q profe|| rc=1
 
 if [ $rc -eq 1 ]; then
 
-   echo " - The user profe not exists : creating..."
-   adduser --quiet --disabled-password --shell /bin/bash --home /home/profe --gecos Profe profe
-   echo "profe:profe" | chpasswd
+    echo " - The user profe not exists : creating..."
+    adduser --quiet --disabled-password --shell /bin/bash --home /home/profe --gecos Profe profe
+    echo "profe:profe" | chpasswd
 
 else
-	echo " - The user profe exists in system...nothing to do"
+    echo " - The user profe exists in system...nothing to do"
 fi
 
-echo  " * Senia : Adding User alumno "
+echo  " * [ Senia Default Users ] : Adding User [ alumno ] "
 echo  " *  - Testing if alumno exists"
+
 
 rc=$DEFAULTRC
 cat /etc/passwd | grep -q alumno || rc=1
 
 if [ $rc -eq 1 ]; then
-
-   echo " - The user profe not exists : creating..."
+   echo " - The user alumno not exists : creating..."
    adduser --quiet --disabled-password --shell /bin/bash --home /home/alumno --gecos Alumno alumno
    echo "alumno:alumno" | chpasswd
-
 else
-
    echo " - The user alumno exists in system...nothing to do"
-
 fi
 
+
+echo  " * [ Senia Default Users ] : Adding User [ euler ] "
+echo  " *  - Testing if euler exists"
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q euler || rc=1
+
+if [ $rc -eq 1 ]; then
+   echo " - The user euler not exists : creating..."
+   adduser --quiet --disabled-password --shell /bin/bash --home /home/euler --gecos Euler euler
+   echo "112358:112358" | chpasswd
+else
+   echo " - The user euler exists in system...nothing to do"
+fi
 
 
 exit 0

@@ -7,7 +7,7 @@ Standards-Version: 3.9.8
 
 Package: senia-backgrounds
 Architecture: all
-Depends: ${misc:Depends}, papirus-icon-theme, pocillo-icon-theme, ubuntu-budgie-themes, blackbird-gtk-theme, greybird-gtk-theme 
+Depends: ${misc:Depends} 
 Description: senia wallpapers and settings
  Customized backgrounds for SENIA IES
 
@@ -15,6 +15,11 @@ Package: senia-locks
 Architecture: all
 Depends: ${misc:Depends}
 Description: Senia Locks for Mate Desktop 
+
+Package: senia-locks-xfce
+Architecture: all
+Depends: ${misc:Depends}
+Description: Senia Locks for Xfce4 Desktop 
 
 Package: senia-frozen-users
 Architecture: all
@@ -54,17 +59,15 @@ Depends: ${misc:Depends},senia-cdd, senia-browsers-settings, senia-non-essential
 Description: Metapackage for Desktop 
  Restrictions and Some useful settings for Desktops
 
-
 Package: senia-proxy-settings
 Architecture: all
 Depends: ${misc:Depends}
 Description: First version for Proxy
  Proxy Settings for IES La Senia
 
-
 Package: senia-cdd-ciclos-it
 Architecture: all
-Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings
+Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings, senia-locks-xfce
 Description: Senia package selection for IT FP
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:

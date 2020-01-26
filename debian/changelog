@@ -1,3 +1,12 @@
+senia-cdd (2020.01.15) bionic; urgency=high
+
+  * Back to basics.
+  * Maths user.
+  * Some minor fixes in booting.
+  * Xfce for IT Desktops.
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 25 Jan 2020 08:05:03 +0100
+
 senia-cdd (2019.10.17) bionic; urgency=high
 
   * Updated dependences 
