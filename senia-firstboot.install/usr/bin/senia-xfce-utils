@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# This script is licensed under GPL v3
+# or higher.
+
+PATH_XSESSIONS="/root/senia-backups/usr.share.xsessions/"
+XSESSIONS_TO_BE_CLEAN="plasma.desktop xfce.desktop mate.desktop"
+PATH_XSESSION_SYSTEM="/usr/share/xsessions"
+
+show_usage(){
+    echo " USAGE : $0 [ OPTIONS ] "
+    echo " "
+    echo " Options : "
+    echo -e " \t[ --clean-xsessions | -cx ] - Remove all sessions except xubuntu"
+    echo -e " \t[ -h | --help ] - Show this message "
+    exit 0
+}
+
+
+make_backup_xsessions(){
+
+    logger -s -t "senia-xfce-utils" " Creating backups for plasma.desktop : $PATH_XSESSIONS"
+    
+    mkdir -p "$PATH_XSESSIONS" 
+    
+    for SES in $XSESSIONS_TO_BE_CLEAN; do
+	logger -s -t "senia-xfce-utils" " Backup : $SES"
+	if [ -e "$PATH_XSESSION_SYSTEM/$SES" ]; then
+	    mv  "$PATH_XSESSION_SYSTEM/$SES" $PATH_XSESSIONS
+	fi
+    done    
+    
+}
+
+#
+# MAIN
+
+case $1  in
+     
+    --clean-xsessions|-cx)
+	make_backup_xsessions
+    ;;
+    -h|--help)
+	show_usage
+	;;
+    *)
+	show_usage
+    ;;
+esac
