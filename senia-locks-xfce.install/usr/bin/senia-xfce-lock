@@ -3,8 +3,8 @@
 # This script is licensed under GPL v3
 # or higher.
 
-PATH_XDG_XFCE_LOCKS="/etc/xdg/xfce4-senia/xfconf/xfce-perchannel-xml/"
-PATH_XDG_XFCE_LOCKS_SYSTEM="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/"
+PATH_XDG_XFCE_LOCKS="/etc/xdg/xfce4-senia/xfconf/xfce-perchannel-xml"
+PATH_XDG_XFCE_LOCKS_SYSTEM="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml"
 
 show_usage(){
     echo " USAGE : $0 [ OPTIONS ] "
@@ -18,7 +18,8 @@ show_usage(){
 set_locks(){
 
     for LOCK in $(ls -1 $PATH_XDG_XFCE_LOCKS) ; do
-	logger -s -t "senia-xfce-utils" " Backup : $LOCK"
+	logger -s -t "senia-xfce-utils" " Set : $LOCK"
+	cp $PATH_XDG_XFCE_LOCKS/$LOCK $PATH_XDG_XFCE_LOCKS_SYSTEM/
     done    
 }
 
