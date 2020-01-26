@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# This script is licensed under GPL v3
+# or higher.
+
+PATH_XDG_XFCE_LOCKS="/etc/xdg/xfce4-senia/xfconf/xfce-perchannel-xml/"
+PATH_XDG_XFCE_LOCKS_SYSTEM="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml/"
+
+show_usage(){
+    echo " USAGE : $0 [ OPTIONS ] "
+    echo " "
+    echo " Options : "
+    echo -e " \t[ --set-locks | -st ] - Set locks from La Senia"
+    echo -e " \t[ -h | --help ] - Show this message "
+    exit 0
+}
+
+set_locks(){
+
+    for LOCK in $(ls -1 $PATH_XDG_XFCE_LOCKS) ; do
+	logger -s -t "senia-xfce-utils" " Backup : $LOCK"
+    done    
+}
+
+
+#
+# MAIN
+
+case $1  in
+     
+    --set-locks|-st)
+	set_locks
+    ;;
+    -h|--help)
+	show_usage
+	;;
+    *)
+	show_usage
+    ;;
+esac
+
+
+
+exit 0
