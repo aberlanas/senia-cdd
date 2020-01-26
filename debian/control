@@ -15,12 +15,15 @@ Package: senia-locks
 Architecture: all
 Depends: ${misc:Depends}
 Description: Senia Locks for Mate Desktop 
-
+ Some useful locks for Senia, that is Ok.
+ 
 Package: senia-locks-xfce
 Architecture: all
 Depends: ${misc:Depends}
 Description: Senia Locks for Xfce4 Desktop 
-
+ XFCE provides a simple way to lock, useful.
+ Thanks for that, XFCE.
+ 
 Package: senia-frozen-users
 Architecture: all
 Depends: ${misc:Depends}, lsb-base
