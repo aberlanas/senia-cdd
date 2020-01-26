@@ -102,10 +102,11 @@ def busca_aulas_vacias():
                         libre=False
                 if (libre):
                     print(aula)
-                    aulas_vacias+=aula
+                    aulas_vacias+=aula+"\n"
             ws_vacia.cell(column=columna_vacia,row=fila_vacia,value=aulas_vacias)
             fila_vacia=fila_vacia+1
             
+        fila_vacia=1
         columna_vacia=columna_vacia+1
     
     wb_vacia.save("patatas_vacias.xlsx")
