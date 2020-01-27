@@ -1,3 +1,9 @@
+senia-cdd (2020.01.27) bionic; urgency=high
+
+  * Rebuild for bionic 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 27 Jan 2020 08:38:18 +0100
+
 senia-cdd (2020.01.27~eoan03) eoan; urgency=high
 
   * Simple upload to solve the changes problem.
