@@ -70,8 +70,8 @@ Description: First version for Proxy
 
 Package: senia-cdd-ciclos-it
 Architecture: all
-Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings, senia-locks-xfce
-Description: Senia package selection for IT FP
+Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings, senia-locks-xfce, libqt5multimedia5, wireshark-qt, libqt5multimediagsttools5, libqt5multimedia5, libqt5multimediawidgets5, libqt5multimedia5, qtbase-abi-5-12-4, libqt5core5a 
+Description: Senia package selection for IT - FP
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:
   * atom
