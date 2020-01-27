@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# This script is licensed under GPL v3
+# or higher.
+
+PATH_XDG_XFCE_LOCKS="/usr/share/senia-locks-xfce/xfce-perchannel-xml"
+PATH_XDG_XFCE_LOCKS_SYSTEM="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml"
+
+PATH_EOAN_XDG_XFCE_LOCKS="/usr/share/senia-locks-xfce/eoan-xubuntu-perchannel-xml"
+PATH_EOAN_XDG_XFCE_LOCKS_SYSTEM="/etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/"
+
+show_usage(){
+    echo " USAGE : $0 [ OPTIONS ] "
+    echo " "
+    echo " Options : "
+    echo -e " \t[ --set-locks | -st ] - Set locks from La Senia"
+    echo -e " \t[ -h | --help ] - Show this message "
+    exit 0
+}
+
+
+set_locks_eoan(){
+
+    for LOCK in $(ls -1 $PATH_EOAN_XDG_XFCE_LOCKS) ; do
+	logger -s -t "senia-xfce-utils" " EOAN Setting : $LOCK"
+	cp $PATH_EOAN_XDG_XFCE_LOCKS/$LOCK $PATH_EOAN_XDG_XFCE_LOCKS_SYSTEM/
+    done
+}
+
+set_locks(){
+
+    for LOCK in $(ls -1 $PATH_XDG_XFCE_LOCKS) ; do
+	logger -s -t "senia-xfce-utils" " Set : $LOCK"
+	cp $PATH_XDG_XFCE_LOCKS/$LOCK $PATH_XDG_XFCE_LOCKS_SYSTEM/
+    done
+
+    CODENAME=$(lsb_release -cs)
+    if [ $CODENAME = "eoan" ]; then
+	set_locks_eoan
+    fi
+}
+
+
+#
+# MAIN
+
+case $1  in
+     
+    --set-locks|-st)
+	set_locks
+	
+    ;;
+    -h|--help)
+	show_usage
+	;;
+    *)
+	show_usage
+    ;;
+esac
+
+
+
+exit 0

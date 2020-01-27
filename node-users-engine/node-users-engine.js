@@ -396,22 +396,22 @@ function filterAlumnesByCurso(alumnes,cursCodi){
 function getAlumnes(centre){
     // For now this seems redundant buy I think 
     // will be usefull in the future
-    return centre.centre.alumnes.alumne;
+    return centre.centro.alumnos.alumne;
 }
 
 function getGrups(centre){
     // For now this seems redundant
-    return centre.centre.grups.grup;
+    return centre.centro.grupos.grupo;
 }
 
 
 function getProfessors(centre){
-    return centre.centre.professors.professor;
+    return centre.centro.docentes.professor;
 }
 
 function getAssignatures(centre){
     //console.log(JSON.stringify(centre.centre.assignatures.assignatura));
-    return centre.centre.assignatures.assignatura;
+    return centre.centro.assignatures.assignatura;
 }
 
 
@@ -481,7 +481,8 @@ if (program.info){
 
 if (program.listGroups){
 
-    var grups  = getGrups(centre);
+    console.log(centre);
+    grups  = getGrups(centre);
 
     if (program.customIdPrefix){
         customIdPrefix = program.customIdPrefix;
@@ -491,6 +492,7 @@ if (program.listGroups){
         saveCohorts = true;
     }
 
+    console.log(grups);
     printGrups(grups,outputMode);
     process.exit(0);
 }

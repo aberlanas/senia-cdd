@@ -128,7 +128,7 @@ Description: senia configuration for inventory
 
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, senia-inventory-client, gpm, gimp, libqt5webkit5, libqt5multimedia5, libqt5xml5, libqt5script5, libqt5scripttools5, kdenlive, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, chromium-browser, chromium-browser-l10n
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, chromium-browser, chromium-browser-l10n
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 

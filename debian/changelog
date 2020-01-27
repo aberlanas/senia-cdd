@@ -1,10 +1,17 @@
-senia-cdd (2020.01.26~eoan1) eoan; urgency=high
+senia-cdd (2020.01.27~eoan02) eoan; urgency=medium
 
-  * Continue improving Senia for Ciclos IT 
+  * Updated xfce-locks for eoan.
+  * Some dependences removed.
 
- -- tic La Senia <tic@ieslasenia.org>  Mon, 27 Jan 2020 08:27:16 +0100
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 26 Jan 2020 20:38:24 +0100
 
-senia-cdd (2020.01.25~eoan1) eoan; urgency=high
+senia-cdd (2020.01.26~eoan) eoan; urgency=high
+
+  * Updated changelog: eoan - removing some unused dependences 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 26 Jan 2020 18:48:05 +0100
+
+senia-cdd (2020.01.25) bionic; urgency=high
 
   * Back to basics.
   * Maths user.
