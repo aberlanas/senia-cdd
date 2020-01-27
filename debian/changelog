@@ -1,3 +1,9 @@
+senia-cdd (2020.01.27+bionic1) bionic; urgency=high
+
+  * Removed impossible dependence
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 27 Jan 2020 09:07:38 +0100
+
 senia-cdd (2020.01.27) bionic; urgency=high
 
   * Rebuild for bionic 
