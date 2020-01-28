@@ -7,6 +7,10 @@ PATH_XSESSIONS="/root/senia-backups/usr.share.xsessions/"
 XSESSIONS_TO_BE_CLEAN="plasma.desktop xfce.desktop mate.desktop"
 PATH_XSESSION_SYSTEM="/usr/share/xsessions"
 
+PATH_APT_PREFERENCES="/root/senia-backups/etc.apt.preferences.d"
+PREFERENCES_TO_BE_CLEAN="99-neon-base-files 99-neon-software-properties 99-pulseaudio-qt"
+PATH_APT_PREFERENCES_SYSTEM="/etc/apt/preferences.d"
+
 show_usage(){
     echo " USAGE : $0 [ OPTIONS ] "
     echo " "
@@ -25,7 +29,7 @@ make_backup_xsessions(){
     mkdir -p "$PATH_XSESSIONS" 
     
     for SES in $XSESSIONS_TO_BE_CLEAN; do
-	logger -s -t "senia-xfce-utils" " Backup : $SES"
+	logger -s -t "senia-xfce-utils" " Xsessions-Backup : $SES"
 	if [ -e "$PATH_XSESSION_SYSTEM/$SES" ]; then
 	    mv  "$PATH_XSESSION_SYSTEM/$SES" $PATH_XSESSIONS
 	fi
@@ -34,13 +38,27 @@ make_backup_xsessions(){
 }
 
 clean_neon(){
+
+    logger -s -t "senia-xfce-utils" "APT-Conf : Removing configuration"
+    mkdir -p "$PATH_APT_PREFERENCES"
+
+    for PREF in $PREFERENCES_TO_BE_CLEAN; do
+	logger -s -t "senia-xfce-utils" "APT-Conf.Backup : $PREF"
+	if [ -e "$PATH_APT_PREFERENCES_SYSTEM/$PREF" ]; then
+	    mv  "$PATH_APT_PREFERENCES_SYSTEM/$PREF" $PATH_APT_PREFERENCES/
+	fi
+    done
+
     
-    logger -s -t "senia-xfce-utils" " APT : Removing packages "
+    logger -s -t "senia-xfce-utils" "APT : Removing packages "
 
     # Delete old pacakges
-    apt purge libqt5core5a
+    # apt purge libqt5core5a
 
+
+    
 }
+
 
 
 
