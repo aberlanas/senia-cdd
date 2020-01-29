@@ -6,6 +6,8 @@
 PATH_XSESSIONS="/root/senia-backups/usr.share.xsessions/"
 XSESSIONS_TO_BE_CLEAN="plasma.desktop xfce.desktop mate.desktop"
 PATH_XSESSION_SYSTEM="/usr/share/xsessions"
+LIGHTDM_DATA="/var/lib/lightdm-data"
+LIGHTDM_USERS_TO_CLEAN="smx daw alumno profe tic euler"
 
 show_usage(){
     echo " USAGE : $0 [ OPTIONS ] "
@@ -13,9 +15,19 @@ show_usage(){
     echo " Options : "
     echo -e " \t[ --clean-xsessions | -cx ] - Remove all sessions except xubuntu"
     echo -e " \t[ --clean-neon | -cn ] - Remove some packages from neon"
+    echo -e " \t[ --clean-lightdm | -cl ] - Clean lightdm info"
     echo -e " \t[ -h | --help ] - Show this message "
     exit 0
 }
+
+
+clean_lightdm_sessions(){
+    logger -s -t "senia-xfce-utils" " Cleaning Sessions : $LIGHTDM_DATA"
+    for US in $LIGHTDM_USERS_TO_CLEAN; do
+	logger -s -t "senia-xfce-utils" " * Session $LIGHTDM_DATA/$US "
+	[ ! -e $LIGHTDM_DATA/$US ] || rm -rf  "$LIGHTDM_DATA/$US"
+    done
+    }
 
 
 make_backup_xsessions(){
@@ -54,6 +66,9 @@ case $1  in
     ;;
     -h|--help)
 	show_usage
+	;;
+    --clean-lightdm |-cl)
+	clean_lightdm_sessions
 	;;
     --clean-neon | -cn)
 	clean_neon
