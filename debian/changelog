@@ -1,3 +1,9 @@
+senia-cdd (2020.01.29) bionic; urgency=high
+
+  * Updated xfce backgrounds for IT 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 29 Jan 2020 18:41:17 +0100
+
 senia-cdd (2020.01.27~eoan01) eoan; urgency=medium
 
   * Updated xfce-locks for eoan.
