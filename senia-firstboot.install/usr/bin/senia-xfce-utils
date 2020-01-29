@@ -12,6 +12,7 @@ show_usage(){
     echo " "
     echo " Options : "
     echo -e " \t[ --clean-xsessions | -cx ] - Remove all sessions except xubuntu"
+    echo -e " \t[ --clean-neon | -cn ] - Remove some packages from neon"
     echo -e " \t[ -h | --help ] - Show this message "
     exit 0
 }
@@ -32,6 +33,17 @@ make_backup_xsessions(){
     
 }
 
+clean_neon(){
+    
+    logger -s -t "senia-xfce-utils" " APT : Removing packages "
+
+    # Delete old pacakges
+    apt purge libqt5core5a
+
+}
+
+
+
 #
 # MAIN
 
@@ -42,6 +54,9 @@ case $1  in
     ;;
     -h|--help)
 	show_usage
+	;;
+    --clean-neon | -cn)
+	clean_neon
 	;;
     *)
 	show_usage

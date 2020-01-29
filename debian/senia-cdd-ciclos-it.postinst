@@ -6,10 +6,10 @@ set -e
 
 case $1 in
         configure)
-                #Senia repositories
-		echo " * Senia SMX on wireshark"
-		adduser smx wireshark
-        ;;
+             #Senia repositories
+	    echo " * Senia SMX on wireshark"
+	    adduser smx wireshark || echo " SMX user not in system..."
+            ;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
                 echo "postinst called with argument \`$1'" >&2

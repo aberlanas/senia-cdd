@@ -8,6 +8,7 @@ senia-cdd (2020.01.27~eoan01) eoan; urgency=medium
 
   * Updated xfce-locks for eoan.
   * Some dependences removed.
+  * Updated aules as our default place.
 
  -- tic La Senia <tic@ieslasenia.org>  Sun, 26 Jan 2020 20:38:24 +0100
 
