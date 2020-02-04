@@ -23,7 +23,13 @@ Depends: ${misc:Depends}
 Description: Senia Locks for Xfce4 Desktop 
  XFCE provides a simple way to lock, useful.
  Thanks for that, XFCE.
- 
+
+Package: senia-desktop-xfce
+Architecture: all
+Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm
+Description: Senia XFCE4 Dependences
+ Simple package to solve the xfce4 session.
+
 Package: senia-frozen-users
 Architecture: all
 Depends: ${misc:Depends}, lsb-base
@@ -70,7 +76,7 @@ Description: First version for Proxy
 
 Package: senia-cdd-ciclos-it
 Architecture: all
-Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings, senia-locks-xfce, libqt5multimedia5, wireshark-qt, libqt5multimediagsttools5, libqt5multimedia5, libqt5multimediawidgets5, libqt5multimedia5,libqt5core5a, libqt5x11extras5 
+Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings, senia-locks-xfce, libqt5multimedia5, wireshark-qt, libqt5multimediagsttools5, libqt5multimedia5, libqt5multimediawidgets5, libqt5multimedia5,libqt5core5a, libqt5x11extras5, senia-desktop-xfce
 Description: Senia package selection for IT - FP
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:

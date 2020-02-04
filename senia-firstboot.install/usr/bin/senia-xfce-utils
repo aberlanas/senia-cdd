@@ -15,7 +15,8 @@ show_usage(){
     echo " USAGE : $0 [ OPTIONS ] "
     echo " "
     echo " Options : "
-    echo -e " \t[ --clean-xsessions | -cx ] - Remove all sessions except xubuntu"
+    echo -e " \t[ --clean-xsessions | -cx ] - Remove sessions except xubuntu"
+    echo -e " \t[ --clean-cache | -cc ] - Remove cache of xubuntu"
     echo -e " \t[ --clean-neon | -cn ] - Remove some packages from neon"
     echo -e " \t[ -h | --help ] - Show this message "
     exit 0
@@ -59,6 +60,15 @@ clean_neon(){
     
 }
 
+make_clean_cache()
+{
+
+    logger -s -t "senia-xfce-utils" "XFCE4 : Cleaning cache"
+    find /home/ -xtype d -wholename "*.cache/xfce4*" -exec rm -rf {} \;
+    
+}
+
+
 
 
 
@@ -75,6 +85,9 @@ case $1  in
 	;;
     --clean-neon | -cn)
 	clean_neon
+	;;
+    --clean-cache | -cc)
+	make_clean_cache
 	;;
     *)
 	show_usage

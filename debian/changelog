@@ -1,3 +1,11 @@
+senia-cdd (2020.02.04) bionic; urgency=high
+
+  * Fixed senia-xfce-utils to clean xfce4 sessions cache.
+  * Added xubuntu-desktop and xubuntu-default-settings to senia-cdd-ciclos-it
+  * Created package for xfce4 migration
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 04 Feb 2020 06:23:32 +0100
+
 senia-cdd (2020.01.28) bionic; urgency=high
 
   * Cleaning apt configuration.
