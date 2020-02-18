@@ -1,3 +1,9 @@
+senia-cdd (2020.02.18) bionic; urgency=high
+
+  * Updated senia-backgrounds 
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 18 Feb 2020 20:35:56 +0100
+
 senia-cdd (2020.02.04) bionic; urgency=high
 
   * Fixed senia-xfce-utils to clean xfce4 sessions cache.
