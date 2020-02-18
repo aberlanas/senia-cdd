@@ -1,6 +1,6 @@
-senia-cdd (2020.02.18) bionic; urgency=high
+senia-cdd (2020.02.18~focal) focal; urgency=high
 
-  * Updated senia-backgrounds 
+  * Updated senia-backgrounds
 
  -- tic La Senia <tic@ieslasenia.org>  Tue, 18 Feb 2020 20:35:56 +0100
 
