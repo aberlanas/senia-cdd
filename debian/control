@@ -77,10 +77,9 @@ Description: First version for Proxy
 Package: senia-cdd-ciclos-it
 Architecture: all
 Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings, senia-locks-xfce, libqt5multimedia5, wireshark-qt, libqt5multimediagsttools5, libqt5multimedia5, libqt5multimediawidgets5, libqt5multimedia5,libqt5core5a, libqt5x11extras5, senia-desktop-xfce, senia-backgrounds
-Description: Senia package selection for IT - FP
+Description: Senia package selection for IT - FP and ESO
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:
-  * atom
   * virtualbox
   * packettracer
   * eclipse-neon
@@ -107,7 +106,7 @@ Description: IES La Senia CDD
 
 Package: senia-non-essential-tools
 Architecture: all
-Depends: ${misc:Depends},${python:Depends}, ${python3:Depends}, python3-xlrd,python-opencv,python3-pyside.qtgui, python3-pyside.qtcore, python-pil, git-buildpackage, openssh-server
+Depends: ${misc:Depends}
 Description: But highly recommended
  IES La Senia development packages and tools packages
 
@@ -134,7 +133,7 @@ Description: senia configuration for inventory
 
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, chromium-browser, chromium-browser-l10n
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, chromium-browser, chromium-browser-l10n, libreoffice-sdbc-hsqldb
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 
