@@ -30,14 +30,7 @@ case "$1" in
   configure)
     # Set up our config for dconf
 	# Dirty hack
-	echo " * FOR NOW "
-	echo "dconf update"
-    if [ -x /usr/bin/dconf ]; then
-	echo " * Dconf exists...else must be run"
-	dconf update
-    else
-	echo " Dconf not exists...nothing to do"	    
-    fi    
+	echo " * Senia Empty"
 
   ;;
 
