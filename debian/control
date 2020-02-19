@@ -2,7 +2,7 @@ Source: senia-cdd
 Section: metapackages
 Priority: optional
 Maintainer: tic La Senia <tic@ieslasenia.org>
-Build-Depends: debhelper (>=9), unzip, python3-dev, python-dev, dh-python
+Build-Depends: debhelper (>=9), unzip, python3-dev, dh-python
 Standards-Version: 3.9.8
 
 Package: senia-backgrounds
