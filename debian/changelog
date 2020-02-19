@@ -1,3 +1,10 @@
+senia-cdd (2020.02.19) bionic; urgency=high
+
+  * Added python-dev in senia-cdd Build depends. Must be removed
+    at next version.
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 19 Feb 2020 07:58:07 +0100
+
 senia-cdd (2020.02.18~focal) focal; urgency=high
 
   * Updated senia-backgrounds
