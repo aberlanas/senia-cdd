@@ -1,3 +1,9 @@
+senia-cdd (2020.03.11) bionic; urgency=high
+
+  * Added xz-utils 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 11 Mar 2020 07:20:07 +0100
+
 senia-cdd (2020.03.10) bionic; urgency=high
 
   * Added zeal for IT Skills.
