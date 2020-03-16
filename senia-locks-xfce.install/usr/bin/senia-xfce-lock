@@ -65,7 +65,7 @@ set_locks(){
 	set_locks_bionic
     elif [ $CODENAME = "eoan" ]; then
 	set_locks_eoan
-    elif [ $CODENAM = "focal" ]; then
+    elif [ $CODENAME = "focal" ]; then
 	set_locks_focal
     fi
     
