@@ -9,6 +9,11 @@ PATH_XDG_XFCE_LOCKS_SYSTEM="/etc/xdg/xfce4/xfconf/xfce-perchannel-xml"
 PATH_EOAN_XDG_XFCE_LOCKS="/usr/share/senia-locks-xfce/eoan-xubuntu-perchannel-xml"
 PATH_EOAN_XDG_XFCE_LOCKS_SYSTEM="/etc/xdg/xdg-xubuntu/xfce4/xfconf/xfce-perchannel-xml/"
 
+PATH_FOCAL_XDG_XFCE_LOCKS_SYSTEM="$PATH_EOAN_XDG_XFCE_LOCKS_SYSTEM"
+PATH_FOCAL_XDG_XFCE_LOCKS="/usr/share/senia-locks-xfce/focal-xubuntu-perchannel-xml"
+
+
+
 show_usage(){
     echo " USAGE : $0 [ OPTIONS ] "
     echo " "
@@ -21,23 +26,49 @@ show_usage(){
 
 set_locks_eoan(){
 
+    logger -s -t "senia-xfce-utils" " EOAN Settings "
     for LOCK in $(ls -1 $PATH_EOAN_XDG_XFCE_LOCKS) ; do
 	logger -s -t "senia-xfce-utils" " EOAN Setting : $LOCK"
 	cp $PATH_EOAN_XDG_XFCE_LOCKS/$LOCK $PATH_EOAN_XDG_XFCE_LOCKS_SYSTEM/
     done
 }
 
-set_locks(){
+set_locks_focal(){
 
+    logger -s -t "senia-xfce-utils" " Focal Settings "
+    for LOCK in $(ls -1 $PATH_FOCAL_XDG_XFCE_LOCKS) ; do
+	logger -s -t "senia-xfce-utils" " Focal Setting : $LOCK"
+	cp $PATH_FOCAL_XDG_XFCE_LOCKS/$LOCK $PATH_FOCAL_XDG_XFCE_LOCKS_SYSTEM/
+    done
+    
+}
+
+set_locks_bionic(){
+
+    logger -s -t "senia-xfce-utils" " Bionic Settings "
+    
     for LOCK in $(ls -1 $PATH_XDG_XFCE_LOCKS) ; do
 	logger -s -t "senia-xfce-utils" " Set : $LOCK"
 	cp $PATH_XDG_XFCE_LOCKS/$LOCK $PATH_XDG_XFCE_LOCKS_SYSTEM/
     done
 
+
+}
+
+
+set_locks(){
+
+
     CODENAME=$(lsb_release -cs)
-    if [ $CODENAME = "eoan" ]; then
+    
+    if [ $CODENAME = "bionic" ]; then
+	set_locks_bionic
+    elif [ $CODENAME = "eoan" ]; then
 	set_locks_eoan
+    elif [ $CODENAM = "focal" ]; then
+	set_locks_focal
     fi
+    
 }
 
 
