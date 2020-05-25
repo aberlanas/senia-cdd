@@ -29,7 +29,8 @@ case "$1" in
 
   configure)
     # Set up our config for dconf
-    echo "Configured empty"
+    echo " * [ Senia ] : Cleaning old Settings for Dconf"
+    test ! -f /etc/dconf/profile/user || rm -f /etc/dconf/profile/user
     exit 0
   ;;
 

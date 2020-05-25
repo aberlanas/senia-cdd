@@ -1,3 +1,9 @@
+senia-cdd (2020.05.25) focal; urgency=high
+
+  * Starting to build for Focal
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 25 May 2020 07:27:57 +0200
+
 senia-cdd (2020.03.11) bionic; urgency=high
 
   * Added xz-utils 
