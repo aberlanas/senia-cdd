@@ -3,7 +3,7 @@ Section: metapackages
 Priority: optional
 Maintainer: tic La Senia <tic@ieslasenia.org>
 Build-Depends: debhelper (>=9), unzip, dh-python
-Standards-Version: 3.9.8
+Standards-Version: 4.5.0
 
 Package: senia-backgrounds
 Architecture: all
