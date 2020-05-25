@@ -1,0 +1,11 @@
+[Unit]
+Description=Senia : Frozen-Users
+After=network.target
+User=root
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/senia-frozen
+
+[Install]
+WantedBy=multi-user.target

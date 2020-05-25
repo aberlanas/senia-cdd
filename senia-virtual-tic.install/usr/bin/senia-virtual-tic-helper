@@ -1,0 +1,15 @@
+#!/bin/bash
+
+DESKTOPS="senia-virtual-tic.desktop senia-scanner.desktop" 
+USERS="profe"
+
+for user in ${USERS}; do
+	for desktop in ${DESKTOPS}; do
+		logger -s -t "senia-virtual-tic" "Setting for ${user} : ${desktop}"
+		cp /usr/share/applications/${desktop} /home/${user}/Desktop/
+		chmod +x /home/${user}/Desktop/${desktop} 
+		chown ${user}:${user} /home/${user}/Desktop/${desktop}
+	done
+done
+
+exit 0
