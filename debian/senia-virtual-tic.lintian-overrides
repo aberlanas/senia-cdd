@@ -1,1 +1,4 @@
 senia-virtual-tic: binary-without-manpage usr/bin/senia-virtual-tic
+senia-virtual-tic: binary-without-manpage usr/bin/senia-virtual-tic-helper
+senia-virtual-tic: desktop-command-not-in-package usr/share/applications/senia-scanner.desktop x-www-browser
+senia-virtual-tic: desktop-mime-but-no-exec-code usr/share/applications/senia-scanner.desktop

@@ -1,0 +1,11 @@
+[Unit]
+Description=Senia : Virtual TIC Helpers
+After=network.target
+User=root
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/senia-virtual-tic-helper
+
+[Install]
+WantedBy=multi-user.target

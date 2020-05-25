@@ -3,3 +3,4 @@ senia-firstboot: binary-without-manpage usr/bin/senia-firstboot
 senia-firstboot: binary-without-manpage usr/bin/senia-firstboot-aula
 senia-firstboot: binary-without-manpage usr/bin/senia-repositories
 senia-firstboot: binary-without-manpage usr/bin/senia-rsync
+senia-firstboot: binary-without-manpage usr/bin/senia-xfce-utils
