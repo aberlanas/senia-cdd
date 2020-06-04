@@ -1,10 +1,12 @@
-#! /usr/bin/python
+#!/usr/bin/python3
+
+# Instalar :
+# * python3-pdfrw
 
 import os
 from pdfrw import PdfWriter, PdfReader, IndirectPdfDict, PdfName, PdfDict,PdfObject
 
-
-INVOICE_TEMPLATE_PATH = '9_FP_GM_I_GS_AUTOBIS.pdf' # DOCUMENTO BASE
+INVOICE_TEMPLATE_PATH = 'templates/9_FP_GM_I_GS_AUTOBIS.pdf' # DOCUMENTO BASE
 INVOICE_OUTPUT_PATH = 'invoice.pdf' #DESTINO
 
 
@@ -18,15 +20,11 @@ WIDGET_SUBTYPE_KEY = '/Widget'
 
 def write_fillable_pdf(input_pdf_path, output_pdf_path, data_dict):
 
-    
-
-
     template_pdf = PdfReader(input_pdf_path)
 	# Para que se vean los campos rellenados
     template_pdf.Root.AcroForm.update(PdfDict(NeedAppearances=PdfObject('true'))) 
     for page in template_pdf.pages:
         annotations = page[ANNOT_KEY]
-
 
         for annotation in annotations:
             if annotation[SUBTYPE_KEY] == WIDGET_SUBTYPE_KEY:
@@ -67,14 +65,14 @@ def write_fillable_pdf(input_pdf_path, output_pdf_path, data_dict):
 
 
 data_dict = {
-   'untitled1': '46025700', #Codigo de centro
-   'untitled5': 'Centro', #Nombre del centro
+   'untitled1': '46017675', #Codigo de centro
+   'untitled5': 'IES La Sènia', #Nombre del centro
    'untitled6': PdfName('Yes'), #Centro titularidad publica
-   'untitled2': 'Valencia', #Localidad centro
+   'untitled2': 'Paiporta', #Localidad centro
    'untitled4': 'Valencia', #Provincia centro
-   'untitled8': 'Numero', #Telefono Centro
-   'untitled3': 'Calle Falsa, 123', #Direccion Centro
-   'untitled9': '46900', #Codigo Postal Centro
+   'untitled8': '961 20 59 55', #Telefono Centro
+   'untitled3': 'Calle Escultor José Capuz, 96', #Direccion Centro
+   'untitled9': '46200', #Codigo Postal Centro
    'untitled10': 'NIA', #NIA Alumno
    'untitled11': 'Curso', #Curso Alumno
    'untitled12': 'Apellidos, Nombre', #Apellidos, Nombre - Alumnos
@@ -92,11 +90,11 @@ data_dict = {
    'untitled26': 'Punto 2.2', #Punto 2.2
    'untitled27': 'Punto 2.3', #Punto 2.3
    'untitled28': 'Punto 2.4', #Punto 2.4
-   'untitled30': 'Valencia', #Firma Valencia
+   'untitled30': 'Paiporta', #Firma Valencia
    'untitled31': '28', #Firma dia
    'untitled32': 'Mayo' #Firma Mes
 }
 
-#if __name__ == '__main__':
-write_fillable_pdf(INVOICE_TEMPLATE_PATH, INVOICE_OUTPUT_PATH, data_dict)
-print("Hola")
+if __name__ == '__main__':
+    write_fillable_pdf(INVOICE_TEMPLATE_PATH, INVOICE_OUTPUT_PATH, data_dict)
+    print(" * Rellenado ")
