@@ -1,3 +1,9 @@
+senia-cdd (2020.06.04) focal; urgency=high
+
+  * Cleaning and fixing dependences
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 04 Jun 2020 10:55:47 +0200
+
 senia-cdd (2020.05.25) focal; urgency=high
 
   * Starting to build for Focal

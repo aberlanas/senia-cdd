@@ -26,7 +26,7 @@ Description: Senia Locks for Xfce4 Desktop
 
 Package: senia-desktop-xfce
 Architecture: all
-Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm
+Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm, senia-locks-xfce
 Description: Senia XFCE4 Dependences
  Simple package to solve the xfce4 session.
 
@@ -76,19 +76,13 @@ Description: First version for Proxy
 
 Package: senia-cdd-ciclos-it
 Architecture: all
-Depends: ${misc:Depends}, default-mysql-server, mysql-workbench, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings, senia-locks-xfce, libqt5multimedia5, wireshark-qt, libqt5multimediagsttools5, libqt5multimedia5, libqt5multimediawidgets5, libqt5multimedia5,libqt5core5a, libqt5x11extras5, senia-desktop-xfce, senia-backgrounds
+Depends: ${misc:Depends}, default-mysql-server, dia, apache2, vim, wireshark, filezilla, bmon, hwinfo, tree, nmap, default-jdk, , senia-cdd, epoptes-client, adduser, senia-browsers-settings, gtkterm, senia-proxy-settings, senia-locks-xfce, libqt5multimedia5, wireshark-qt, libqt5multimediagsttools5, libqt5multimedia5, libqt5multimediawidgets5, libqt5multimedia5,libqt5core5a, libqt5x11extras5, senia-desktop-xfce, senia-backgrounds
 Description: Senia package selection for IT - FP and ESO
  Some packages to use in SMX and DAW
   * Remain at "at hand" the next packages:
   * virtualbox
   * packettracer
   * eclipse-neon
-
-Package: senia-cdd-ciclos-afi
-Architecture: all
-Depends: ${misc:Depends}, senia-cdd, senia-browsers-settings
-Description: Senia package selection for AFI FP
- Some packages to use in GA and AFI
 
 Package: senia-cdd-aulas-inf
 Architecture: all
@@ -133,7 +127,7 @@ Description: senia configuration for inventory
 
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, chromium-browser, chromium-browser-l10n, libreoffice-sdbc-hsqldb, zeal, xz-utils
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, libreoffice-sdbc-hsqldb, zeal, xz-utils, fonts-firacode
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 
