@@ -1,3 +1,9 @@
+senia-cdd (2020.06.05) focal; urgency=high
+
+  * Updated dependences 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 04 Jun 2020 11:50:11 +0200
+
 senia-cdd (2020.06.04) focal; urgency=high
 
   * Cleaning and fixing dependences
