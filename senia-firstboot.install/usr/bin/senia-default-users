@@ -12,6 +12,26 @@ if [ ! -z "$1" ]; then
     fi    
 fi
 
+echo  " * [ Senia Default Users ] : Adding User [ tic ] "
+echo  " *  - Testing if tic exists"
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q tic|| rc=1
+
+if [ $rc -eq 1 ]; then
+   echo " - The user tic not exists : creating..."
+   adduser --quiet --disabled-password --shell /bin/bash --home /home/tic --gecos TIC  tic
+   echo "tic:tic" | chpasswd
+   adduser tic adm
+   adduser tic sudo
+else
+   echo " - The user euler tic in system...nothing to do"
+fi
+
+
+
+
+
 echo  " * [ Senia Default Users ] : Adding User [ profe ] "
 echo  " *  - Testing if exists"
 

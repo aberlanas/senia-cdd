@@ -64,8 +64,8 @@ Description: Metapackage for aulas and clients.
 
 Package: senia-cdd-desktop
 Architecture: all
-Depends: ${misc:Depends},senia-cdd, senia-browsers-settings, senia-non-essential-tools
-Description: Metapackage for Desktop
+Depends: ${misc:Depends},senia-cdd, senia-browsers-settings, senia-non-essential-tools, senia-desktop-xfce, senia-locks-xfce
+Description: Metapackage for Desktop - Xfce
  Restrictions and Some useful settings for Desktops
 
 Package: senia-proxy-settings
