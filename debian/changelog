@@ -1,3 +1,9 @@
+senia-cdd (2020.06.07) focal; urgency=high
+
+  * Added Kiosko
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 05 Jun 2020 11:40:12 +0200
+
 senia-cdd (2020.06.06) focal; urgency=high
 
   * Updated cdd-desktop dependences.

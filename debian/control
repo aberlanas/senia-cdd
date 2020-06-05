@@ -26,7 +26,7 @@ Description: Senia Locks for Xfce4 Desktop
 
 Package: senia-desktop-xfce
 Architecture: all
-Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm, senia-locks-xfce
+Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm, senia-locks-xfce, senia-backgrounds
 Description: Senia XFCE4 Dependences
  Simple package to solve the xfce4 session.
 
