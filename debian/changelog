@@ -1,3 +1,15 @@
+senia-cdd (2020.06.10) focal; urgency=high
+
+  * Updated background for 2020-2021 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 10 Jun 2020 16:23:49 +0200
+
+senia-cdd (2020.06.08) focal; urgency=high
+
+  * Removed Euler user for now
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 06 Jun 2020 08:37:51 +0200
+
 senia-cdd (2020.06.07) focal; urgency=high
 
   * Added Kiosko

@@ -64,19 +64,4 @@ else
 fi
 
 
-echo  " * [ Senia Default Users ] : Adding User [ euler ] "
-echo  " *  - Testing if euler exists"
-
-rc=$DEFAULTRC
-cat /etc/passwd | grep -q euler || rc=1
-
-if [ $rc -eq 1 ]; then
-   echo " - The user euler not exists : creating..."
-   adduser --quiet --disabled-password --shell /bin/bash --home /home/euler --gecos Euler euler
-   echo "euler:112358" | chpasswd
-else
-   echo " - The user euler exists in system...nothing to do"
-fi
-
-
 exit 0

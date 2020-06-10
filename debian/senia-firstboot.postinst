@@ -11,7 +11,7 @@ case $1 in
 		rc=0
 		
 		echo " * [ Senia Repositoris : Bionic ]"
-		test -f /etc/apt/sources.list.d/ticsenia-ubuntu-ppa-bionic.list	||rc=1
+		test -f /etc/apt/sources.list.d/ticsenia-ubuntu-ppa-focal.list	||rc=1
 		
 		if [ $rc -eq 1 ]; then
 			echo " * Adding new PPA for TIC Senia ..."
