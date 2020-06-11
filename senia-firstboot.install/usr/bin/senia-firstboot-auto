@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+show_usage(){
+	echo -e " [ USAGE ] : \t senia-firstboot-auto [CLASSNAME] "
+	echo -e " \t\t senia-firstboot-auto [DESPACHO PUESTO]"
+	echo -e " " 
+	echo -e " Example: $(basename $0) audiovisuales"
+	echo -e " Example: $(basename $0) aula13"
+}
+
+
+
+if [ $# -lt 2 -o $# -gt 3 ]; then
+	show_usage
+	exit 0
+	else
+	echo " yeee"
+fi
+
+
+exit 0
