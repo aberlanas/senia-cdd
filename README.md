@@ -1,14 +1,28 @@
 # Senia CDD 
 
-
 Documentacion de los diferentes paquetes y necesidades de Software de las aulas del centro
-IES La Senia de Paiporta.
+IES La Senia de Paiporta, aunque podría adaptarse a cualquier centro educativo. 
 
 Actualmente contamos con configuracion y paqueteria que aplica a las diferentes aulas e infraestructura
 del centro.
 
-Se muestra una pequenya descripcion de cada una de las instalaciones disponibles.
+En la versión 20.04 del PPA para el IES La Senia, el escritorio se basa en XFCE. La posibilidad de configurar el Escritorio, así como de establecer blindajes lo suficientemente fuertes para que el alumnado no pueda cambiar el escritorio y no permitir su correcta utilización por parte de otros usuarios.
 
+## Creación Imágen de Instalación
+
+Utilizando *cubic* se ha realizado una *customización* de Xubuntu 20.04. Los únicos cambios que han 
+
+
+
+
+### Generacion Password Preseed
+
+Para la generación del Password del usuario, en el fichero de preseed, se debe pegar el texto que que se obtiene de 
+la generación del *md5* utilizando `mkpasswd`:
+
+```shell
+printf "PASSWORD" | mkpasswd -s -m md5
+```
 
 # Arboles de dependencias
 
