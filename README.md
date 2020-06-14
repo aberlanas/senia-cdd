@@ -10,10 +10,18 @@ En la versión 20.04 del PPA para el IES La Senia, el escritorio se basa en XFCE
 
 ## Creación Imágen de Instalación
 
-Utilizando *cubic* se ha realizado una *customización* de Xubuntu 20.04. Los únicos cambios que han 
+Utilizando *cubic* se ha realizado una *customización* de Xubuntu 20.04. Los únicos cambios que deben hacerse son:
 
+### modo-interactivo
 
+```shell
+sudo add-apt-repository ppa:ticsenia/ppa
+sudo apt install senia-cdd-ciclos-it plymouth-theme-xubuntu-logo
+``` 
 
+### preseed
+
+De la ruta: [Preseed](tools/preseed), copiamos el contenido del fichero a *xubuntu.preseed* que luego acabará dentro del directorio */cdrom/*.
 
 ### Generacion Password Preseed
 
@@ -23,6 +31,12 @@ la generación del *md5* utilizando `mkpasswd`:
 ```shell
 printf "PASSWORD" | mkpasswd -s -m md5
 ```
+
+### Instalación desatendida
+
+La opción "Senia Desatendida" nos permite realizar la instalación de manera desatendida. 
+
+
 
 # Arboles de dependencias
 
