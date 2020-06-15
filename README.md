@@ -19,6 +19,24 @@ sudo add-apt-repository ppa:ticsenia/ppa
 sudo apt install senia-cdd-ciclos-it plymouth-theme-xubuntu-logo
 ``` 
 
+#### Password de tic
+
+```shell
+sudo passwd tic
+```
+
+Por defecto: *tic* -> *tic*
+
+
+#### Creación de Usuarios
+Creación de usuarios, en caso de que sea para las aulas de ciclos, sería conveniente que se instalaran los siguientes usuarios.
+
+```shell
+sudo adduser daw
+sudo adduser smx
+```
+
+
 ### preseed
 
 De la ruta: [Preseed](tools/preseed), copiamos el contenido del fichero a *xubuntu.preseed* que luego acabará dentro del directorio */cdrom/*.
