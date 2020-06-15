@@ -58,7 +58,16 @@ d-i user-setup/allow-password-weak boolean true
 
 # Enable extras.ubuntu.com.
 d-i	apt-setup/extras	boolean true
+
 # Install the Xubuntu desktop.
 tasksel	tasksel/first	multiselect xubuntu-desktop
+
 # No XFCE translation packages yet.
 d-i	pkgsel/language-pack-patterns	string
+
+
+# Grub Install
+d-i grub-installer/only_debian boolean true
+d-i grub-installer/with_other_os boolean true
+d-i grub-installer/bootdev  string default
+
