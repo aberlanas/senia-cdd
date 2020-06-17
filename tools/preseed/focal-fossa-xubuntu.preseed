@@ -49,10 +49,10 @@ d-i apt-setup/universe boolean true
 # Users
 d-i passwd/user-fullname string tic 
 d-i passwd/username string tic
-d-i passwd/user-password-crypted password YOUR_PASSWORD_HERE
+d-i passwd/user-password-crypted password $1$d2MGYey.$9ijbuGfJLMfJ5.GMopLtE.
 d-i passwd/user-default-groups string adm audio cdrom dip lpadmin sudo plugdev sambashare video
 d-i passwd/root-login boolean true
-d-i passwd/root-password-crypted password YOUR_PASSWORD_HERE
+d-i passwd/root-password-crypted password $1$d2MGYey.$9ijbuGfJLMfJ5.GMopLtE.
 d-i user-setup/allow-password-weak boolean true
 
 
@@ -62,9 +62,9 @@ d-i	apt-setup/extras	boolean true
 # Install the Xubuntu desktop.
 tasksel	tasksel/first	multiselect xubuntu-desktop
 
-# No XFCE translation packages yet.
-d-i	pkgsel/language-pack-patterns	string
-
+# XFCE traducciones
+d-i pkgsel/language-pack-patterns	string en,es
+d-i pkgsel/language-packs multiselect en, es
 
 # Grub Install
 d-i grub-installer/only_debian boolean true
