@@ -6,7 +6,7 @@ set -e
 case $1 in
         configure)
             #Senia repositories
-	    echo " * [ SENIA CDD ] : Senia Users"
+	    echo " * [ Senia-cdd ] : Testing Senia Users"
 	    senia-default-users || true
         ;;
 

@@ -1,3 +1,11 @@
+senia-cdd (2020.06.21) focal; urgency=medium
+
+  * Updated default users gecos.
+  * Updated cosmetic messages in senia-default-users
+  * Updated cosmetic messages in senia-firstboot
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 21 Jun 2020 12:58:39 +0200
+
 senia-cdd (2020.06.16) focal; urgency=high
 
   * Updated background for 2020-2021 and fixed dependences 

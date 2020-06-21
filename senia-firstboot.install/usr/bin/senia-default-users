@@ -19,13 +19,14 @@ rc=$DEFAULTRC
 cat /etc/passwd | grep -q tic|| rc=1
 
 if [ $rc -eq 1 ]; then
-   echo " - The user tic not exists : creating..."
-   adduser --quiet --disabled-password --shell /bin/bash --home /home/tic --gecos TIC  tic
+   echo " * - The user tic not exists : creating..."
+
+   adduser --quiet --disabled-password --shell /bin/bash --home /home/tic --gecos tic  tic
    echo "tic:tic" | chpasswd
    adduser tic adm
    adduser tic sudo
 else
-   echo " - The user euler tic in system...nothing to do"
+   echo " * - The user is in in system...nothing to do"
 fi
 
 
@@ -40,12 +41,12 @@ cat /etc/passwd | grep -q profe|| rc=1
 
 if [ $rc -eq 1 ]; then
 
-    echo " - The user profe not exists : creating..."
-    adduser --quiet --disabled-password --shell /bin/bash --home /home/profe --gecos Profe profe
+    echo " * - The user profe not exists : creating..."
+    adduser --quiet --disabled-password --shell /bin/bash --home /home/profe --gecos profe profe
     echo "profe:profe" | chpasswd
 
 else
-    echo " - The user profe exists in system...nothing to do"
+    echo " * - The user profe exists in system...nothing to do"
 fi
 
 echo  " * [ Senia Default Users ] : Adding User [ alumno ] "
@@ -56,11 +57,11 @@ rc=$DEFAULTRC
 cat /etc/passwd | grep -q alumno || rc=1
 
 if [ $rc -eq 1 ]; then
-   echo " - The user alumno not exists : creating..."
-   adduser --quiet --disabled-password --shell /bin/bash --home /home/alumno --gecos Alumno alumno
+   echo " * - The user alumno not exists : creating..."
+   adduser --quiet --disabled-password --shell /bin/bash --home /home/alumno --gecos alumno alumno
    echo "alumno:alumno" | chpasswd
 else
-   echo " - The user alumno exists in system...nothing to do"
+   echo " * - The user alumno exists in system...nothing to do"
 fi
 
 

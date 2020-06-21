@@ -7,16 +7,17 @@ set -e
 case $1 in
         configure)
                 #Senia repositories
-		echo " * Senia repos: Testing if is enabled ppa-ticsenia"
 		rc=0
-		
-		echo " * [ Senia Repositoris : Bionic ]"
-		test -f /etc/apt/sources.list.d/ticsenia-ubuntu-ppa-focal.list	||rc=1
+		echo " * [ Senia Repositories : Focal - 20.04 ]"
+		test -f /etc/apt/sources.list.d/ticsenia-ubuntu-ppa-focal.list	|| rc=1
 		
 		if [ $rc -eq 1 ]; then
-			echo " * Adding new PPA for TIC Senia ..."
+			echo " * [ Senia Repositories : Adding new PPA for TIC Senia ] "
 			add-apt-repository -y ppa:ticsenia/ppa
+		else 
+			echo " * [ Senia Repositories : All Ok ]"
 		fi
+
         ;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
