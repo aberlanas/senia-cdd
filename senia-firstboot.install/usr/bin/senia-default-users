@@ -5,6 +5,8 @@
 
 DEFAULTRC=0
 
+SENIA_USERS="tic profe alumno"
+
 if [ ! -z "$1" ]; then
     if [ "$1" = "--force" ]; then
 	DEFAULTRC=1
@@ -12,57 +14,28 @@ if [ ! -z "$1" ]; then
     fi    
 fi
 
-echo  " * [ Senia Default Users ] : Adding User [ tic ] "
-echo  " *  - Testing if tic exists"
+for USERAUX in ${SENIA_USERS}; do 
 
-rc=$DEFAULTRC
-cat /etc/passwd | grep -q tic|| rc=1
+	echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+	echo  "  --> Testing if ${USERAUX} exists"
 
-if [ $rc -eq 1 ]; then
-   echo " * - The user tic not exists : creating..."
+	rc=$DEFAULTRC
+	cat /etc/passwd | grep -q ${USERAUX}|| rc=1
 
-   adduser --quiet --disabled-password --shell /bin/bash --home /home/tic --gecos tic  tic
-   echo "tic:tic" | chpasswd
-   adduser tic adm
-   adduser tic sudo
-else
-   echo " * - The user is in in system...nothing to do"
-fi
+	if [ $rc -eq 1 ]; then
+	   echo "  --> The user : ${USERAUX} not exists : creating..."
 
+	   adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+	   echo "${USERAUX}:${USERAUX}" | chpasswd
+	   if [ ${USERAUX} == "tic" ]; then
+		   adduser ${USERAUX} adm
+		   adduser ${USERAUX} sudo
+	   fi
+        else
+	   echo "  --> The user is already system...nothing to do"
+	fi
 
-
-
-
-echo  " * [ Senia Default Users ] : Adding User [ profe ] "
-echo  " *  - Testing if exists"
-
-rc=$DEFAULTRC
-cat /etc/passwd | grep -q profe|| rc=1
-
-if [ $rc -eq 1 ]; then
-
-    echo " * - The user profe not exists : creating..."
-    adduser --quiet --disabled-password --shell /bin/bash --home /home/profe --gecos profe profe
-    echo "profe:profe" | chpasswd
-
-else
-    echo " * - The user profe exists in system...nothing to do"
-fi
-
-echo  " * [ Senia Default Users ] : Adding User [ alumno ] "
-echo  " *  - Testing if alumno exists"
-
-
-rc=$DEFAULTRC
-cat /etc/passwd | grep -q alumno || rc=1
-
-if [ $rc -eq 1 ]; then
-   echo " * - The user alumno not exists : creating..."
-   adduser --quiet --disabled-password --shell /bin/bash --home /home/alumno --gecos alumno alumno
-   echo "alumno:alumno" | chpasswd
-else
-   echo " * - The user alumno exists in system...nothing to do"
-fi
+done
 
 
 exit 0

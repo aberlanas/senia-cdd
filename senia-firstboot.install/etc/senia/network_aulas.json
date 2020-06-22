@@ -1,0 +1,15 @@
+{
+    "centro": "IES La Senia",
+    "gateway": "172.29.0.1",
+    "plantas": 3,
+    "aulas": [
+        {
+            "hostname": "audiovisuales",
+            "ip": "172.29.0.60"
+        },
+        {
+            "hostname": "conserjeria",
+            "ip": "172.29.0.49"
+        }
+    ]
+}
