@@ -1,3 +1,11 @@
+senia-cdd (2020.06.25) focal; urgency=high
+
+  * Updated senia-firstboot to support dhcp as parameter
+    in network configuration.
+  * Removing nagios configuration.
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 25 Jun 2020 17:21:21 +0200
+
 senia-cdd (2020.06.22) focal; urgency=high
 
   * Updated logic in senia-default-users

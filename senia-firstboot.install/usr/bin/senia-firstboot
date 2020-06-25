@@ -15,6 +15,7 @@
 
 # Some values
 DEFAULTMODE=""
+ONLYNAME=""
 
 if [ $(id -u) -ne 0 ]; then
 	echo " [ ERROR ]: You need execution privileges to run this program"
@@ -31,6 +32,8 @@ if [ $# -eq 2 ] ; then
 
 elif [ $# -ne 5 ] ; then
 	echo " [ USAGE ] : "
+	echo " - ONLYNAME and DHCP"
+	echo "     $0 NAME dhcp"
 	echo " - SIMPLE"
 	echo "     $0 NAME IP"
 	echo " - FULL"
@@ -42,8 +45,10 @@ fi
 
 MYNAME="$1"
 MYIP="$2"
+if [ "${MYIP}" = "dhcp" ]; then
+	echo " * Setting only hostname"
 
-if [ "$DEFAULTMODE" = "yes" ]; then
+elif [ "$DEFAULTMODE" = "yes" ]; then
 	echo " * Setting Default values ..."
 	MYMASK="23"
 	MYGW="172.29.0.1"
@@ -68,27 +73,19 @@ IFACE=$(ip addr | grep ^2 | cut -d " " -f2 | tr ":" " "| sed -e "s/ //g")
 
 set_hostname(){
 	# Set Hostname
+	echo " * [ senia-firstboot ] : set hostname : ${MYNAME}"
 	sed -e "s/_@_HOSTNAME_@_/$MYNAME/g" $TPL_HOSTNAME > $TMP_DIR/etc.hostname
 }
 
 set_hosts(){
 	# Set Hosts
+	echo " * [ senia-firstboot ] : set hosts : ${MYNAME}"
 	sed -e "s/127.0.1.1.*/127.0.1.1\t$MYNAME/g" /etc/hosts > $TMP_DIR/etc.hosts
-}
-
-set_ocsinventory(){
-	# Set OcsInventory
-	echo "server=$SERVERIP" > $TMP_DIR/etc.ocsinventory.ocsinventory-agent.cfg
-	echo "tag=$MYNAME" >> $TMP_DIR/etc.ocsinventory.ocsinventory-agent.cfg
-}
-
-set_nrpe(){
-	# Set NRPE
-	sed -e "s/_@_MYIP_@_/$MYIP/g;s/_@_SERVERIP_@_/$SERVERIP/g" "$TPL_PATH/nrpe.tpl" > $TMP_DIR/nrpe.tpl
 }
 
 set_IP(){
 	# Set IP
+	echo " * [ senia-firstboot ] : Static IP : ${MYIP}"
 	ifdown $IFACE || echo " * Something has wrong but $IFACE could be ready in few moments"
 	systemctl stop networking
 	systemctl disable network-manager.service || echo "No he podido hacer esta operacion (Desabilitado)"
@@ -114,20 +111,13 @@ set_IP(){
 
 final_build(){
 	# Hostname
+	echo " * [ senia-firstboot ] : Setting hostname and hosts"
 	cp $TMP_DIR/etc.hostname /etc/hostname
 	hostname -F /etc/hostname
 
 	# Hosts
 	cp $TMP_DIR/etc.hosts /etc/hosts
 
-	# OCS Inventory	
-	mkdir -p /etc/ocsinventory/
-	cp $TMP_DIR/etc.ocsinventory.ocsinventory-agent.cfg /etc/ocsinventory/ocsinventory-agent.cfg
-
-
-	# NRPE
-	mkdir -p /etc/nagios/
-	cp $TMP_DIR/nrpe.tpl /etc/nagios/nrpe.cfg
 }
 
 
@@ -136,15 +126,16 @@ echo " [ Firstboot of La Senia ] "
 echo " Setting: "
 echo "  * Name : $MYNAME"
 echo "  * IP : $MYIP"
-echo "  * Servidor : $SERVERIP"
 
 echo " WORKING DIR : $TMP_DIR"
 
 set_hostname
 set_hosts
-set_ocsinventory
-set_nrpe
-set_IP
+
+if [ ${MYIP} != "dhcp" ];then
+	set_IP
+fi
+
 final_build
 
 exit 0
