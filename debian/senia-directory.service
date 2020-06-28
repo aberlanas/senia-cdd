@@ -1,0 +1,11 @@
+[Unit]
+Description=Senia : Directory Execution 
+After=network.target
+User=root
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/senia-directory-helper
+
+[Install]
+WantedBy=multi-user.target

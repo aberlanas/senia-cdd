@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+logger -t "senia-directory-helper" " * Init"
+
+
+
+
+logger -t "senia-directory-helper" " * Exit"
+
+exit 0

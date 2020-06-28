@@ -1,3 +1,9 @@
+senia-cdd (2020.06.28.1) focal; urgency=high
+
+  * Added senia-directory skeleton 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 28 Jun 2020 09:13:59 +0200
+
 senia-cdd (2020.06.28) focal; urgency=high
 
   * Added Kitty and building from Noctis.

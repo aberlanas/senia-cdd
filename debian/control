@@ -42,7 +42,14 @@ Architecture: all
 Depends: ${misc:Depends}, zenity, lsb-base
 Description: Simple Virtual TIC Desktop App
  One TIC for all things, useful commands...
-  
+
+Package: senia-directory
+Architecture: all
+Depends: ${misc:Depends}, bsdutils
+Description: SSO and Mounting Infraestructure
+ Simple integration, mount points and scripts
+ for Senia Single-Sign-On mechanism.
+
 Package: senia-browsers-settings
 Architecture: all
 Depends: ${misc:Depends}
