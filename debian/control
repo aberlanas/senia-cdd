@@ -94,7 +94,7 @@ Description: Senia package selection for Inf
 Package: senia-cdd
 Architecture: all
 Pre-Depends: senia-firstboot
-Depends: ${misc:Depends}, senia-dependences, senia-networking, senia-startup-conf, senia-cron, nagios-nrpe-server
+Depends: ${misc:Depends}, senia-dependences, senia-networking, senia-startup-conf, senia-cron 
 Description: IES La Senia CDD
  All the stuff
 
@@ -127,7 +127,7 @@ Description: senia configuration for inventory
 
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts, fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, libreoffice-sdbc-hsqldb, zeal, xz-utils, fonts-firacode
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts,fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad,gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, libreoffice-sdbc-hsqldb, zeal, xz-utils, fonts-firacode, kitty
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 

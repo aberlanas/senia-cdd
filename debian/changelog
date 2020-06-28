@@ -1,3 +1,9 @@
+senia-cdd (2020.06.28) focal; urgency=high
+
+  * Added Kitty and building from Noctis.
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 28 Jun 2020 07:51:30 +0200
+
 senia-cdd (2020.06.25) focal; urgency=high
 
   * Updated senia-firstboot to support dhcp as parameter
