@@ -1,5 +1,5 @@
 // Senia settings
-pref("browser.startup.homepage", "https://aules.edu.gva.es/moodle/login/index.php |https://docent.edu.gva.es/md-front/www/ | http://ieslasenia.org | http://revista.ieslasenia.org/ |  172.29.0.245 ",locked);
+pref("browser.startup.homepage", "https://aules.edu.gva.es/moodle/login/index.php |https://docent.edu.gva.es/md-front/www/ | http://ieslasenia.org | http://revista.ieslasenia.org/ |  https://search.disroot.org/ ");
 
 pref("pref.privacy.disable_button.view_passwords", true, locked); //Disable the "Show Passwords" Button
 pref("privacy.donottrackheader.enabled", true, locked); //no targeted ads

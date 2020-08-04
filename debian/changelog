@@ -1,3 +1,11 @@
+senia-cdd (2020.08.04) focal; urgency=high
+
+  * Testing some new features for 2020-2021 course.
+  * Updated firefox-homepage
+  * Added new depence for emacs developers.
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 04 Aug 2020 16:30:29 +0200
+
 senia-cdd (2020.06.28.1) focal; urgency=high
 
   * Added senia-directory skeleton 
