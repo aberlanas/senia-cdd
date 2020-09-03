@@ -4,7 +4,7 @@
 from openpyxl import Workbook
 from openpyxl import load_workbook
 
-listFile = "/home/aberlanas/Descargas/1ESO_2021.xlsx"
+listFile = "/home/aberlanas/Descargas/1_ESO_2021.xlsx"
 
 
 wb = load_workbook(listFile)
@@ -12,12 +12,13 @@ wb = load_workbook(listFile)
 for sheet_name in wb.sheetnames:
 
    sheet = wb[sheet_name]
+
    print( "" )
    print( "# Grup : " + sheet['A1'].value)
    print( "")
 
    print("|Nº| Nom |Cognoms|")
-   print("|:-:|:---:|:------|")
+   print("|:-:|:---|:------|")
    
    numA = 1
    for row in sheet.iter_rows(min_row=4,max_row=24):
@@ -45,10 +46,10 @@ for sheet_name in wb.sheetnames:
            apel = ape.strip().split(' ')
 
            for auxp in apel:
-               auxf = auxp[0:2]
+               auxf = auxp[0:3]
 
                sasteriscos = ""
-               nasteriscos = len(auxp)-2
+               nasteriscos = len(auxp)-3
                for i in range(nasteriscos):
                    sasteriscos += "*"
 
@@ -59,6 +60,8 @@ for sheet_name in wb.sheetnames:
 
    print(" ")
    print("---")
-   print("\\newpage")
+   print(" ")
+   print("\\newpage ")
+   print(" ")
 
 

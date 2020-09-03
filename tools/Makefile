@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 TEMPLATE_TEX="rsrc/templates/pd-nologo-tpl.latex"
-PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
+PANDOC_OPTIONS="-V fontsize=14pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
 
 PDF_PATH:=$(shell readlink -f ListadosLOPD)
 
