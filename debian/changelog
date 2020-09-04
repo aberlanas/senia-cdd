@@ -1,3 +1,9 @@
+senia-cdd (2020.09.05) focal; urgency=high
+
+  * Added unrar-free as a dependence.
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 04 Sep 2020 19:42:00 +0200
+
 senia-cdd (2020.09.04) focal; urgency=high
 
   * Updated search webpage to duckduckgo.
