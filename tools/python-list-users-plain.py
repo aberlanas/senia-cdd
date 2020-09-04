@@ -4,7 +4,7 @@
 from openpyxl import Workbook
 from openpyxl import load_workbook
 
-listFile = "/home/aberlanas/Descargas/1_ESO_2021.xlsx"
+listFile = "/home/aberlanas/temp/GRUPOS_2021.xlsx"
 fgroupsPath = "/tmp/listGroups.txt"
 
 wb = load_workbook(listFile)
@@ -36,8 +36,11 @@ for sheet_name in wb.sheetnames:
            #print (str(row[0].value))
            nombrel = nombre.split(',')
 
-           nom = nombrel[1]
-           ape = nombrel[0]
+           try:
+              nom = nombrel[1]
+              ape = nombrel[0]
+           except Exception as e:
+              print (str(e))
 
            nomFinal = ""
            noml = nom.strip().split(' ')
