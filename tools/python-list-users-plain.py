@@ -5,7 +5,7 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 
 listFile = "/home/aberlanas/Descargas/1_ESO_2021.xlsx"
-fgroupsPath = "/tmp/listGroupsLOPD.txt"
+fgroupsPath = "/tmp/listGroups.txt"
 
 wb = load_workbook(listFile)
 fgroups = open(fgroupsPath,'x')
@@ -48,14 +48,7 @@ for sheet_name in wb.sheetnames:
            apel = ape.strip().split(' ')
 
            for auxp in apel:
-               auxf = auxp[0:3]
-
-               sasteriscos = ""
-               nasteriscos = len(auxp)-3
-               for i in range(nasteriscos):
-                   sasteriscos += "*"
-
-               apelFinal+=auxf.capitalize()+sasteriscos+" "
+               apelFinal+=auxp.capitalize()+" "
 
            print ("| " + str(numA) + " | "+ nomFinal + "|" + apelFinal +"|")
            numA = numA + 1
