@@ -1,3 +1,11 @@
+senia-cdd (2020.09.04) focal; urgency=high
+
+  * Updated search webpage to duckduckgo.
+  * Updated emacs dependences.
+  * Ready to be installed.
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 04 Sep 2020 19:16:51 +0200
+
 senia-cdd (2020.08.04) focal; urgency=high
 
   * Testing some new features for 2020-2021 course.
