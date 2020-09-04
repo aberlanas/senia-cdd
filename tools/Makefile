@@ -7,12 +7,14 @@ PDF_PATH:=$(shell readlink -f ListadosLOPD)
 
 clean:
 	@echo " * Clean workspace "
+	rm -f /tmp/listGroups.txt
+	rm -rf tempList/* 
+	rm -rf $(PDF_PATH)/*.pdf
 
-
-listados-lopd:
+listados-lopd: clean
 	@echo " [ Step : Listados LOPD ]"
-	@mkdir -p ListadosLOPD
-	@mkdir -p 1ESO
-	@./python-list-users-lopd.py > 1ESO/12.md
-	pandoc --template $(TEMPLATE_TEX) $(PANDOC_OPTIONS) -o $(PDF_PATH)/Listados_1ESO.pdf 1ESO/*.md 
-	atril ListadosLOPD/Listados_1ESO.pdf 
+	@mkdir -p tempList
+	@./python-list-users-lopd.py > tempList/listadosTodos.md
+	pandoc --template $(TEMPLATE_TEX) $(PANDOC_OPTIONS) -o $(PDF_PATH)/ListadosInicioCurso.pdf tempList/*.md 
+	atril ListadosLOPD/ListadosInicioCurso.pdf
+	@./separador.sh
