@@ -1,3 +1,15 @@
+senia-cdd (2020.09.07) focal; urgency=high
+
+  * Removed unused package and looking for new Sovietic Solution.
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 05 Sep 2020 18:06:26 +0200
+
+senia-cdd (2020.09.06) focal; urgency=high
+
+  * Added chromium-browser and chromium-browser-l10n to dependences.
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 05 Sep 2020 16:53:53 +0200
+
 senia-cdd (2020.09.05) focal; urgency=high
 
   * Added unrar-free as a dependence.

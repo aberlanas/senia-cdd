@@ -10,12 +10,6 @@ Architecture: all
 Depends: ${misc:Depends} 
 Description: senia wallpapers and settings
  Customized backgrounds for SENIA IES
-
-Package: senia-locks
-Architecture: all
-Depends: ${misc:Depends}
-Description: Senia Locks for Mate Desktop 
- Some useful locks for Senia, that is Ok.
  
 Package: senia-locks-xfce
 Architecture: all
@@ -65,7 +59,7 @@ Description: Always in incognito for browsers
 
 Package: senia-cdd-aulas
 Architecture: all
-Depends: ${misc:Depends},senia-browsers-settings-incognito, senia-cdd, senia-browsers-settings, senia-virtual-tic, senia-locks
+Depends: ${misc:Depends},senia-browsers-settings-incognito, senia-cdd, senia-browsers-settings, senia-virtual-tic
 Description: Metapackage for aulas and clients.
  Restrictions and so on for aulas.
 
@@ -134,7 +128,7 @@ Description: senia configuration for inventory
 
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts,fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad,gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, libreoffice-sdbc-hsqldb, zeal, xz-utils, fonts-firacode, kitty, emacs, elpa-dpkg-dev-el, dpkg-dev,  elpa-debian-el, emacs-goodies-el, debhelper, dh-python, git-buildpackage, unrar-free
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts,fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad,gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfat-fuse, exfat-utils, libreoffice-sdbc-hsqldb, zeal, xz-utils, fonts-firacode, emacs, elpa-dpkg-dev-el, dpkg-dev,  elpa-debian-el, emacs-goodies-el, debhelper, dh-python, git-buildpackage, unrar-free, chromium-browser, chromium-browser-l10n
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 

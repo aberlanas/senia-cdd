@@ -3,29 +3,28 @@
 TEMPLATE_TEX="rsrc/templates/pd-nologo-tpl.latex"
 PANDOC_OPTIONS="-V fontsize=14pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
 
-PDF_PATH:=$(shell readlink -f ListadosLOPD)
+PDF_PATH=~/temp/ListadosLOPD
+TEMP_LOPD_PATH=~/temp/tempListLOPD
+TEMP_PATH=~/temp/tempList
 
 configure:
 	@echo " * Configuring "
-	mkdir -p ListadosLOPD
-	mkdir -p ~/temp/
-
+	mkdir -p $(PDF_PATH)
+	mkdir -p $(TEMP_LOPD_PATH)
+	mkdir -p $(TEMP_PATH)
 
 clean:
 	@echo " * Clean workspace "
-	rm -f /tmp/listGroupsLOPD.txt
-	rm -f /tmp/listGroups.txt
-	rm -rf tempList/*
-	rm -rf tempListLOPD/* 
-	rm -rf $(PDF_PATH)/*.pdf
+	rm -rf $(PDF_PATH)/*
+	rm -rf $(TEMP_LOPD_PATH)/* 
+	rm -rf $(TEMP_PATH)/*.pdf
 
 
 listados-lopd: clean configure
 	@echo " [ Step : Listados LOPD ]"
-	@mkdir -p tempListLOPD
-	@./python-list-users-lopd.py > tempListLOPD/listadosTodos.md
-	pandoc --template $(TEMPLATE_TEX) $(PANDOC_OPTIONS) -o $(PDF_PATH)/ListadosInicioCursoLOPD.pdf tempListLOPD/*.md
-	atril ListadosLOPD/ListadosInicioCursoLOPD.pdf
+	@./python-list-users-lopd.py > $(TEMP_LOPD_PATH)/listadosTodos.md
+	pandoc --template $(TEMPLATE_TEX) $(PANDOC_OPTIONS) -o $(PDF_PATH)/ListadosInicioCursoLOPD.pdf $(TEMP_LOPD_PATH)/*.md
+	atril $(PDF_PATH)/ListadosInicioCursoLOPD.pdf
 
 
 listados-trocitos: listados-lopd
@@ -50,9 +49,9 @@ listados-plain: clean configure
 
 	@echo " [ Step : Listados Plain ] "
 	@mkdir -p tempList
-	@./python-list-users-plain.py > tempList/listadosTodos.md
-	pandoc --template $(TEMPLATE_TEX) $(PANDOC_OPTIONS) -o $(PDF_PATH)/ListadosInicioCurso.pdf tempList/*.md
-	atril ListadosLOPD/ListadosInicioCurso.pdf
+	@./python-list-users-plain.py > ~/temp/tempList/listadosTodos.md
+	pandoc --template $(TEMPLATE_TEX) $(PANDOC_OPTIONS) -o  $(PDF_PATH)/ListadosInicioCurso.pdf  ~/temp/tempList/*.md
+	atril  ~/temp/ListadosLOPD/ListadosInicioCurso.pdf
 
 
 all-listados: listados-lopd listados-plain

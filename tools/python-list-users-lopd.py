@@ -5,10 +5,8 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 
 listFile = "/home/aberlanas/temp/GRUPOS_2021.xlsx"
-fgroupsPath = "/tmp/listGroupsLOPD.txt"
 
 wb = load_workbook(listFile)
-fgroups = open(fgroupsPath,'x')
 
 for sheet_name in wb.sheetnames:
 
@@ -16,7 +14,6 @@ for sheet_name in wb.sheetnames:
 
    print( "" )
    print( "# Grup : " + sheet['A1'].value)
-   fgroups.write(sheet['A1'].value+"\n")
    print( "")
 
    print("|Nº| Nom |Cognoms|")
@@ -69,4 +66,3 @@ for sheet_name in wb.sheetnames:
    print("\\newpage ")
    print(" ")
 
-fgroups.close()
