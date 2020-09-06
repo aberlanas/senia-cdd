@@ -1,3 +1,11 @@
+senia-cdd (2020.09.08) focal; urgency=high
+
+  * Removed kitty.
+  * Minimalism for all the flavours.
+  * cdd-ciclos-it and cdd-desktop more similar.
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 06 Sep 2020 07:58:29 +0200
+
 senia-cdd (2020.09.07) focal; urgency=high
 
   * Removed unused package and looking for new Sovietic Solution.
