@@ -86,7 +86,7 @@ set_hosts(){
 set_IP(){
 	# Set IP
 	echo " * [ senia-firstboot ] : Static IP : ${MYIP}"
-	ifdown $IFACE || echo " * Something has wrong but $IFACE could be ready in few moments"
+	ip link set dev $IFACE down || echo " * Something has wrong but $IFACE could be ready in few moments"
 	systemctl stop networking
 	systemctl disable network-manager.service || echo "No he podido hacer esta operacion (Desabilitado)"
 	systemctl stop network-manager.service || echo "No he podido hacer esta operacion (Parar)"

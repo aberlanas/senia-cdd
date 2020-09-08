@@ -1,3 +1,9 @@
+senia-cdd (2020.09.09) focal; urgency=high
+
+  * Using ip instead ifdown.
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 08 Sep 2020 07:55:34 +0200
+
 senia-cdd (2020.09.08) focal; urgency=high
 
   * Removed kitty.
