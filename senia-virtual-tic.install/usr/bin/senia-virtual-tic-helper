@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DESKTOPS="senia-virtual-tic.desktop senia-scanner.desktop" 
+DESKTOPS="senia-virtual-tic.desktop senia-scanner.desktop firefox.desktop" 
 USERS="profe"
 
 for user in ${USERS}; do
