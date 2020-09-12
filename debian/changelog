@@ -1,3 +1,9 @@
+senia-cdd (2020.09.12) focal; urgency=high
+
+  * Updated settings for screensaver
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 12 Sep 2020 08:16:44 +0200
+
 senia-cdd (2020.09.11) focal; urgency=high
 
   * Updated new default webpages for Firefox.
