@@ -1,3 +1,13 @@
+senia-cdd (2020.09.17) focal; urgency=high
+
+  * Updated cron with a basic shutdown on postinstall.
+  * Fixed bug in senia-cron, incorrect syntax on paramenter.
+  * Added vlc as a dependence.
+  * Added libdvd-pkg as a dependence.
+  * Added libreoffice-base as a dependence.
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 17 Sep 2020 06:21:09 +0200
+
 senia-cdd (2020.09.16) focal; urgency=high
 
   * Updated senia-virtual-tic with more options.

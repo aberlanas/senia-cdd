@@ -48,7 +48,7 @@ case "$1" in
 		    shutdown_15_21
             ;;
 	shutdown_21)
-		    shutdown_inf
+		    shutdown_21
 		    ;;
         *)
             echo "Usage: $0 {reset|shutdown_15_21|shutdown_21}"
