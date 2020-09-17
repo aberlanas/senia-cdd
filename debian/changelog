@@ -1,3 +1,15 @@
+senia-cdd (2020.09.19) focal; urgency=high
+
+  * Updated again
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 17 Sep 2020 09:00:01 +0200
+
+senia-cdd (2020.09.18) focal; urgency=high
+
+  * Updated shutdown hour to 23:00
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 17 Sep 2020 08:56:18 +0200
+
 senia-cdd (2020.09.17) focal; urgency=high
 
   * Updated cron with a basic shutdown on postinstall.

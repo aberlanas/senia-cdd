@@ -8,7 +8,7 @@ case $1 in
         configure)
              #Senia repositories
 	    echo " * Senia Cron : Setting a Basic Shutdown"
-	    senia-cron shutdown_21 || true
+	    senia-cron shutdown_23 || true
             ;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
