@@ -6,8 +6,8 @@ network:
       gateway4: _@_MYGW_@_
       nameservers:
         addresses:
-          - 8.8.8.8
-          - 1.0.0.1
+          - 172.27.111.5
+          - 172.27.111.6
       # Uncomment this line and comment previous in 
       # case you are not sure about your IP 
       # DHCP could be your simple salvation. 

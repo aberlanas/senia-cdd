@@ -1,0 +1,36 @@
+#!/bin/bash
+FILE_NETPLAN="/etc/netplan/02-senia-network.yaml"
+
+if [ ! -f ${FILE_NETPLAN} ]; then
+    echo " * [ senia-set-dns ] -> File not exists...nothing to do"
+    exit 0
+fi
+
+DNS_1="8.8.8.8"
+DNS_2="1.0.0.1"
+
+NEW_DNS_1="172.27.111.5"
+NEW_DNS_2="172.27.111.6"
+
+rc=0
+grep -q ${DNS_1} ${FILE_NETPLAN} || rc=1
+if [ $rc -eq 0 ]; then
+    echo " * [ senia-set-dns ] -> DNS_1 : ${DNS_1} is present : replace them"
+    sed -i "s%${DNS_1}%${NEW_DNS_1}%g" ${FILE_NETPLAN}
+else
+    echo " * [ senia-set-dns ] -> DNS_1 is correct "
+fi
+
+
+rc=0
+grep -q ${DNS_2} ${FILE_NETPLAN} || rc=1
+if [ $rc -eq 0 ]; then
+    echo " * [ senia-set-dns ] -> DNS_2 : ${DNS_2} is present : replace them"
+    sed -i "s%${DNS_2}%${NEW_DNS_2}%g" ${FILE_NETPLAN}
+else
+    echo " * [ senia-set-dns ] -> DNS_2 is correct "
+fi
+
+netplan apply
+
+exit 0

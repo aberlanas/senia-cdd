@@ -18,6 +18,8 @@ case $1 in
 			echo " * [ Senia Repositories : All Ok ]"
 		fi
 
+		senia-set-dns
+
         ;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
