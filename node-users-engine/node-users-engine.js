@@ -105,6 +105,7 @@ function printGrups(grups,mode="simple"){
     // Variable para el autoincremental del idNumber
     var incrementalId = 0;
 
+    //console.log(grups);
     grups.forEach(function(grup){
         
         if (mode == "simple"){
@@ -395,23 +396,24 @@ function filterAlumnesByCurso(alumnes,cursCodi){
 
 function getAlumnes(centre){
     // For now this seems redundant buy I think 
-    // will be usefull in the future
-    return centre.centro.alumnos.alumne;
+    // will be usefull in the futur
+    return centre.centre.alumnes.alumne;
 }
 
 function getGrups(centre){
     // For now this seems redundant
-    return centre.centro.grupos.grupo;
+    //return centre.centro.grupos.grupo;
+    return centre.centre.grups.grup
 }
 
 
 function getProfessors(centre){
-    return centre.centro.docentes.professor;
+    return centre.centre.professors.professor;
 }
 
 function getAssignatures(centre){
     //console.log(JSON.stringify(centre.centre.assignatures.assignatura));
-    return centre.centro.assignatures.assignatura;
+    return centre.centre.assignatures.assignatura;
 }
 
 
@@ -481,7 +483,7 @@ if (program.info){
 
 if (program.listGroups){
 
-    console.log(centre);
+    //console.log(centre);
     grups  = getGrups(centre);
 
     if (program.customIdPrefix){
