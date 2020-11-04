@@ -1,5 +1,5 @@
 // Senia settings
-pref("browser.startup.homepage", " https://duckduckgo.com/  | https://portal.edu.gva.es/aules/ |https://docent.edu.gva.es/md-front/www/ | http://ieslasenia.org | http://revista.ieslasenia.org/ | https://172.29.0.245  ");
+pref("browser.startup.homepage", " https://www.ecosia.org/?c=es  | https://portal.edu.gva.es/aules/ |https://docent.edu.gva.es/md-front/www/");
 
 pref("pref.privacy.disable_button.view_passwords", true, locked); //Disable the "Show Passwords" Button
 pref("privacy.donottrackheader.enabled", true, locked); //no targeted ads
