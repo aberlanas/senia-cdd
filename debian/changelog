@@ -1,3 +1,9 @@
+senia-cdd (2020.12.02) focal; urgency=high
+
+  * Added wallpaper 
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 01 Dec 2020 11:56:12 +0100
+
 senia-cdd (2020.12.01) focal; urgency=high
 
   * Added inventory-client 
