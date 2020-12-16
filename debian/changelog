@@ -1,3 +1,9 @@
+senia-cdd (2020.12.16) focal; urgency=high
+
+  * Added new homepage by GVA
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 16 Dec 2020 06:52:57 +0100
+
 senia-cdd (2020.12.03) focal; urgency=high
 
   * Fixed a little bug in senia-cron.
