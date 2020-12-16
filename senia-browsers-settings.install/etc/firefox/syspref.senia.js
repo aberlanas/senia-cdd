@@ -1,5 +1,5 @@
 // Senia settings
-pref("browser.startup.homepage", " https://www.ecosia.org/?c=es  | https://portal.edu.gva.es/aules/ |https://acces.edu.gva.es/escriptori/ ");
+pref("browser.startup.homepage", " https://www.ecosia.org/?c=es |https://acces.edu.gva.es/escriptori/ ");
 
 pref("pref.privacy.disable_button.view_passwords", true, locked); //Disable the "Show Passwords" Button
 pref("privacy.donottrackheader.enabled", true, locked); //no targeted ads
