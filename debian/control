@@ -191,4 +191,11 @@ Description: Senia shutdown plans
  This package provides some useful binaries for use 
  crontab to shutdown machines
 
+Package: senia-sacred-place
+Architecture: all
+Depends: ${misc:Depends}
+Description: A Senia Sacred (and secure) place
+ This package provides mechanisms to avoid
+ some Senia configurations in several machines 
+ and Systems.
 
