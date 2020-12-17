@@ -1,3 +1,9 @@
+senia-cdd (2020.12.18) focal; urgency=high
+
+  * Updated with postinstall fixed (bug) 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 17 Dec 2020 18:37:19 +0100
+
 senia-cdd (2020.12.17) focal; urgency=high
 
   * Updated with new package. 
