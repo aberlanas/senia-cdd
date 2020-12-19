@@ -1,3 +1,11 @@
+senia-cdd (2020.12.20) focal; urgency=high
+
+  * Updated with senia-itaca-installer
+    a solution for Flash adapted from 
+    LliureX. For Focal Machines. 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 19 Dec 2020 08:38:32 +0100
+
 senia-cdd (2020.12.19) focal; urgency=high
 
   * Updated with new Background
