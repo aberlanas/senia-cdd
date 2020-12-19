@@ -1,14 +1,18 @@
 #!/bin/bash
 
-DESKTOPS="senia-virtual-tic.desktop senia-scanner.desktop firefox.desktop" 
+DESKTOPS="senia-virtual-tic.desktop senia-scanner.desktop firefox.desktop palemoon-itaca.desktop" 
 USERS="profe"
 
 for user in ${USERS}; do
 	for desktop in ${DESKTOPS}; do
 		logger -s -t "senia-virtual-tic" "Setting for ${user} : ${desktop}"
-		cp /usr/share/applications/${desktop} /home/${user}/Escritorio/
-		chmod +x /home/${user}/Escritorio/${desktop} 
-		chown ${user}:${user} /home/${user}/Escritorio/${desktop}
+		if [ -e /usr/share/applications/${desktop} ]; then
+			cp /usr/share/applications/${desktop} /home/${user}/Escritorio/
+			chmod +x /home/${user}/Escritorio/${desktop} 
+			chown ${user}:${user} /home/${user}/Escritorio/${desktop}
+		else
+			logger -s t "senia-virtual-tic" "Skipping $desktop"
+		fi
 	done
 done
 

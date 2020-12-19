@@ -199,3 +199,8 @@ Description: A Senia Sacred (and secure) place
  some Senia configurations in several machines 
  and Systems.
 
+Package: senia-itaca-installer
+Architecture: all
+Depends: ${misc:Depends}
+Description: A Cutre Solution for Flash
+ Installer for PaleMoon and Flash Settings

@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+if [ $(id -u) -ne 0 ]; then
+	echo " * You must be root to run this program"
+	exit 0
+fi
+
+echo " Enabling partner repositories "
+
+rc=0
+cat /etc/apt/sources.list | grep ^deb|grep -q partner|| rc=1
+
+if [ $rc -eq 0 ]; then
+	echo " * Partner is enabled "
+else
+	echo " * Partner is not enabled ..."
+	echo "deb http://archive.canonical.com/ubuntu focal partner" >/etc/apt/sources.list.d/senia-itaca.list
+	apt update
+	apt install adobe-flashplugin
+fi
+
+echo " Setting repositories for PaleMoon"
+
+echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:stevenpusser.list
+
+echo " Installing the Key "
+wget -O - https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_20.04/Release.key | sudo apt-key add -
+
+echo " Updating the Cache" 
+
+apt update
+
+echo " Install PaleMoon"
+
+apt install palemoon
+
+
+
+
