@@ -1,3 +1,9 @@
+senia-cdd (2020.12.21) focal; urgency=high
+
+  * Updated dependences.
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 20 Dec 2020 11:01:16 +0100
+
 senia-cdd (2020.12.20) focal; urgency=high
 
   * Updated with senia-itaca-installer
