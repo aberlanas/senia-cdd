@@ -1,8 +1,35 @@
-senia-cdd (2020.12.16.1) focal; urgency=high
+senia-cdd (2020.12.21) focal; urgency=high
 
-  * Added new National Socialism for Cookies, History, ...
+  * Updated dependences.
 
- -- tic La Senia <tic@ieslasenia.org>  Wed, 16 Dec 2020 12:03:21 +0100
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 20 Dec 2020 11:01:16 +0100
+
+senia-cdd (2020.12.20) focal; urgency=high
+
+  * Updated with senia-itaca-installer
+    a solution for Flash adapted from 
+    LliureX. For Focal Machines. 
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 19 Dec 2020 08:38:32 +0100
+
+senia-cdd (2020.12.19) focal; urgency=high
+
+  * Updated with new Background
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 17 Dec 2020 19:08:13 +0100
+
+senia-cdd (2020.12.18) focal; urgency=high
+
+  * Updated with postinstall fixed (bug) 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 17 Dec 2020 18:37:19 +0100
+
+senia-cdd (2020.12.17) focal; urgency=high
+
+  * Updated with new package. 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 17 Dec 2020 18:14:51 +0100
+>>>>>>> 5f004a69caf45f6e3eacc6c58b5f1cc68a31606b
 
 senia-cdd (2020.12.16) focal; urgency=high
 

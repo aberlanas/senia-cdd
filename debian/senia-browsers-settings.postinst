@@ -11,23 +11,30 @@ OUR_PACKAGE="senia-browser-settings"
 
 case $1 in
         configure)
-                #Senia Firefox link goes here
-                if dpkg-divert --package ${OUR_PACKAGE} --add  --rename  --divert ${ORIG_FILE}.real ${ORIG_FILE} ; then
-                        ln -fs ${OUR_FILE} ${ORIG_FILE}
-                else
-                        echo "Unabe to divert file ${ORIG_FILE}"
-                fi
+                if [ ! -e /etc/senia-sacred-place/chosen ]; then
+			#Senia Firefox link goes here
+        	        if dpkg-divert --package ${OUR_PACKAGE} --add  --rename  --divert ${ORIG_FILE}.real ${ORIG_FILE} ; then
+                	        ln -fs ${OUR_FILE} ${ORIG_FILE}
+	                else
+        	                echo "Unabe to divert file ${ORIG_FILE}"
+                	fi
 
-		# Cleaning firefox profiles
-		find /home/alumno/ -name ".mozilla" -exec rm -rf {} \; || true 
-		find /home/profe/ -name ".mozilla" -exec rm -rf {} \; || true 
+			# Cleaning firefox profiles
+			find /home/alumno/ -name ".mozilla" -exec rm -rf {} \; || true 
+			find /home/profe/ -name ".mozilla" -exec rm -rf {} \; || true 
+		else
+			logger -s -t "senia-browser-settings" "Disabled because is a Sacred Place"
+		fi
         ;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
                 echo "postinst called with argument \`$1'" >&2
                 exit 1
         ;;
-
+	remove,*|abort-install,*|disappear,*|*,y)
+		echo " * Removing diversion "
+		dpkg-divert --remove --rename ${ORIG_FILE} || true
+	;;
         *)
                 echo "postinst called with unknown argument \`$1'" >&2
                 exit 1
