@@ -1,3 +1,9 @@
+senia-cdd (2021.02.26) focal; urgency=high
+
+  * Updated background 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 26 Feb 2021 11:46:03 +0100
+
 senia-cdd (2021.02.12) focal; urgency=high
 
   * LibreOffice metapackage added as dependence 
