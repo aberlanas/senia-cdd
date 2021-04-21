@@ -141,7 +141,7 @@ Description: Senia APT and StartUp configuration
 
 Package: senia-appinventor
 Architecture:all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, lib32stdc++6
 Description: Senia package for AppInventor 
  and StartUp configuration
 

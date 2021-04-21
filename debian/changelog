@@ -1,3 +1,9 @@
+senia-cdd (2021.04.21) focal; urgency=high
+
+  * Added lib32stdc++6 to senia-appinventor
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 21 Apr 2021 12:38:09 +0200
+
 senia-cdd (2021.04.19) focal; urgency=high
 
   * Updated background.
