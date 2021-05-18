@@ -1,3 +1,10 @@
+senia-cdd (2021.05.18) focal; urgency=high
+
+  * Updated with new Yago Wallpaper
+  * Removed unused dependence.
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 18 May 2021 09:30:40 +0200
+
 senia-cdd (2021.04.21) focal; urgency=high
 
   * Added lib32stdc++6 to senia-appinventor
