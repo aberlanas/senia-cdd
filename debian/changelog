@@ -1,3 +1,9 @@
+senia-cdd (2021.05.21) focal; urgency=high
+
+  * Added kitty-terminfo 
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 21 May 2021 12:50:06 +0200
+
 senia-cdd (2021.05.18) focal; urgency=high
 
   * Updated with new Yago Wallpaper
