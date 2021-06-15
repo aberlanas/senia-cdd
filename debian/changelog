@@ -4,11 +4,37 @@ senia-cdd (2021.06.15) focal; urgency=high
 
  -- tic La Senia <tic@ieslasenia.org>  Tue, 15 Jun 2021 06:03:36 +0200
 
-senia-cdd (2021.04.18) focal; urgency=high
+senia-cdd (2021.05.21) focal; urgency=high
 
-  * Added kdenlive
+  * Added kitty-terminfo 
 
- -- tic La Senia <tic@ieslasenia.org>  Sun, 18 Apr 2021 07:00:47 +0200
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Fri, 21 May 2021 12:50:06 +0200
+
+senia-cdd (2021.05.18) focal; urgency=high
+
+  * Updated with new Yago Wallpaper
+  * Removed unused dependence.
+
+ -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Tue, 18 May 2021 09:30:40 +0200
+
+senia-cdd (2021.04.21) focal; urgency=high
+
+  * Added lib32stdc++6 to senia-appinventor
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 21 Apr 2021 12:38:09 +0200
+
+senia-cdd (2021.04.19) focal; urgency=high
+
+  * Updated background.
+  * Updated with KDEnlive.
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 19 Apr 2021 10:24:01 +0200
+
+senia-cdd (2021.02.26) focal; urgency=high
+
+  * Updated background 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 26 Feb 2021 11:46:03 +0100
 
 senia-cdd (2021.02.12) focal; urgency=high
 
