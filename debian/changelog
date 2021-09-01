@@ -1,3 +1,9 @@
+senia-cdd (2021.09.01.1) focal; urgency=high
+
+  * Updated buildepends 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 01 Sep 2021 17:42:07 +0200
+
 senia-cdd (2021.09.01) focal; urgency=high
 
   * Updated Wallpaper
