@@ -37,5 +37,175 @@ for USERAUX in ${SENIA_USERS}; do
 
 done
 
+USERAUX="dam"
+PASSAUX="AdaLovelace"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+
+USERAUX="smx"
+PASSAUX="Turing"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+
+USERAUX="dam"
+PASSAUX="Babbage"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+
+USERAUX="primero"
+PASSAUX="Insercion"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+
+USERAUX="segundo"
+PASSAUX="Burbuja"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+
+USERAUX="tercero"
+PASSAUX="MergeSort"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+USERAUX="cuarto"
+PASSAUX="QuickSort"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+USERAUX="batxi"
+PASSAUX="HashTable"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+
+
+USERAUX="batxii"
+PASSAUX="BTree+"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+
 
 exit 0
