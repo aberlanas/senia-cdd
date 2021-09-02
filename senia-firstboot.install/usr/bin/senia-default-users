@@ -37,6 +37,10 @@ for USERAUX in ${SENIA_USERS}; do
 
 done
 
+# Spagetti code
+# TODO Fix this shit
+
+
 USERAUX="dam"
 PASSAUX="AdaLovelace"
 
