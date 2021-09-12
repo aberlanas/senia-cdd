@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo " * [ Installing Senia IDEs ] "
+
+snap install --classic code
+
+exit 0

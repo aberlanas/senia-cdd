@@ -2,6 +2,7 @@ senia-cdd (2021.09.12) focal; urgency=high
 
   * Updated Wallpaper.
   * Ready to all the users.
+  * Added a simple binary to install IDEs in Ciclos.
 
  -- Angel Berlanas Vicente <angel.berlanas@gmail.com>  Sun, 12 Sep 2021 08:03:46 +0200
 
