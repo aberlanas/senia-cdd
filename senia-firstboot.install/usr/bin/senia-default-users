@@ -41,7 +41,7 @@ done
 # TODO Fix this shit
 
 
-USERAUX="dam"
+USERAUX="daw"
 PASSAUX="AdaLovelace"
 
 echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
