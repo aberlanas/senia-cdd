@@ -1,6 +1,12 @@
+senia-cdd (2021.09.23~hirsute1) hirsute; urgency=high
+
+  * Reported to hirsute 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 22 Sep 2021 19:30:00 +0200
+
 senia-cdd (2021.09.22) focal; urgency=high
 
-  * 
+  * Fixed some little bugs 
 
  -- tic La Senia <tic@ieslasenia.org>  Wed, 22 Sep 2021 19:08:18 +0200
 
