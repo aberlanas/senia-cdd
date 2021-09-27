@@ -63,8 +63,8 @@ echo " [ Docker test ] "
 
 ##### DOCKER TEST
 rd=0
-getent group | grep -q docker || rc=1
-if [ ${rc} -eq 0 ]; then
+getent group | grep -q docker || rd=1
+if [ ${rd} -eq 0 ]; then
 	echo " --> The user : ${USERAUX} must be able to run docker "
 	adduser ${USERAUX} docker
 else
@@ -93,8 +93,8 @@ echo "${USERAUX}:${PASSAUX}" | chpasswd
 
 ##### DOCKER TEST
 rd=0
-getent group | grep -q docker || rc=1
-if [ ${rc} -eq 0 ]; then
+getent group | grep -q docker || rd=1
+if [ ${rd} -eq 0 ]; then
 	echo " --> The user : ${USERAUX} must be able to run docker "
 	adduser ${USERAUX} docker
 else
@@ -123,8 +123,8 @@ echo "${USERAUX}:${PASSAUX}" | chpasswd
 
 ##### DOCKER TEST
 rd=0
-getent group | grep -q docker || rc=1
-if [ ${rc} -eq 0 ]; then
+getent group | grep -q docker || rd=1
+if [ ${rd} -eq 0 ]; then
 	echo " --> The user : ${USERAUX} must be able to run docker "
 	adduser ${USERAUX} docker
 else
