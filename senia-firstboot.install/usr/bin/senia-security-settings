@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+echo " * Senia Security Settings : The S.S.S "
+
+echo " [S.S.S] - OpenSSH "
+
+
+exit 0
