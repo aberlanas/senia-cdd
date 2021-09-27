@@ -1,3 +1,9 @@
+senia-cdd (2021.09.27.1) focal; urgency=high
+
+  * Updated dependences 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 27 Sep 2021 16:33:58 +0200
+
 senia-cdd (2021.09.27) focal; urgency=high
 
   * Added docker group to smx,daw and dam users.
