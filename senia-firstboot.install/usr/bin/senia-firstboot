@@ -102,6 +102,10 @@ set_DHCP(){
 	cp "$TPL_PATH/interfaces.final" /etc/network/interfaces
 
 	clean_netplan
+	sed -e "s/_@_IFACE_@_/$IFACE/g" "$TPL_NETPLAN_DHCP" > /etc/netplan/02-senia-network.yaml
+	netplan apply
+
+	systemctl start networking
 
 }
 set_IP(){
@@ -116,7 +120,7 @@ set_IP(){
 	clean_netplan	
 	
 	echo " * Setting IP on netplan"
-	sed -e "s/_@_IFACE_@_/$IFACE/g;" "$TPL_NETPLAN_DHCP" > /etc/netplan/02-senia-network.yaml
+	sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g;s/_@_MYMASK_@_/$MYMASK/g;s/_@_MYGW_@_/$MYGW/g" "$TPL_NETPLAN" > /etc/netplan/02-senia-network.yaml
 	netplan apply
 
 	systemctl start networking
