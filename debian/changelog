@@ -1,6 +1,7 @@
 senia-cdd (2021.09.30) focal; urgency=high
 
-  * Updated senia-firstboot to correct the dhcp on netplan 
+  * Updated senia-firstboot to correct the dhcp on netplan
+  * Updated Wallpaper 
 
  -- tic La Senia <tic@ieslasenia.org>  Thu, 30 Sep 2021 16:30:59 +0200
 
