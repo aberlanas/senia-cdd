@@ -41,7 +41,7 @@ done
 # TODO Fix this shit
 
 
-USERAUX="dam"
+USERAUX="daw"
 PASSAUX="AdaLovelace"
 
 echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
@@ -58,6 +58,18 @@ fi
 
 echo " --> The user : ${USERAUX} must have the default passwd assigned"
 echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+echo " [ Docker test ] "
+
+##### DOCKER TEST
+rd=0
+getent group | grep -q docker || rd=1
+if [ ${rd} -eq 0 ]; then
+	echo " --> The user : ${USERAUX} must be able to run docker "
+	adduser ${USERAUX} docker
+else
+	echo " Docker is not installed "
+fi
 
 
 USERAUX="smx"
@@ -79,6 +91,18 @@ echo " --> The user : ${USERAUX} must have the default passwd assigned"
 echo "${USERAUX}:${PASSAUX}" | chpasswd
 
 
+##### DOCKER TEST
+rd=0
+getent group | grep -q docker || rd=1
+if [ ${rd} -eq 0 ]; then
+	echo " --> The user : ${USERAUX} must be able to run docker "
+	adduser ${USERAUX} docker
+else
+	echo " Docker is not installed "
+fi
+
+
+
 USERAUX="dam"
 PASSAUX="Babbage"
 
@@ -96,6 +120,17 @@ fi
 
 echo " --> The user : ${USERAUX} must have the default passwd assigned"
 echo "${USERAUX}:${PASSAUX}" | chpasswd
+
+##### DOCKER TEST
+rd=0
+getent group | grep -q docker || rd=1
+if [ ${rd} -eq 0 ]; then
+	echo " --> The user : ${USERAUX} must be able to run docker "
+	adduser ${USERAUX} docker
+else
+	echo " Docker is not installed "
+fi
+
 
 
 USERAUX="primero"

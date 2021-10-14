@@ -1,3 +1,41 @@
+senia-cdd (2021.10.01~hirsute1) hirsute; urgency=high
+
+  * Updated to hirsute 
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 01 Oct 2021 06:40:39 +0200
+
+senia-cdd (2021.09.30) focal; urgency=high
+
+  * Updated senia-firstboot to correct the dhcp on netplan
+  * Updated Wallpaper 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 30 Sep 2021 16:30:59 +0200
+
+senia-cdd (2021.09.27.2~hirsute) hirsute; urgency=high
+
+  * Updated dependences 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 27 Sep 2021 16:33:58 +0200
+
+senia-cdd (2021.09.27) focal; urgency=high
+
+  * Added docker group to smx,daw and dam users.
+  * Hardening sshd 
+
+ -- tic La Senia <tic@ieslasenia.org>  Mon, 27 Sep 2021 16:22:35 +0200
+
+senia-cdd (2021.09.23~hirsute1) hirsute; urgency=high
+
+  * Reported to hirsute 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 22 Sep 2021 19:30:00 +0200
+
+senia-cdd (2021.09.22) focal; urgency=high
+
+  * Fixed some little bugs 
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 22 Sep 2021 19:08:18 +0200
+
 senia-cdd (2021.09.12) focal; urgency=high
 
   * Updated Wallpaper.
