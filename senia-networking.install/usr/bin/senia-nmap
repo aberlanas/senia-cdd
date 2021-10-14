@@ -8,19 +8,29 @@ if [ $# -eq 0 ]; then
 fi
 
 
+
+
 # Some values
 
+echo " * Senia Nmap ... getting localmachine IP"
+LOCALIP=$(ip addr | grep ${1}| tr -s " "| cut -d " " -f3 | cut -d "/" -f1)
 
 echo " * Senia Nmap ... logging machines"
-nmap -sP "$1" > /tmp/senia-nmap.log
+nmap --exclude ${LOCALIP} -sP "$1" > /tmp/senia-nmap.log
+
 
 echo " * Only ips "
+echo ""
+echo -n " "
 cat /tmp/senia-nmap.log | grep "$1" | sed -e "s%.* for %%g;s%.*(%%g;s%)%%g"|tr "\n" " "
 echo ""
+echo ""
 
-LISTOFIPS=$(cat /tmp/senia-nmap.log | grep "$1" | sed -e "s%.* for %%g;s%.*(%%g;s%)%%g"|tr "\n" " ")
+LISTOFIPS=$(cat /tmp/senia-nmap.log | grep "$1" | grep -v "${LOCALIP}" | sed -e "s%.* for %%g;s%.*(%%g;s%)%%g"|tr "\n" " ")
 
 echo "clusterssh -l tic ${LISTOFIPS}" | xclip
-
+echo " * Notice to Seafarers: You have the command in your clipboard (Shift+Insert)"
+echo "                        - The current machine is not in the list ... "
+echo "                        - But your IP is : ${LOCALIP}"
 
 exit 0
