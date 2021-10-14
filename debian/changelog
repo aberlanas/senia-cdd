@@ -1,6 +1,7 @@
-senia-cdd (2021.10.14.1) focal; urgency=high
+senia-cdd (2021.10.14.2) focal; urgency=high
 
-  *  Disabled inventory for now
+  * Disabled inventory for now
+  * New features on senia-nmap
 
  -- tic La Senia <tic@ieslasenia.org>  Thu, 14 Oct 2021 16:00:54 +0200
 
