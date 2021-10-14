@@ -18,4 +18,9 @@ echo " * Only ips "
 cat /tmp/senia-nmap.log | grep "$1" | sed -e "s%.* for %%g;s%.*(%%g;s%)%%g"|tr "\n" " "
 echo ""
 
+LISTOFIPS=$(cat /tmp/senia-nmap.log | grep "$1" | sed -e "s%.* for %%g;s%.*(%%g;s%)%%g"|tr "\n" " ")
+
+echo "clusterssh -l tic ${LISTOFIPS}" | xclip
+
+
 exit 0

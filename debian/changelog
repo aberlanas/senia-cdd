@@ -1,3 +1,10 @@
+senia-cdd (2021.10.14) focal; urgency=high
+
+  * Added xclip as a dependence
+  * Added to senia-nmap the xclip mechanism
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 14 Oct 2021 08:17:36 +0200
+
 senia-cdd (2021.10.01~hirsute1) hirsute; urgency=high
 
   * Updated to hirsute 
