@@ -10,6 +10,7 @@ case $1 in
             echo " Auto Inventory"
             mkdir -p /etc/fusioninventory/
             cp /usr/share/senia-inventory-client/cfgs/senia-basic-agent.cfg /etc/fusioninventory/agent.cfg  
+	    echo " * Fusion inventory disabled"
             fusioninventory-agent || true
         ;;
 
