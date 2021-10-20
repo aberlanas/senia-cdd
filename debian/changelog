@@ -1,3 +1,9 @@
+senia-cdd (2021.10.20) focal; urgency=high
+
+  * Added new binary
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 20 Oct 2021 17:55:32 +0200
+
 senia-cdd (2021.10.14.2) focal; urgency=high
 
   * Disabled inventory for now
