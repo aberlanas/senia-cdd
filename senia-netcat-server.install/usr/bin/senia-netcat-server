@@ -1,0 +1,14 @@
+#!/bin/bash
+
+SNPORT=10000
+SNIP=127.0.0.1
+SNFILE="/tmp/default-senia-nmap.txt"
+
+source /etc/senia-netcat-server/exam.conf || echo " * Something bad happens"
+
+nc -k -l $SNIP $SNPORT | tee $SNFILE
+
+
+
+
+exit 0
