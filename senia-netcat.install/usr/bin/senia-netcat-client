@@ -17,7 +17,18 @@ IP=$1
 PORT=$2
 shift 2
 
-echo " - $(date +%Y/%m/%d-%H:%M) [ $SNHOSTNAME ] > $@" | nc -q 1 $IP $PORT
+TUNEL="[ direct ]"
+
+LINE=$(ss -l -p| grep $PORT |head -n 1)
+
+rc=0
+
+echo $LINE|grep -q ssh||rc=1
+if [ $rc -eq 0 ]; then
+	TUNEL="[ tunneled ]"
+fi
+	
+echo " - $(date +%Y/%m/%d-%H:%M) [ $SNHOSTNAME ] $TUNEL > $@" | nc -q 1 $IP $PORT
 
 
 exit 0
