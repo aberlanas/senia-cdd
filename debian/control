@@ -136,6 +136,8 @@ Description: Senia Metapackage of dependences
 Package: senia-netcat
 Architecture: all
 Depends: ${misc:Depends},netcat-openbsd
+Conflicts: senia-netcat-server
+Replaces: senia-netcat-server
 Description: A Senia netcat Simple Server
  Amusement is granted with this package
 
