@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# This script is licensed under GPL v3 or higher.
+
+# Author: Angel Berlanas Vicente
+#         <angel.berlanas@gmail.com>
+
+# Some values
+SNHOSTNAME=$(hostname)
+
+if [ $# -lt 3 ]; then
+	echo " * USAGE : $(basename $0) IP PORT MSG "
+	exit 1
+fi
+
+IP=$1
+PORT=$2
+shift 2
+
+echo " - $(date +%Y/%m/%d-%H:%M) [ $SNHOSTNAME ] >$@" | nc -q 1 $IP $PORT
+
+
+exit 0

@@ -133,7 +133,7 @@ Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts,fo
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 
-Package: senia-netcat-server
+Package: senia-netcat
 Architecture: all
 Depends: ${misc:Depends},netcat-openbsd
 Description: A Senia netcat Simple Server
