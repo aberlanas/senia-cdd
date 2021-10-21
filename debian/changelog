@@ -1,3 +1,9 @@
+senia-cdd (2021.10.21) focal; urgency=high
+
+  * Added new binary for the exam. 
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 21 Oct 2021 06:07:30 +0200
+
 senia-cdd (2021.10.20) focal; urgency=high
 
   * Added new binary
