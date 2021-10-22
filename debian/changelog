@@ -1,3 +1,9 @@
+senia-cdd (2021.10.22) focal; urgency=high
+
+  * Fixed bug
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 22 Oct 2021 09:20:45 +0200
+
 senia-cdd (2021.10.21+exam01) focal; urgency=high
 
   * Added new features 

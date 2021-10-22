@@ -6,7 +6,9 @@ SNFILE="/tmp/default-senia-nmap.txt"
 
 source /etc/senia-netcat-server/exam.conf || echo " * Something bad happens"
 
-nc -k -l $SNIP $SNPORT | tee $SNFILE
+echo " * Senia-NetCat-Server : Started"
+#nc -k -l $SNIP $SNPORT | tee $SNFILE
+nc -k -l $SNPORT | tee $SNFILE
 
 
 
