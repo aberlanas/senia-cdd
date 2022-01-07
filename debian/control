@@ -107,7 +107,7 @@ Description: But highly recommended
 
 Package: senia-firstboot
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, python3
 Recommends: vim
 Description: Senia Firstboot for cloned systems
  Firstboot script made by David and Fons to solve 
