@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 with open("/etc/senia/network_aulas.json", "r") as read_file:
     data = json.load(read_file)

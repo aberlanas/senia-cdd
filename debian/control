@@ -39,7 +39,7 @@ Description: Simple Virtual TIC Desktop App
 
 Package: senia-directory
 Architecture: all
-Depends: ${misc:Depends}, bsdutils
+Depends: ${misc:Depends}, bsdutils (>=1:2.34-0.1ubuntu9)
 Description: SSO and Mounting Infraestructure
  Simple integration, mount points and scripts
  for Senia Single-Sign-On mechanism.
