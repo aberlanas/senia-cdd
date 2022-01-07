@@ -138,7 +138,7 @@ Architecture: all
 Depends: ${misc:Depends},netcat-openbsd
 Conflicts: senia-netcat-server
 Replaces: senia-netcat-server
-Description: A Senia netcat Simple Server
+Description: Simple Server for netcat
  Amusement is granted with this package
 
 Package: senia-startup-conf
@@ -202,7 +202,7 @@ Description: Senia shutdown plans
 Package: senia-sacred-place
 Architecture: all
 Depends: ${misc:Depends}
-Description: A Senia Sacred (and secure) place
+Description: secure places for senia environments
  This package provides mechanisms to avoid
  some Senia configurations in several machines 
  and Systems.

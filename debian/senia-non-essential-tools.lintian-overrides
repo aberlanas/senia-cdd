@@ -1,4 +1,1 @@
-senia-non-essential-tools: binary-without-manpage usr/bin/senia-diploma
-senia-non-essential-tools: binary-without-manpage usr/bin/senia-image-toolbox
 senia-non-essential-tools: binary-without-manpage usr/bin/senia-musica-tall
-senia-non-essential-tools: binary-without-manpage usr/bin/senia-procesador-listados

@@ -1,0 +1,2 @@
+senia-netcat: no-manual-page usr/bin/senia-netcat-client
+senia-netcat: no-manual-page usr/bin/senia-netcat-server
