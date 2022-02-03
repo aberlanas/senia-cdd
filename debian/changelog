@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 senia-cdd (2022.01.31~impish) impish; urgency=high
+=======
+senia-cdd (2022.02.03) focal; urgency=high
+
+  * Removed some blocks for Firefox
+  * Added traceroute
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 03 Feb 2022 08:43:52 +0100
+
+senia-cdd (2022.01.31) focal; urgency=high
+>>>>>>> 37bb3dd8572510c0a5707fc904fd38556a6c41c2
 
   * Reported to impish.
 
