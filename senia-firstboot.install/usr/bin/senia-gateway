@@ -45,16 +45,20 @@ if [ "${ACTION}" = "set" ]; then
 
     IFACE=$(ip addr | grep ^2 | cut -d " " -f2 | tr ":" " "| sed -e "s/ //g")
 
-	echo " * Setting IP on netplan"
+	echo " * Setting this IP ${MYIP} as default GW"
 	sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g" "$TPL_NETPLAN_GW" > /etc/netplan/03-senia-gateway.yaml
 
     netplan apply
+    echo " * Your GW is : $(ip r | head -n 1 | cut -d " " -f3)"
+    echo " * REMEMBER TO DELETE THIS SETTINGS AFTER THE USE OF IT"
+    echo " sudo senia-gateway delete"
 
 elif [ "${ACTION}" = "delete" ]; then
     
     echo " * Cleaning configuration "
     rm -f /etc/netplan/03-senia-gateway.yaml
     netplan apply
+    echo " * Your GW is : $(ip r | head -n 1 | cut -d " " -f3)"
 
 fi
 
