@@ -27,7 +27,7 @@ fi
 
 # Test arguments
 
-if [ $# -gt 2 ] ; then
+if [ $# -eq 0 -o $# -gt 2 ] ; then
 	echo " [ USAGE ] : "
 	echo " - set IP-NEW-GW"
 	echo " - delete"
@@ -49,7 +49,6 @@ if [ "${ACTION}" = "set" ]; then
 	sed -e "s/_@_IFACE_@_/$IFACE/g;s/_@_MYIP_@_/$MYIP/g" "$TPL_NETPLAN_GW" > /etc/netplan/03-senia-gateway.yaml
 
     netplan apply
-	systemctl start networking
 
 elif [ "${ACTION}" = "delete" ]; then
     
