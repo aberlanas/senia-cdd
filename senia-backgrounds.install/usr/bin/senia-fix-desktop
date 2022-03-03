@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+
+
+CHANNEL="xfce4-desktop"
+DEFAULT_PROP_WALL_VALUE="/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png"
+PROP_WALL=""
+
+rc=0
+xfconf-query -c ${CHANNEL} -l | grep -q last-image  || rc=1
+
+if [ ${rc} -eq 1 ]; then
+
+	echo " * Nothing has changed "
+	exit 0
+else
+	PROP_WALL=$(xfconf-query -c ${CHANNEL} -l | grep last-image)
+	xfconf-query -c ${CHANNEL} -p ${PROP_WALL} -s ${DEFAULT_PROP_WALL_VALUE} --create
+	echo " * Setting the correct wallpaper "
+fi
+
+exit 0
