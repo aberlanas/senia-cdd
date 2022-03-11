@@ -31,6 +31,20 @@ case "$1" in
     # Set up our config for dconf
     echo " * [ Senia ] : Cleaning old Settings for Dconf"
     test ! -f /etc/dconf/profile/user || rm -f /etc/dconf/profile/user
+
+    echo " * [ Senia Stasi ] : Fixing wallpaper fixed for lightdm "
+
+    rc=0
+    cat /etc/lightdm/lightdm-gtk-greeter.conf | grep ^user-background|| rc=1
+    if [ ${rc} -eq 1 ]; then
+	echo " [ Senia Stasi ]: Setting Stasi"
+	echo " background=/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png" >> /etc/lightdm/lightdm-gtk-greeter.conf
+	echo "user-background = false" >> /etc/lightdm/lightdm-gtk-greeter.conf
+    else
+	echo " [ Senia Stasi ]: Stasi already installed"
+    fi
+
+
     exit 0
   ;;
 

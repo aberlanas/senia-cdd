@@ -15,13 +15,13 @@ else
 	for prop in ${PROP_WALL}; do
 		# Test if the property has changed 
 		aux=$(xfconf-query -c xfce4-desktop  -p ${prop})
-		if [ ${aux} != ${DEFAULT_PROP_WALL_VALUE} ]; then
+		if [ "${aux}" != "${DEFAULT_PROP_WALL_VALUE}" ]; then
 			CURRENT_WALL=$(echo ${prop} | grep last-image | cut -d '/' -f 4,5 )
 			MSG=" * Setting the correct wallpaper for user ${USER} : ${CURRENT_WALL} "
 			logger -t "senia-stasi" -s "${MSG}"
-			xfconf-query -c ${CHANNEL} -p ${prop} -s ${DEFAULT_PROP_WALL_VALUE} --create
+			xfconf-query -c "${CHANNEL}" -p "${prop}" -s "${DEFAULT_PROP_WALL_VALUE}" --create
 		else
-			echo " Nothing to see here"	
+			logger -t "senia-stasi" -s "Nothing to see here"
 		fi
 	done
 fi
