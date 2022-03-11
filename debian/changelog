@@ -1,3 +1,9 @@
+senia-cdd (2022.03.11) jammy; urgency=high
+
+  * Updated with stasi
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 11 Mar 2022 07:01:34 +0100
+
 senia-cdd (2022.03.10~jammy1) jammy; urgency=high
 
   * Updated dependences
