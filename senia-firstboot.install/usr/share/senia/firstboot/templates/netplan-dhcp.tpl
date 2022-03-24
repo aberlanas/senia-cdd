@@ -1,4 +1,6 @@
 network:
+  version: 2
+  renderer: networkd
   ethernets:
     _@_IFACE_@_:
       #addresses:

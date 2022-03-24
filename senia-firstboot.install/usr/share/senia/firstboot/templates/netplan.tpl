@@ -1,9 +1,13 @@
 network:
+  version: 2
+  renderer: networkd
   ethernets:
     _@_IFACE_@_:
       addresses:
         - _@_MYIP_@_/_@_MYMASK_@_
-      gateway4: _@_MYGW_@_
+      routes: 
+        - to: default
+          via: _@_MYGW_@_
       nameservers:
         addresses:
           - 172.27.111.5
