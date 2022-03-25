@@ -161,7 +161,7 @@ Description: Senia package for Networking
 
 Package: senia-languages
 Architecture: all
-Depends: ${misc:Depends}, libreoffice-l10n-ca, libreoffice-help-ca, language-pack-ca-base, language-pack-ca, firefox-locale-ca, gimp-help-ca , hunspell-ca, hyphen-ca ,language-pack-ca, mythes-ca, wcatalan, gimp-help-en, gimp-help-es, hunspell-en-au, libreoffice-l10n-en-gb, hyphen-en-gb ,hyphen-en-ca, mythes-es,hunspell-en-ca, libreoffice-help-en-gb, hunspell-en-gb, hunspell-en-za, hyphen-es, libreoffice-l10n-en-za, mythes-en-au
+Depends: ${misc:Depends}, libreoffice-l10n-ca, libreoffice-help-ca, language-pack-ca-base, language-pack-ca, firefox-locale-ca, firefox-locale-es, hunspell-en-za, wbritish, libreoffice-help-es, gimp-help-ca , hunspell-ca, hyphen-ca ,language-pack-ca, mythes-ca, wcatalan, gimp-help-en, gimp-help-es, hunspell-en-au, libreoffice-l10n-en-gb, hyphen-en-gb ,hyphen-en-ca, mythes-es,hunspell-en-ca, libreoffice-help-en-gb, hunspell-en-gb, hunspell-en-za, hyphen-es, libreoffice-l10n-en-za, mythes-en-au
 Description: Senia languages meta
  Some languages
 
