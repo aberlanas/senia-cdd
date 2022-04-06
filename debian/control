@@ -24,6 +24,10 @@ Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm, se
 Description: Senia XFCE4 Dependences
  Simple package to solve the xfce4 session.
 
+Package: senia-cdd-gnome
+Architecture: all
+Depends: ${misc:Depends}, ubuntu-desktop, yaru-theme-gnome-shell, gnome-tweaks, lightdm, senia-backgrounds, ubuntu-session 
+
 Package: senia-frozen-users
 Architecture: all
 Depends: ${misc:Depends}, lsb-base
