@@ -1,3 +1,11 @@
+senia-cdd (2022.04.07) jammy; urgency=high
+
+  * Added GNOME as an alternative.
+  * Added Description without errors.
+  * Updated some dependences.
+
+ -- tic La Senia <tic@ieslasenia.org>  Thu, 07 Apr 2022 19:48:06 +0200
+
 senia-cdd (2022.04.06) jammy; urgency=high
 
   * Added GNOME as an alternative.

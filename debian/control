@@ -26,7 +26,10 @@ Description: Senia XFCE4 Dependences
 
 Package: senia-cdd-gnome
 Architecture: all
-Depends: ${misc:Depends}, ubuntu-desktop, yaru-theme-gnome-shell, gnome-tweaks, lightdm, senia-backgrounds, ubuntu-session 
+Depends: ${misc:Depends}, ubuntu-desktop, yaru-theme-gnome-shell, lightdm, senia-backgrounds
+Description: Senia GNOME Dependences
+ A minimalistic package for GNOME Desktops using
+ the Senia Environment. 
 
 Package: senia-frozen-users
 Architecture: all
