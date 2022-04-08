@@ -18,6 +18,14 @@ Description: Senia Locks for Xfce4 Desktop
  XFCE provides a simple way to lock, useful.
  Thanks for that, XFCE.
 
+Package: senia-cdd-xfce
+Architecture: all
+Depends: ${misc:Depends}, senia-desktop-xfce
+Provides: senia-desktop-environment
+Description: Senia XFCE Dependences
+ A minimalist package for XFCE4 Desktop using
+ the Senia Environment
+
 Package: senia-desktop-xfce
 Architecture: all
 Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm, senia-locks-xfce, senia-backgrounds
@@ -27,6 +35,7 @@ Description: Senia XFCE4 Dependences
 Package: senia-cdd-gnome
 Architecture: all
 Depends: ${misc:Depends}, ubuntu-desktop, yaru-theme-gnome-shell, lightdm, senia-backgrounds
+Provides: senia-desktop-environment
 Description: Senia GNOME Dependences
  A minimalistic package for GNOME Desktops using
  the Senia Environment. 
