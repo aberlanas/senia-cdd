@@ -1,6 +1,7 @@
-senia-cdd (2022.04.08) jammy; urgency=high
+senia-cdd (2022.04.08.1) jammy; urgency=high
 
-  * NOT RELEASED YET
+  * Added senia-version...remembering old times
+  * Added new binary
 
  -- tic La Senia <tic@ieslasenia.org>  Thu, 07 Apr 2022 19:50:25 +0200
 
