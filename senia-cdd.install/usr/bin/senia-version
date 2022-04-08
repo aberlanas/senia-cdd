@@ -18,7 +18,11 @@ if [ ! -d ${SENIA_VERSION_PATH} ]; then
 fi
 
 # Normal behaviour
-cat /etc/senia-version.d/*  
+SENIA_VERSION_DATE=$(dpkg -l| grep senia-cdd | head -n 1 | tr -s " " | cut -d " " -f3)
+SENIA_VERSION_ITEMS=$(cat /etc/senia-version.d/* | tr "/n" " ")
+
+echo " * Senia Version : ${SENIA_VERSION_DATE} ${SENIA_VERSION_ITEMS}"
+
 
 
 
