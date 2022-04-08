@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+# This script is licensed
+# under GPLv3 or Higher.
+
+
+SENIA_VERSION_PATH="/etc/senia-version.d/"
+
+# Some useful functions
+die(){
+    echo " [ senia-version ] Error : $1"
+    exit 1
+}
+
+if [ ! -d ${SENIA_VERSION_PATH} ]; then
+    die " Not Path for Version : ${SENIA_VERSION_PATH}"
+fi
+
+# Normal behaviour
+cat /etc/senia-version/*  
+
+
+
