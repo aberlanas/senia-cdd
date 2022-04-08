@@ -18,7 +18,8 @@ if [ ! -d ${SENIA_VERSION_PATH} ]; then
 fi
 
 # Normal behaviour
-cat /etc/senia-version/*  
+cat /etc/senia-version.d/*  
+
 
 
 
