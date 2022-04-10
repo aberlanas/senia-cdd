@@ -31,16 +31,11 @@ case "$1" in
 	# Set up our config for APT service
 
 	echo " * Senia Startup Conf : disabling apt-daily timer"
-	systemctl enable apt-daily.timer || true
+	deb-systemd-helper enable apt-daily.timer || true
 	
 	echo " * Senia Startup Conf : stopping apt-daily service"
-	systemctl enable apt-daily.service || true
+	deb-systemd-helper enable apt-daily.service || true
 
-	echo " * Senia Startup Conf : stopping apt-daily"
-	systemctl start apt-daily.timer || true
-
-	echo " * Senia Startup Conf : reloadin daemon"
-	systemctl daemon-reload || true
   ;;
 
   abort-upgrade|abort-remove|abort-deconfigure)
