@@ -4,6 +4,15 @@ CHANNEL="xfce4-desktop"
 DEFAULT_PROP_WALL_VALUE="/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png"
 PROP_WALL=""
 
+# Test if this machine is a Senia Sacred Place
+rc=0
+senia-version -t sacred || rc=1
+if [ $rc -eq 0 ]; then
+	logger -t "senia-stasi" -s " $(basename $0) -> This is a Sacred Place, nothing to do"
+	exit 0
+fi
+
+
 rc=0
 xfconf-query -c ${CHANNEL} -l | grep -q last-image  || rc=1
 
