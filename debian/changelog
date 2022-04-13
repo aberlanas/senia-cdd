@@ -1,3 +1,9 @@
+senia-cdd (2022.04.13) jammy; urgency=high
+
+  * Added shellcheck to senia-dependences thanks to @sirdeg.
+
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 13 Apr 2022 10:15:36 +0200
+
 senia-cdd (2022.04.10) jammy; urgency=high
 
   * Added test to senia-version (-t VALUE).
