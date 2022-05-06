@@ -1,3 +1,10 @@
+senia-cdd (2022.05.06) jammy; urgency=high
+
+  * Added new package for gnome settings.
+  * Added conflicts mechanism.
+
+ -- tic La Senia <tic@ieslasenia.org>  Fri, 06 May 2022 06:47:59 +0200
+
 senia-cdd (2022.05.05) jammy; urgency=high
 
   * Added new wallpaper and ready to install in Aula1.

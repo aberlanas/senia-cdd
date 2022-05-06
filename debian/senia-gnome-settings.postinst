@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -e
+
+
+case $1 in 
+	configure)
+		echo " * [ Senia Gnome Settings ] -> Cleaning old dconf "
+		if [ -f senia-backgrounds.install/etc/dconf/db/senia.d/01-background ]; then
+			echo " * -- 01-background deleted "
+			rm -f /etc/dconf/db/senia.d/01-background
+		fi
+		if [ -f senia-backgrounds.install//etc/dconf/db/senia.d/02-settings-terminal ]; then
+			echo " * -- 02-settings-terminal deleted "
+			rm -f /etc/dconf/db/senia.d/02-settings-terminal
+		fi
+	
+		echo " * [ Senia Gnome Settings ] -> Apply new dconf "
+		dconf update
+	;;
+	*)
+		echo " Postinstall called with an unknown argument"
+	;;
+esac
+
+
+
+
+
+#DEBHELPER#
+
+
+exit 0

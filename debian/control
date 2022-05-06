@@ -36,6 +36,7 @@ Package: senia-cdd-gnome
 Architecture: all
 Depends: ${misc:Depends}, ubuntu-desktop, yaru-theme-gnome-shell, lightdm, senia-backgrounds
 Provides: senia-desktop-environment
+Conflicts: senia-backgrounds (<= 2022.05.05)
 Description: Senia GNOME Dependences
  A minimalistic package for GNOME Desktops using
  the Senia Environment. 
