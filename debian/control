@@ -43,7 +43,7 @@ Description: Senia GNOME Dependences
 
 Package: senia-gnome-settings
 Architecture: all
-Depends: ${misc:Depends}, dconf
+Depends: ${misc:Depends}, dconf-cli
 Description: Senia GNOME default settings
  Some useful configurations for GNOME Desktops
 
