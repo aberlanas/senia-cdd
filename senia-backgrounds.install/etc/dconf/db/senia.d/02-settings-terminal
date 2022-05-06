@@ -1,8 +1,0 @@
-[org/mate/terminal/profiles/default]
-use-theme-colors=false
-background-color='#000000000000'
-foreground-color='#FFFFFFFFFFFF'
-
-[org/mate/terminal/profiles/default]
-silent-bell=true
-
