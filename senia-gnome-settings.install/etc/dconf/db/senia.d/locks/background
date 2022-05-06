@@ -1,0 +1,5 @@
+# Lock desktop background settings
+#/org/gnome/desktop/background/picture-uri
+#/org/gnome/desktop/background/picture-options
+#/org/gnome/desktop/background/primary-color
+#/org/gnome/desktop/background/secondary-color

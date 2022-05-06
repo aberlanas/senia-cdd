@@ -40,6 +40,12 @@ Description: Senia GNOME Dependences
  A minimalistic package for GNOME Desktops using
  the Senia Environment. 
 
+Package: senia-gnome-settings
+Architecture: all
+Depends: ${misc:Depends}, dconf
+Description: Senia GNOME default settings
+ Some useful configurations for GNOME Desktops
+
 Package: senia-frozen-users
 Architecture: all
 Depends: ${misc:Depends}, lsb-base
