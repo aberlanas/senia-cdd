@@ -152,7 +152,7 @@ Description: senia configuration for inventory
 
 Package: senia-dependences
 Architecture:all
-Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts,fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad,gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfatprogs, libreoffice-sdbc-hsqldb, zeal, xz-utils, fonts-firacode, fonts-crosextra-carlito, emacs, elpa-dpkg-dev-el, dpkg-dev,  elpa-debian-el, emacs-goodies-el, debhelper, git-buildpackage, unrar-free, chromium-browser, chromium-browser-l10n, vlc, libdvd-pkg, libreoffice-base, senia-inventory-client, libapache2-mod-php, libgconf-2-4, libreoffice, shotwell,  kdenlive, kitty-terminfo, php-xdebug, sqlitebrowser, junit, xclip, shellcheck
+Depends: ${misc:Depends},openssh-server, inkscape, vim, screen, msttcorefonts,fonts-cantarell, gstreamer1.0-plugins-ugly, gstreamer1.0-plugins-bad,gstreamer1.0-plugins-good, fonts-inconsolata, gcc, make, perl, fonts-open-sans, mailutils, gpm, gimp, clusterssh, lame, senia-virtual-tic, exfatprogs, libreoffice-sdbc-hsqldb, zeal, xz-utils, fonts-firacode, fonts-crosextra-carlito, dpkg-dev, debhelper, git-buildpackage, unrar-free, chromium-browser, chromium-browser-l10n, vlc, libdvd-pkg, libreoffice-base, senia-inventory-client, libapache2-mod-php, libgconf-2-4, libreoffice, shotwell,  kdenlive, kitty-terminfo, php-xdebug, sqlitebrowser, junit, xclip, shellcheck
 Description: Senia Metapackage of dependences
  Some packages  to group dependences
 
