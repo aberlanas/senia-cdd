@@ -1,0 +1,44 @@
+#!/bin/bash 
+
+# This script is licensed unde GPLv3 or higher
+
+
+MODULE_INTEL="i915"
+FILE_X11="/etc/X11/xorg.conf.d/20-intel-senia.conf"
+TPL_FILE_X11="/usr/share/senia/firstboot/templates/senia-20-intel.conf"
+
+
+# Test if the solution is already applied.
+
+if [ -f {FILE_X11} ]; then
+    echo " * [i915-intel] : Senia Solution already applied ... nothing to do."
+    exit 0
+fi
+
+
+# Test if i915 is in use 
+
+rc=0
+lsmod | grep -q ^i915 || rc=1
+
+if [ ${rc} -eq 0 ]; then
+    
+    echo " * This machine uses the i195 module "
+
+    USING_THE_MODULE="$(lsmod| grep ^${MODULE_INTEL}| tr -s " " | cut -d " " -f 3)"
+    if [ ${USING_THE_MODULE} -gt 0 ]; then
+    
+        echo " * Copying file "
+        cp -f ${TPL_FILE_X11} ${FILE_X11}
+    
+    fi
+
+else
+
+    echo " * This machine not uses the i915 module"
+
+fi
+
+
+
+exit 0
