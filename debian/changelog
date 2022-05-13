@@ -4,6 +4,12 @@ senia-cdd (2022.05.13) jammy; urgency=high
 
  -- tic La Senia <tic@ieslasenia.org>  Fri, 13 May 2022 09:05:37 +0200
 
+senia-cdd (2022.05.07~beta1) jammy; urgency=high
+
+  * Updated and removed dependences
+
+ -- tic La Senia <tic@ieslasenia.org>  Sat, 07 May 2022 06:45:55 +0200
+
 senia-cdd (2022.05.06.1) jammy; urgency=high
 
   * Added new wallpaper
