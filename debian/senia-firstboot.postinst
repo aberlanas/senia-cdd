@@ -32,7 +32,7 @@ case $1 in
 
 
 		senia-set-dns
-
+        senia-set-xorg-conf-for-intel || true
         ;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
