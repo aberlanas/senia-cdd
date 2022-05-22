@@ -1,3 +1,9 @@
+senia-cdd (2022.05.22~beta1) jammy; urgency=high
+
+  * Updated senia-kiosko in order to make the survey.
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 22 May 2022 07:50:27 +0200
+
 senia-cdd (2022.05.13.1) jammy; urgency=medium
 
   * Updated in order to test the update 

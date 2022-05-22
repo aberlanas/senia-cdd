@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-URLKIOSKO="https://portal.edu.gva.es/telematricula/es/inicio/"
+URLKIOSKO="https://schools-go-digital.jrc.ec.europa.eu/self-assessment?s=tB5DAjR&lang=es"
 
 logger -t " Senia Kiosko " " Starting FirefoX  : $URLKIOSKO"
 firefox -private "${URLKIOSKO}" & 
