@@ -5,6 +5,9 @@
 
 set -e
 
+WALLPAPER_ORIG_PATH="/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png"
+
+
 # summary of how this script can be called:
 #        * <postinst> `configure' <most-recently-configured-version>
 #        * <old-postinst> `abort-upgrade' <new version>
@@ -43,6 +46,13 @@ case "$1" in
     else
 	echo " [ Senia Stasi ] : Stasi already installed "
     fi
+
+
+    if  [ -f ${WALLPAPER_ORIG_PATH} ]; then
+	echo " * [ senia-backgrounds ] : Copying file for ImageMagick"
+	cp ${WALLPAPER_ORIG_PATH} ${WALLPAPER_ORIG_PATH}.orig.png
+    fi
+
     exit 0
   ;;
 
