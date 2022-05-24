@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+rc=0
+NTPSERVER="cuco.rediris.es"
+ntpdate ${NTPSERVER} || rc=1
+
+if [ ${rc} -eq 0 ]; then
+	echo " * [ senia-ntpdate ] : Updated with ${NTPSERVER}"
+else
+	echo " * [ senia-ntpdate ] : Warning, not updated with ${NTPSERVER}"
+fi
+
+
+exit 0

@@ -1,0 +1,11 @@
+[Unit]
+Description=Senia : Senia NTP Client
+After=network.target
+User=root
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/senia-ntpdate
+
+[Install]
+WantedBy=multi-user.target

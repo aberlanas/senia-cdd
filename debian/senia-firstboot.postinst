@@ -31,8 +31,12 @@ case $1 in
 		fi
 
 
+    		echo " * [ senia-firstboot ] : Enabling service for NTP Client"
+		systemctl enable senia-firstboot.service || true
+
+
 		senia-set-dns
-        senia-set-xorg-conf-for-intel || true
+	        senia-set-xorg-conf-for-intel || true
         ;;
 
         abort-upgrade|abort-remove|abort-deconfigure)
