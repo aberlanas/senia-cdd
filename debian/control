@@ -130,7 +130,7 @@ Description: But highly recommended
 
 Package: senia-firstboot
 Architecture: all
-Depends: ${misc:Depends}, python3
+Depends: ${misc:Depends}, python3, ntpdate
 Recommends: vim
 Description: Senia Firstboot for cloned systems
  Firstboot script made by David and Fons to solve 

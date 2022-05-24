@@ -1,3 +1,10 @@
+senia-cdd (2022.05.25) jammy; urgency=high
+
+  * Updated with cuco.rediris.es 
+  * Updated with new binary
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 24 May 2022 17:49:49 +0200
+
 senia-cdd (2022.05.24.3) jammy; urgency=high
 
   * Updated with default enabled service 
