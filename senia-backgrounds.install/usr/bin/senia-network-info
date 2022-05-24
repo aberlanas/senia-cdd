@@ -1,0 +1,79 @@
+#!/bin/bash
+
+contar=0
+comprobar=0
+
+#busco las interfaces de que dispone cada ordenador
+interface_eth=$(netstat -i | awk $'{print $1}' | grep ^en)
+interface_wlo=$(netstat -i | awk $'{print $1}' | grep ^wl)
+
+#compruebo si hay interface WI-FI
+if ! [ -z $interface_wlo ]; then
+    ip_wlo=$(ifconfig $interface_wlo | grep inet\ | awk $'{print $2}' | cut -d "/" -f1)
+else
+    ip_wlo=0
+fi
+
+#compruebo que la interfaz WI-FI tenga conexion si no la tiene le asigno un 0 
+if [ -z $ip_wlo ]; then
+    ip_wlo=0
+fi
+
+
+#compruebo si hay interface de eth
+if ! [ -z $interface_eth ]; then
+    ip_eth=$(ifconfig $interface_eth | grep inet\ | awk $'{print $2}' | cut -d "/" -f1)
+fi
+
+#los junto los dos separados por 1 espacio para el array
+ip+=$(echo $ip_wlo" ")
+ip+=$(echo $ip_eth)
+
+declare -a ips=($ip)
+repe=0
+for u in ${ips[@]}; do
+    ((repe ++))
+    if [[ $u =~ ^[172]{3}\.[29]{2}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then 
+        ip_del_ordenador=$u
+        comprobar=1
+        let contar=repe
+    fi
+    if [ $contar -eq 1 ]; then
+        tipo_de_conexion="WI-FI"
+    fi
+    if [ $contar -eq 2 ]; then
+        tipo_de_conexion="Cableada"
+    fi
+done
+repe=0
+if [ $comprobar -eq 0 ]; then
+    for u in ${ips[@]}; do
+        ((repe ++))
+        if [[ $u =~ ^[192]{3}\.[168]{3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+            ip_del_ordenador=$u
+            comprobar=1
+            let contar=repe
+        fi
+        if [ $contar -eq 1 ]; then
+            tipo_de_conexion="WI-FI"
+        fi
+        if [ $contar -eq 2 ]; then
+            tipo_de_conexion="Cableada"
+        fi
+    done
+fi
+
+if [ -z $tipo_de_conexion ]; then
+    tipo_de_conexion="No hay"
+fi
+
+if [ -z $ip_del_ordenador ]; then
+    ip_del_ordenador="Sin IP"
+fi
+
+nombre=$(hostname)
+
+echo -e "\ Hostname: "$nombre
+echo -e " Tipo de conexion: "$tipo_de_conexion
+echo -e " IP: "$ip_del_ordenador
+exit 0

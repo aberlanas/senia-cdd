@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# This script is licensed under GPL v3 or higher.
+#
+
+# Author: Javier Puertas 
+#        <javierpuertas2004@gmail.com>
+
+# Some useful values
+
+DESTINO2=/tmp/senia-cookie-destino-tmp-2.png
+DESTINO4=/tmp/senia-cookie-destino-tmp-4.png
+FOTO_ORIGINAL="/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png.orig.png"
+DESTINO="/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png"
+
+clean_tmp(){
+    echo " * [ senia-cookie-info-wallpaper ] : Cleaning tmp images "
+    rm -f $DESTINO2 $DESTINO4
+}
+
+
+
+TEXTO=$(senia-network-info)
+
+clean_tmp
+
+convert -size 280x90 -extent 290x100 -background white -pointsize 20 -fill red label:"$TEXTO" ${DESTINO2}
+
+convert ${DESTINO2} -bordercolor white -border 13 \( +clone -background black -shadow 80x8+8+8 \) +swap -background none -layers merge +repage ${DESTINO4}
+
+convert $FOTO_ORIGINAL ${DESTINO4} -gravity SouthEast -composite ${DESTINO}
+
+clean_tmp
+
+exit 0
+
