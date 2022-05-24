@@ -48,10 +48,14 @@ case "$1" in
     fi
 
 
+
     if  [ -f ${WALLPAPER_ORIG_PATH} ]; then
 	echo " * [ senia-backgrounds ] : Copying file for ImageMagick"
 	cp ${WALLPAPER_ORIG_PATH} ${WALLPAPER_ORIG_PATH}.orig.png
     fi
+
+    echo " * [ senia-backgrounds ] : Enabling service for Wallpaper cookie info"
+    systemctl enable senia-backgrounds.service || true
 
     exit 0
   ;;
