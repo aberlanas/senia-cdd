@@ -1,0 +1,11 @@
+[Unit]
+Description=Senia : Senia Wallpaper Cookie
+After=network.target
+User=root
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/senia-cookie-info-wallpaper
+
+[Install]
+WantedBy=multi-user.target
