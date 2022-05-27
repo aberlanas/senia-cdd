@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+
+KIOSKO_LIGHTDM_SETTING="/etc/lightdm/lightdm.conf.d/zz-senia-kiosko-login.conf"
+
+case $1 in 
+        remove|purge|abort-install|disappear)
+                if [ -f ${KIOSKO_LIGHTDM_SETTING} ] ; then
+                        echo " * Cleaning Kiosko Autologin"
+                        rm -f ${KIOSKO_LIGHTDM_SETTING}
+                fi
+                
+                ;;
+        *)
+                echo "Nothing to do"
+                ;; 
+esac
+
+
+#DEBHELPER#
+
