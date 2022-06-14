@@ -72,8 +72,10 @@ if [ -z $ip_del_ordenador ]; then
 fi
 
 nombre=$(hostname)
+seniaversion=$(senia-version)
 
 echo -e "\ Hostname: "$nombre
 echo -e " Tipo de conexion: "$tipo_de_conexion
 echo -e " IP: "$ip_del_ordenador
+echo -e " $seniaversion"
 exit 0
