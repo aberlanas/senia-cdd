@@ -32,7 +32,8 @@ manera más *Consellería-compliant*) lo que está configurado en el Switch del 
 está separada en dos mitades, la primera :
 
 - `172.29.0.0/24` $\rightarrow$ NO TIENE DHCP, de esta manera nosotros ponemos IPs fijas en esta red para los equipos de las Aulas del centro.
-- `172.29.1.0/24` $\rightarrow$ TIENE DHCP, donde los portátiles, móviles, y dispositivos no configurados en la red deñ centro se les asigna una dirección
+- `172.29.1.0/24` $\rightarrow$ TIENE DHCP, donde los portátiles, móviles, y dispositivos no configurados en la red del centro se les asigna una dirección
    y pueden trabajar.
+
 
 
