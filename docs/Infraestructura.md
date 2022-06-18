@@ -25,6 +25,14 @@ lo que importa no es cómo las clasificamos sino cómo funcionan ;-) .
 
 Disponemos de 510 direcciones IP válidas en esa red:
 
-172.29.0.1 $\leftarrow$ 172.29.1.254
+172.29.0.1 $\rightarrow$ 172.29.1.254
+
+Sin embargo, para facilitar la administración del centro y ya que no contamos con un DHCP propio ( y ser de esta 
+manera más *Consellería-compliant*) lo que está configurado en el Switch del centro (Gestionado por el SAI), es que esta red de 510 direcciones 
+está separada en dos mitades, la primera :
+
+- `172.29.0.0/24` $\rightarrow$ NO TIENE DHCP, de esta manera nosotros ponemos IPs fijas en esta red para los equipos de las Aulas del centro.
+- `172.29.1.0/24` $\rightarrow$ TIENE DHCP, donde los portátiles, móviles, y dispositivos no configurados en la red deñ centro se les asigna una dirección
+   y pueden trabajar.
 
 
