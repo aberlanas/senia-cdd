@@ -8,4 +8,5 @@ del centro.
 
 # Enlaces de Interés
 
+* [Infraestructura del IES](docs/Infraestructura.md)
 * [Migración a Jammy para PSs](docs/MigracionAJammy.md)
