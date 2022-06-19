@@ -106,6 +106,16 @@ Aula portátil
 |aula12  |          |    | focal   | -         |
 
 
+#### Aula PT
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|aulapt-profe  |          |    | focal   | -         |
+|aulapt-pc01  |          |    | focal   | -         |
+|aulapt-pc02  |          |    | focal   | -         |
+|aulapt-pc03  |          |    | focal   | -         |
+|aulapt-pc04  |          |    | focal   | -         |
+
 #### Planta 2
 
 | Aula | Hostname | IP | Versión | senia-cdd |
@@ -125,5 +135,120 @@ Aula portátil
 
 #### Aula Informatica 1
 
-|aula21 |          |    | focal   | -         |
 
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|servidor-aula01 |          | 172.29.0.251/192.168.1.254   | focal   | -         |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+
+#### Aula Informatica 2
+
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|servidor-aula02 |          | 172.29.0.252/192.168.2.254   | jammy   | -         |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+
+#### Aula Informatica 3
+
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|aulainf03-pcprofe |          | 192.168.4.99   | jammy   | -         |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+
+#### Aula Informatica 4
+
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|aulainf04-pcprofe |          | 192.168.4.199   | jammy   | -         |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+
+#### Aula Informatica 5
+
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|aulainf05-pcprofe |          | 192.168.5.100   | jammy   | -         |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
+|      |         |     |jammy    |           |
