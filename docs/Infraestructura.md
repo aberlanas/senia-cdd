@@ -35,5 +35,37 @@ está separada en dos mitades, la primera :
 - `172.29.1.0/24` $\rightarrow$ TIENE DHCP, donde los portátiles, móviles, y dispositivos no configurados en la red del centro se les asigna una dirección
    y pueden trabajar.
 
+TODO: Rellenar con más información
+
+#### Aulas Prefabricadas
+
+Switch distribuidor en la AulaPrefabricada 2
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|AP1   |          |    | focal   | -         |
+|AP2   |          |    | focal   | -         |
+|AP3   |          |    | focal   | -         |
+|AP4   |          |    | focal   | -         |
+|AP5   |          |    | focal   | -         |
+|AP6   |          |    | focal   | -         |
+|AP7   |          |    | focal   | -         |
+|AP8   |          |    | focal   | -         |
+
+#### Taller de Tecnología
+
+
+#### Gimnasio 
+
+
+#### Planta 0
+
+
+#### Planta 1
+
+
+#### Planta 2
+
+
 
 
