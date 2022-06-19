@@ -54,18 +54,76 @@ Switch distribuidor en la AulaPrefabricada 2
 
 #### Taller de Tecnología
 
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|taller  |          |    | focal   | -         |
+
 
 #### Gimnasio 
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|Gimnasio  | gimnasio         |    | focal   | -         |
 
 
 #### Planta 0
 
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|audiovisuales  |          |    | focal   | -         |
+|biblioteca  |          |    | focal   | -         |
+|musica  |          |    | focal   | -         |
+|aula0  |          |    | focal   | -         |
+|salaguardias  |          |    | jammy   | -         |
+|salaprofes01  |          |    | jammy   | -         |
+|salaprofes02  |          |    | jammy   | -         |
+|salaprofes03  |          |    | jammy   | -         |
+|salaprofes04  |          |    | jammy   | -         |
 
 #### Planta 1
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|aula11  |          |    | focal   | -         |
+|aula12  |          |    | focal   | -         |
+|aula13  |          |    | focal   | -         |
+|aula14  |          |    | focal   | -         |
+|aula15  |          |    | focal   | -         |
+|aula16  |          |    | focal   | -         |
+|aula17  |          |    | focal   | -         |
+|aula18  |          |    | focal   | -         |
+|aula19  |          |    | focal   | -         |
+
+#### Laboratorio Ciencias 
+
+Aula portátil 
+
+#### Dep.Lenguas Extranjeras
+
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|aula11  |          |    | focal   | -         |
+|aula12  |          |    | focal   | -         |
 
 
 #### Planta 2
 
+| Aula | Hostname | IP | Versión | senia-cdd |
+|------|----------|----|---------|-----------|
+|depmatemticas  |          |    | focal   | -         |
+|aula21 |          |    | focal   | -         |
+|aula22 |          |    | focal   | -         |
+|aula23 |          |    | focal   | -         |
+|aula24 |          |    | focal   | -         |
+|aula25 |          |    | focal   | -         |
+|aula26 |          |    | focal   | -         |
+|aula27 |          |    | focal   | -         |
+|aulaplastica |          |    | focal   | -         |
 
 
+### Aulas Informatica
+
+#### Aula Informatica 1
+
+|aula21 |          |    | focal   | -         |
 
