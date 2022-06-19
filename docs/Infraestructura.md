@@ -79,6 +79,7 @@ Switch distribuidor en la AulaPrefabricada 2
 |salaprofes02  |          |    | jammy   | -         |
 |salaprofes03  |          |    | jammy   | -         |
 |salaprofes04  |          |    | jammy   | -         |
+|conserjeria  |          |    | focal   | -         |
 
 #### Planta 1
 
@@ -130,6 +131,10 @@ Aula portátil
 |aula27 |          |    | focal   | -         |
 |aulaplastica |          |    | focal   | -         |
 
+
+### Servidor Proxmox
+
+Rellenar aqui
 
 ### Aulas Informatica
 
