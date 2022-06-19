@@ -20,21 +20,21 @@ Description: Senia Locks for Xfce4 Desktop
 
 Package: senia-cdd-xfce
 Architecture: all
-Depends: ${misc:Depends}, senia-desktop-xfce
+Depends: ${misc:Depends}, senia-desktop-xfce, senia-cdd
 Provides: senia-desktop-environment
 Description: Senia XFCE Dependences
  A minimalist package for XFCE4 Desktop using
  the Senia Environment
 
-Package: senia-desktop-xfce
+Package: senia-cdd-kde
 Architecture: all
-Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm, senia-locks-xfce, senia-backgrounds
-Description: Senia XFCE4 Dependences
- Simple package to solve the xfce4 session.
+Depends: ${misc:Depends}, kubuntu-desktop, kubuntu-settings-desktop
+Description: Senia Kubuntu Dependences
+ Simple package to solve the KDE session.
 
 Package: senia-cdd-gnome
 Architecture: all
-Depends: ${misc:Depends}, ubuntu-desktop, yaru-theme-gnome-shell, lightdm, senia-backgrounds
+Depends: ${misc:Depends}, ubuntu-desktop, yaru-theme-gnome-shell, lightdm, senia-backgrounds, senia-cdd
 Provides: senia-desktop-environment
 Conflicts: senia-backgrounds (<= 2022.05.05)
 Description: Senia GNOME Dependences
@@ -46,6 +46,13 @@ Architecture: all
 Depends: ${misc:Depends}, dconf-cli
 Description: Senia GNOME default settings
  Some useful configurations for GNOME Desktops
+
+Package: senia-desktop-xfce
+Architecture: all
+Depends: ${misc:Depends}, xubuntu-default-settings, xubuntu-desktop, lightdm, senia-locks-xfce, senia-backgrounds
+Description: Senia XFCE4 Dependences
+ Simple package to solve the xfce4 session.
+
 
 Package: senia-frozen-users
 Architecture: all
