@@ -37,6 +37,14 @@ está separada en dos mitades, la primera :
 
 TODO: Rellenar con más información
 
+## Red WiFi
+
+Por ahora contamos con una serie de AP de Unifi configurados y gestionados desde el Servidor del Aula 4 (los más viejos). Y mediante la APP el de la sala de profes.
+
+| Unifi | Ubicación | SSID | Switch de la planta |
+|-------|-----------|------|---------------------|
+|       |           |      |                     |
+
 ## Aulas y Equipos
 
 ### Aulas Prefabricadas
