@@ -237,26 +237,31 @@ Establecer aqui el script de IPTables
 | 172.29.0.254/23 | 192.168.4.254/23 |
 
 
-| Aula | Hostname | IP | Versión | senia-cdd |
-|------|----------|----|---------|-----------|
-|aulainf04-pcprofe |          | 192.168.4.199   | jammy   | -         |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
+| Aula | Hostname | IP | Versión | senia-cdd | GVAInventario | 
+|------|----------|----|---------|-----------|----------------|
+| Inf04  | aulainf04-pcprofe         | 192.168.4.199   | jammy   | -         |- |
+| Inf04  | aulainf04-pc01        | 192.168.4.101    |jammy    |           |-|
+| Inf04  | aulainf04-pc02        | 192.168.4.102   |jammy    |            |-|
+| Inf04  | aulainf04-pc03        | 192.168.4.103    |jammy    |           |-|
+| Inf04  | aulainf04-pc04        | 192.168.4.104    |jammy    |           |-|
+| Inf04  | aulainf04-pc05        | 192.168.4.105    |jammy    |           |-|
+| Inf04  | aulainf04-pc06        | 192.168.4.106    |jammy    |           |-|
+| Inf04  | aulainf04-pc07        | 192.168.4.107    |jammy    |           |-|
+| Inf04  | aulainf04-pc08        | 192.168.4.108    |jammy    |           |-|
+| Inf04  | aulainf04-pc09        | 192.168.4.109    |jammy    |           |-|
+| Inf04  | aulainf04-pc10        | 192.168.4.110    |jammy    |           |-|
+| Inf04  | aulainf04-pc11        | 192.168.4.111    |jammy    |           |-|
+| Inf04  | aulainf04-pc12        | 192.168.4.112    |jammy    |           |-|
+| Inf04  | aulainf04-pc13        | 192.168.4.113    |jammy    |           |-|
+| Inf04  | aulainf04-pc14        | 192.168.4.114    |jammy    |           |-|
+| Inf04  | aulainf04-pc15        | 192.168.4.115    |jammy    |           |-|
+| Inf04  | aulainf04-pc16        | 192.168.4.116    |jammy    |           |-|
+| Inf04  | aulainf04-pc17        | 192.168.4.117    |jammy    |           |-|
+| Inf04  | aulainf04-pc18        | 192.168.4.118    |jammy    |           |-|
+| Inf04  | aulainf04-pc19        | 192.168.4.119    |jammy    |           |-|
+| Inf04  | aulainf04-pc20        | 192.168.4.120    |jammy    |           |-|
+| Inf04  | aulainf04-pc21        | 192.168.4.121    |jammy    |           |-|
+| Inf04  | aulainf04-pc22        | 192.168.4.122    |jammy    |           |-|
 
 ##### Aula Informatica 5
 
