@@ -26,6 +26,18 @@ opción desde la base:
 ```shell
 sudo dpkg --remove-architecture i386
 ```
+Si no os deja, habrá que quitar los paquetes que tengamos instalados con esa arquitectura obsoleta:
+
+```shell
+LISTA=$(dpkg -l | awk '/^ii/ && $4 == "i386" { print }'  | tr -s " " | cut -d " " -f2 | tr "\n" " " )
+sudo apt purge ${LISTA}
+```
+
+O, si queréis un *one-liner*:
+
+```shell
+LISTA=$(dpkg -l | awk '/^ii/ && $4 == "i386" { print }'  | tr -s " " | cut -d " " -f2 | tr "\n" " " ); sudo apt purge ${LISTA}
+```
 
 ### icons 64x64 Not found
 
