@@ -37,7 +37,9 @@ está separada en dos mitades, la primera :
 
 TODO: Rellenar con más información
 
-#### Aulas Prefabricadas
+## Aulas y Equipos
+
+### Aulas Prefabricadas
 
 Switch distribuidor en la AulaPrefabricada 2
 
@@ -52,21 +54,21 @@ Switch distribuidor en la AulaPrefabricada 2
 |AP7   |          |    | focal   | -         |
 |AP8   |          |    | focal   | -         |
 
-#### Taller de Tecnología
+### Taller de Tecnología
 
 | Aula | Hostname | IP | Versión | senia-cdd |
 |------|----------|----|---------|-----------|
 |taller  |          |    | focal   | -         |
 
 
-#### Gimnasio 
+### Gimnasio 
 
 | Aula | Hostname | IP | Versión | senia-cdd |
 |------|----------|----|---------|-----------|
 |Gimnasio  | gimnasio         |    | focal   | -         |
 
 
-#### Planta 0
+### Planta 0
 
 | Aula | Hostname | IP | Versión | senia-cdd |
 |------|----------|----|---------|-----------|
@@ -81,7 +83,7 @@ Switch distribuidor en la AulaPrefabricada 2
 |salaprofes04  |          |    | jammy   | -         |
 |conserjeria  |          |    | focal   | -         |
 
-#### Planta 1
+### Planta 1
 
 | Aula | Hostname | IP | Versión | senia-cdd |
 |------|----------|----|---------|-----------|
@@ -117,7 +119,7 @@ Aula portátil
 |aulapt-pc03  |          |    | focal   | -         |
 |aulapt-pc04  |          |    | focal   | -         |
 
-#### Planta 2
+### Planta 2
 
 | Aula | Hostname | IP | Versión | senia-cdd |
 |------|----------|----|---------|-----------|
@@ -132,11 +134,11 @@ Aula portátil
 |aulaplastica |          |    | focal   | -         |
 
 
-### Servidor Proxmox
+#### Servidor Proxmox
 
 Rellenar aqui
 
-### Aulas Informatica
+#### Aulas Informatica
 
 #### Aula Informatica 1
 
@@ -162,7 +164,7 @@ Rellenar aqui
 |      |         |     |jammy    |           |
 |      |         |     |jammy    |           |
 
-#### Aula Informatica 2
+##### Aula Informatica 2
 
 
 | Aula | Hostname | IP | Versión | senia-cdd |
@@ -186,7 +188,7 @@ Rellenar aqui
 |      |         |     |jammy    |           |
 |      |         |     |jammy    |           |
 
-#### Aula Informatica 3
+##### Aula Informatica 3
 
 
 | Aula | Hostname | IP | Versión | senia-cdd |
@@ -210,7 +212,21 @@ Rellenar aqui
 |      |         |     |jammy    |           |
 |      |         |     |jammy    |           |
 
-#### Aula Informatica 4
+##### Aula Informatica 4
+
+Servidor Aula 4
+
+*Provisional*:
+
+Establecer aqui el script de IPTables
+```shell
+# IPTABLES Script del NAT de las Aulas de Ciclos
+
+```
+
+| IP del Centro   | Red de las Aulas de Informatica |
+|-----------------|---------------------------------|
+| 172.29.0.254/23 | 192.168.4.254/23 |
 
 
 | Aula | Hostname | IP | Versión | senia-cdd |
@@ -234,7 +250,7 @@ Rellenar aqui
 |      |         |     |jammy    |           |
 |      |         |     |jammy    |           |
 
-#### Aula Informatica 5
+##### Aula Informatica 5
 
 
 | Aula | Hostname | IP | Versión | senia-cdd |
@@ -257,3 +273,4 @@ Rellenar aqui
 |      |         |     |jammy    |           |
 |      |         |     |jammy    |           |
 |      |         |     |jammy    |           |
+
