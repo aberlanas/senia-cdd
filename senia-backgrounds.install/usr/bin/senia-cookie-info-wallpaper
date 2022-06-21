@@ -11,7 +11,7 @@
 DESTINO2=/tmp/senia-cookie-destino-tmp-2.png
 DESTINO4=/tmp/senia-cookie-destino-tmp-4.png
 FOTO_ORIGINAL="/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png.orig.png"
-DESTINO="/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current.png"
+DESTINO="/usr/share/senia/pixmaps/backgrounds/senia-wallpaper-current-testing.png"
 
 clean_tmp(){
     echo " * [ senia-cookie-info-wallpaper ] : Cleaning tmp images "

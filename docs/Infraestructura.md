@@ -239,7 +239,7 @@ Establecer aqui el script de IPTables
 
 | Aula | Hostname | IP | Versión | senia-cdd | GVAInventario | 
 |------|----------|----|---------|-----------|----------------|
-| Inf04  | aulainf04-pcprofe         | 192.168.4.199   | jammy   | -         |- |
+| Inf04  | aulainf04-pcprofe     | 192.168.4.199   | jammy   | -         |- |
 | Inf04  | aulainf04-pc01        | 192.168.4.101    |jammy    |           |-|
 | Inf04  | aulainf04-pc02        | 192.168.4.102   |jammy    |            |-|
 | Inf04  | aulainf04-pc03        | 192.168.4.103    |jammy    |           |-|
