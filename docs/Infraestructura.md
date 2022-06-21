@@ -51,16 +51,16 @@ Por ahora contamos con una serie de AP de Unifi configurados y gestionados desde
 
 Switch distribuidor en la AulaPrefabricada 2
 
-| Aula | Hostname | IP | Versión | senia-cdd |
-|------|----------|----|---------|-----------|
-|AP1   |          |    | focal   | -         |
-|AP2   |          |    | focal   | -         |
-|AP3   |          |    | focal   | -         |
-|AP4   |          |    | focal   | -         |
-|AP5   |          |    | focal   | -         |
-|AP6   |          |    | focal   | -         |
-|AP7   |          |    | focal   | -         |
-|AP8   |          |    | focal   | -         |
+| Aula | Hostname   | IP            | Versión | senia-cdd  |GVAInventario|
+|------|------------|---------------|---------|------------|-------------|
+|AP1   | aulas-ap01 | 172.29.0.91   | jammy   | 2022-06-19 | Instalado   |
+|AP2   | aulas-ap02 | 172.29.0.92   | jammy   | 2022-06-19 | Instalado   |
+|AP3   | aulas-ap03 | 172.29.0.93   | jammy   | 2022-06-19 | Instalado   |
+|AP4   | aulas-ap04 | 172.29.0.94   | jammy   | 2022-06-19 | Instalado   |
+|AP5   | aulas-ap05 | 172.29.0.95   | jammy   | 2022-06-19 | Instalado   |
+|AP6   | aulas-ap06 | 172.29.0.96   | jammy   | 2022-06-19 | Instalado   |
+|AP7   | aulas-ap07 | 172.29.0.97   | jammy   | 2022-06-19 | Instalado   |
+|AP8   | aulas-ap08 | 172.29.0.98   | jammy   | 2022-06-19 | Instalado   |
 
 ### Taller de Tecnología
 
@@ -261,12 +261,7 @@ Establecer aqui el script de IPTables
 | Inf04  | aulainf04-pc19        | 192.168.4.119    |jammy    |           |-|
 | Inf04  | aulainf04-pc20        | 192.168.4.120    |jammy    |           |-|
 | Inf04  | aulainf04-pc21        | 192.168.4.121    |jammy    |           |-|
-| Inf04  | aulainf04-pc22        | 192.168.4.122    |jammy    |           |-|
-
-##### Aula Informatica 5
-
-
-| Aula | Hostname | IP | Versión | senia-cdd |
+| Inf04  | aulainfinventory.svg| IP | Versión | senia-cdd |
 |------|----------|----|---------|-----------|
 |aulainf05-pcprofe |          | 192.168.5.100   | jammy   | -         |
 |      |         |     |jammy    |           |
