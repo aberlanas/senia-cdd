@@ -93,17 +93,17 @@ Switch distribuidor en la AulaPrefabricada 2
 
 ### Planta 1
 
-| Aula | Hostname | IP | Versión | senia-cdd |
-|------|----------|----|---------|-----------|
-|aula11  |          |    | focal   | -         |
-|aula12  |          |    | focal   | -         |
-|aula13  |          |    | focal   | -         |
-|aula14  |          |    | focal   | -         |
-|aula15  |          |    | focal   | -         |
-|aula16  |          |    | focal   | -         |
-|aula17  |          |    | focal   | -         |
-|aula18  |          |    | focal   | -         |
-|aula19  |          |    | focal   | -         |
+| Aula | Hostname |      IP        | Versión | senia-cdd  |GVAInventario|
+|------|----------|----------------|---------|------------|-------------|
+|aula11  | aula11 | 172.29.0.111   | jammy   | 2022-06-19 | Instalado   |
+|aula12  | aula12 | 172.29.0.112   | jammy   | 2022-06-19 | Instalado   |
+|aula13  | aula13 | 172.29.0.113   | jammy   | 2022-06-19 | Instalado   |
+|aula14  | aula14 | 172.29.0.114   | jammy   | 2022-06-19 | Instalado   |
+|aula15  | aula15 | 172.29.0.115   | jammy   | 2022-06-19 | Instalado   |
+|aula16  | aula16 | 172.29.0.116   | jammy   | 2022-06-19 | Instalado   |
+|aula17  | aula17 | 172.29.0.117   | jammy   | 2022-06-19 | Instalado   |
+|aula18  | aula18 | 172.29.0.118   | jammy   | 2022-06-19 | Instalado   |
+|aula19  | aula19 | 172.29.0.119   | jammy   | 2022-06-19 | Instalado   | 
 
 #### Laboratorio Ciencias 
 
@@ -119,27 +119,27 @@ Aula portátil
 
 #### Aula PT
 
-| Aula | Hostname | IP | Versión | senia-cdd |
-|------|----------|----|---------|-----------|
-|aulapt-profe  |          |    | focal   | -         |
-|aulapt-pc01  |          |    | focal   | -         |
-|aulapt-pc02  |          |    | focal   | -         |
-|aulapt-pc03  |          |    | focal   | -         |
-|aulapt-pc04  |          |    | focal   | -         |
+|     Aula     |    Hostname     |      IP      | Versión | senia-cdd  |GVAInventario|
+|--------------|-----------------|--------------|---------|------------|-------------|
+|aulapt-julio  | aulapt-julio    | 172.29.0.170 | jammy   | 2022-06-19 |  Instalado  |  
+|aulapt-01     | aulapt-01       | 172.29.0.161 | focal   | -          |             |
+|aulapt-02     | aulapt-02       | 172.29.0.162 | jammy   | 2022-06-19 |  Instalado  |
+|aulapt-03     | aulapt-03       | 172.29.0.163 | jammy   | 2022-06-19 |  Instalado  |
+|aulapt-04     | aulapt-04       | 172.29.0.164 | jammy   | 2022-06-19 |  Instalado  |
 
 ### Planta 2
 
 | Aula             | Hostname     | IP             | Versión | senia-cdd |GVAInventario|
 |------------------|--------------|----------------|---------|-----------|-------------|
-|depmatemticas     |depmatematicas|                | focal   | -         |             |
-|deplenguas        |              |                | bionic* |           |             |
+|depmatemticas     |depmatematicas| 172.29.0.230   | focal   | -         |             |
+|deplenguas        |              | 172.29.1.38    | bionic* |           |             |
 |aula21            |              |                | focal   | -         |             |
 |aula23            |              |                | focal   | -         |             |
 |aula24            |              |                | focal   | -         |             |
 |aula25            |              |                | focal   | -         |             |
 |aula26            |              |                | focal   | -         |             |
 |aula27            |              |                | focal   | -         |             |
-|aulaplastica      |              | 172.29.0.231   | focal   | -         |             |
+|aulaplastica      |              | 172.29.0.231   | jammy   | -         |             |
 
 
 #### Servidor Proxmox
@@ -239,9 +239,9 @@ Establecer aqui el script de IPTables
 
 | Aula | Hostname | IP | Versión | senia-cdd | GVAInventario | 
 |------|----------|----|---------|-----------|----------------|
-| Inf04  | aulainf04-pcprofe     | 192.168.4.199    |jammy   | -         |- |
+| Inf04  | aulainf04-pcprofe     | 192.168.4.199    |jammy   | -          |-|
 | Inf04  | aulainf04-pc01        | 192.168.4.101    |jammy    |           |-|
-| Inf04  | aulainf04-pc02        | 192.168.4.102    |jammy    |            |-|
+| Inf04  | aulainf04-pc02        | 192.168.4.102    |jammy    |           |-|
 | Inf04  | aulainf04-pc03        | 192.168.4.103    |jammy    |           |-|
 | Inf04  | aulainf04-pc04        | 192.168.4.104    |jammy    |           |-|
 | Inf04  | aulainf04-pc05        | 192.168.4.105    |jammy    |           |-|
@@ -261,24 +261,35 @@ Establecer aqui el script de IPTables
 | Inf04  | aulainf04-pc19        | 192.168.4.119    |jammy    |           |-|
 | Inf04  | aulainf04-pc20        | 192.168.4.120    |jammy    |           |-|
 | Inf04  | aulainf04-pc21        | 192.168.4.121    |jammy    |           |-|
-| Inf04  | aulainfinventory.svg| IP | Versión | senia-cdd |
-|------|----------|----|---------|-----------|
-|aulainf05-pcprofe |          | 192.168.5.100   | jammy   | -         |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
+
+##### Aula Informatica 5
+
+| Aula | Hostname | IP | Versión | senia-cdd | GVAInventario | 
+|------|----------|----|---------|-----------|---------------|
+| Inf05|aulainf05-pcprofe |      192.168.5.100   | jammy  | 2022.06.19| Instalado    |
+| Inf05| aulainf05-pc01        | 192.168.5.1     |jammy   |           |               |
+| Inf05| aulainf05-pc02       |  192.168.5.2     |jammy   |           |               |
+| Inf05| aulainf05-pc03        | 192.168.5.3     |jammy   |           |               |
+| Inf05| aulainf05-pc04        | 192.168.5.4     |jammy   |           |               |
+| Inf05| aulainf05-pc05        | 192.168.5.5     |jammy   |           |               |
+| Inf05| aulainf05-pc06        | 192.168.5.6     |jammy   |           |               |
+| Inf05| aulainf05-pc07        | 192.168.5.7     |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc08        | 192.168.5.8     |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc09        | 192.168.5.9     |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc10        | 192.168.5.10    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc11        | 192.168.5.11    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc12        | 192.168.5.12    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc13        | 192.168.5.13    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc14        | 192.168.5.14    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc15        | 192.168.5.15    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc16        | 192.168.5.16    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc17        | 192.168.5.17    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc18        | 192.168.5.18    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc19        | 192.168.5.19    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc20        | 192.168.5.20    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc21        | 192.168.5.21    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc22        | 192.168.5.22    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc23        | 192.168.5.23    |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc24        | 192.168.5.24    |jammy   | 2022.06.19 | Instalado    |
+
 
