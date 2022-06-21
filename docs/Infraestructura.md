@@ -107,6 +107,10 @@ Switch distribuidor en la AulaPrefabricada 2
 
 #### Laboratorio Ciencias 
 
+|     Aula     |    Hostname     |      IP      | Versión | senia-cdd  |GVAInventario|
+|--------------|-----------------|--------------|---------|------------|-------------|
+| Lab.Ciencias  | lab-biologia   | 172.29.0.102 | focal  | - |  -  | 
+
 Aula portátil 
 
 #### Dep.Lenguas Extranjeras
@@ -266,13 +270,13 @@ Establecer aqui el script de IPTables
 
 | Aula | Hostname | IP | Versión | senia-cdd | GVAInventario | 
 |------|----------|----|---------|-----------|---------------|
-| Inf05|aulainf05-pcprofe |      192.168.5.100   | jammy  | 2022.06.19| Instalado    |
-| Inf05| aulainf05-pc01        | 192.168.5.1     |jammy   |           |               |
-| Inf05| aulainf05-pc02       |  192.168.5.2     |jammy   |           |               |
-| Inf05| aulainf05-pc03        | 192.168.5.3     |jammy   |           |               |
-| Inf05| aulainf05-pc04        | 192.168.5.4     |jammy   |           |               |
-| Inf05| aulainf05-pc05        | 192.168.5.5     |jammy   |           |               |
-| Inf05| aulainf05-pc06        | 192.168.5.6     |jammy   |           |               |
+| Inf05|aulainf05-pcprofe |      192.168.5.100   | jammy  | 2022.06.19 | Instalado     |
+| Inf05| aulainf05-pc01        | 192.168.5.1     |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc02       |  192.168.5.2     |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc03        | 192.168.5.3     |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc04        | 192.168.5.4     |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc05        | 192.168.5.5     |jammy   | 2022.06.19 | Instalado    |
+| Inf05| aulainf05-pc06        | 192.168.5.6     |jammy   | 2022.06.19 | Instalado    |
 | Inf05| aulainf05-pc07        | 192.168.5.7     |jammy   | 2022.06.19 | Instalado    |
 | Inf05| aulainf05-pc08        | 192.168.5.8     |jammy   | 2022.06.19 | Instalado    |
 | Inf05| aulainf05-pc09        | 192.168.5.9     |jammy   | 2022.06.19 | Instalado    |
