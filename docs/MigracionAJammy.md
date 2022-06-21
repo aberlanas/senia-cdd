@@ -57,14 +57,18 @@ LISTA=$(dpkg -l | awk '/^ii/ && $4 == "i386" { print }'  | tr -s " " | cut -d " 
 
 ### icons 64x64 Not found
 
-El paquete appstream es una *castaña* y no mejor lo quitamos
+El paquete appstream es una *castaña* y lo mejor es que lo quitemos para siempre. Si hace falta ya lo añadiremos.
 
 ```shell
 sudo apt purge appstream
 
 ```
+**Actualización  (21/06/2022)**
 
-Si detectamos más problemas colgaremos aquí la solución.
+Si detectamos más problemas colgaremos aquí la solución. En caso de que aparezcan nuevos errores, no hay problema, los arreglamos y punto.
+
+![Panic](imgs/panic.jpg)\
+
 
 ## Continuamos
 

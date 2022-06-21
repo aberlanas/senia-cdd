@@ -129,17 +129,17 @@ Aula portátil
 
 ### Planta 2
 
-| Aula | Hostname | IP | Versión | senia-cdd |
-|------|----------|----|---------|-----------|
-|depmatemticas  |          |    | focal   | -         |
-|aula21 |          |    | focal   | -         |
-|aula22 |          |    | focal   | -         |
-|aula23 |          |    | focal   | -         |
-|aula24 |          |    | focal   | -         |
-|aula25 |          |    | focal   | -         |
-|aula26 |          |    | focal   | -         |
-|aula27 |          |    | focal   | -         |
-|aulaplastica |          |    | focal   | -         |
+| Aula             | Hostname     | IP             | Versión | senia-cdd |GVAInventario|
+|------------------|--------------|----------------|---------|-----------|-------------|
+|depmatemticas     |depmatematicas|                | focal   | -         |             |
+|deplenguas        |              |                | bionic* |           |             |
+|aula21            |              |                | focal   | -         |             |
+|aula23            |              |                | focal   | -         |             |
+|aula24            |              |                | focal   | -         |             |
+|aula25            |              |                | focal   | -         |             |
+|aula26            |              |                | focal   | -         |             |
+|aula27            |              |                | focal   | -         |             |
+|aulaplastica      |              | 172.29.0.231   | focal   | -         |             |
 
 
 #### Servidor Proxmox
@@ -239,9 +239,9 @@ Establecer aqui el script de IPTables
 
 | Aula | Hostname | IP | Versión | senia-cdd | GVAInventario | 
 |------|----------|----|---------|-----------|----------------|
-| Inf04  | aulainf04-pcprofe     | 192.168.4.199   | jammy   | -         |- |
+| Inf04  | aulainf04-pcprofe     | 192.168.4.199    |jammy   | -         |- |
 | Inf04  | aulainf04-pc01        | 192.168.4.101    |jammy    |           |-|
-| Inf04  | aulainf04-pc02        | 192.168.4.102   |jammy    |            |-|
+| Inf04  | aulainf04-pc02        | 192.168.4.102    |jammy    |            |-|
 | Inf04  | aulainf04-pc03        | 192.168.4.103    |jammy    |           |-|
 | Inf04  | aulainf04-pc04        | 192.168.4.104    |jammy    |           |-|
 | Inf04  | aulainf04-pc05        | 192.168.4.105    |jammy    |           |-|
