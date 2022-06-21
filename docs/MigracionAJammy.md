@@ -1,7 +1,23 @@
-# Migración a Jammy.
+# Migración a Jammy (Guia para PS).
 
 Esta guia describe los pasos para PS necesarios para migrar los equipos del IES La Senia a la versión 22.04.
 Desde Focal Fossa (20.04).
+
+En realidad, los pasos de la guia describen de manera genérica cualquier proceso de migración entre versiones de
+Ubuntu y derivadas:
+
+1. Limpieza de Repositorios
+2. Actualización dentro de la distribución.
+3. Cambio de repositorios.
+4. Actualización a la siguiente versión.
+5. Preguntas y Servicios.
+
+Dentro del *espíritu* de las posibles preguntas, se recomienda que se apliquen los cambios de los responsables de los paquetes, esto puede ocasionar problemas, pero serán resolubles.
+Intentar mantenernos en una versión vieja  (por conocida), es pan para hoy y errores para mañana. Así que sin miedo! P'alante!
+
+![Guide](imgs/guidetothegalaxy.jpg)\
+
+*¡No olvidéis vuestra toalla!*
 
 ## Paso 0
 
