@@ -131,6 +131,24 @@ else
 	echo " Docker is not installed "
 fi
 
+USERAUX="english"
+PASSAUX="MontyPython"
+
+echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
+
+rc=$DEFAULTRC
+cat /etc/passwd | grep -q ${USERAUX}|| rc=1
+
+if [ $rc -eq 1 ]; then
+	echo " --> The user : ${USERAUX} not exists : creating..."
+   	adduser --quiet --disabled-password --shell /bin/bash --home /home/${USERAUX} --gecos ${USERAUX}  ${USERAUX}
+else
+	echo " --> The user exists ... nothing to do"
+fi
+
+echo " --> The user : ${USERAUX} must have the default passwd assigned"
+echo "${USERAUX}:${PASSAUX}" | chpasswd
+
 
 
 USERAUX="primero"

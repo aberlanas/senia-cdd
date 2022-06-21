@@ -73,7 +73,7 @@ Switch distribuidor en la AulaPrefabricada 2
 
 | Aula | Hostname | IP | Versión | senia-cdd |
 |------|----------|----|---------|-----------|
-|Gimnasio  | gimnasio         |    | focal   | -         |
+|Gimnasio  | gimnasio  |    | focal   | -         |
 
 
 ### Planta 0
@@ -143,7 +143,7 @@ Aula portátil
 |aula25            |              |                | focal   | -         |             |
 |aula26            |              |                | focal   | -         |             |
 |aula27            |              |                | focal   | -         |             |
-|aulaplastica      |              | 172.29.0.231   | jammy   | -         |             |
+|Plastica          |aulaplastica  | 172.29.0.231   | jammy   | -         |             |
 
 
 #### Servidor Proxmox

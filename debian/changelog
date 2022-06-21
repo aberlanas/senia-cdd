@@ -1,3 +1,9 @@
+senia-cdd (2022.06.23) jammy; urgency=high
+
+  * Added new user (english) for the English Department 
+
+ -- tic La Senia <tic@ieslasenia.org>  Tue, 21 Jun 2022 18:22:08 +0200
+
 senia-cdd (2022.06.22) jammy; urgency=high
 
   * Dummy upgrade to solve some update-building problems.
