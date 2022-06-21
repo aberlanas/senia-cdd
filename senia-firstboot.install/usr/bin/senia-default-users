@@ -132,7 +132,7 @@ else
 fi
 
 USERAUX="english"
-PASSAUX="MontyPython"
+PASSAUX="montypython"
 
 echo  " * [ Senia Default Users ] : Adding User [ ${USERAUX} ] "
 
