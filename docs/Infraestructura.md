@@ -105,11 +105,12 @@ Switch distribuidor en la AulaPrefabricada 2
 |aula18  | aula18 | 172.29.0.118   | jammy   | 2022-06-19 | Instalado   |
 |aula19  | aula19 | 172.29.0.119   | jammy   | 2022-06-19 | Instalado   | 
 
-#### Laboratorio Ciencias 
+#### Laboratorios 
 
 |     Aula     |    Hostname     |      IP      | Versión | senia-cdd  |GVAInventario|
 |--------------|-----------------|--------------|---------|------------|-------------|
 | Lab.Ciencias  | lab-biologia   | 172.29.0.102 | focal  | - |  -  | 
+| Lab.FisicaQuimia | lab-fq      | 172.29.0.101 | jammy  |2022-06-23 |  Instalado | 
 
 Aula portátil 
 
