@@ -89,7 +89,7 @@ Switch distribuidor en la AulaPrefabricada 2
 |salaprofes02  |          |    | jammy   | -         |
 |salaprofes03  |          |    | jammy   | -         |
 |salaprofes04  |          |    | jammy   | -         |
-|conserjeria  |           |    | focal   | -         |
+|conserjeria  |           |    | jammy   | -         |
 
 ### Planta 1
 
@@ -129,7 +129,7 @@ Aula portátil
 |     Aula     |    Hostname     |      IP      | Versión | senia-cdd  |GVAInventario|
 |--------------|-----------------|--------------|---------|------------|-------------|
 |aulapt-julio  | aulapt-julio    | 172.29.0.170 | jammy   | 2022-06-19 |  Instalado  |  
-|aulapt-01     | aulapt-01       | 172.29.0.161 | focal   | -          |             |
+|aulapt-01     | aulapt-01       | 172.29.0.161 | jammy   | 2022-06-23 |  Instalado  |
 |aulapt-02     | aulapt-02       | 172.29.0.162 | jammy   | 2022-06-19 |  Instalado  |
 |aulapt-03     | aulapt-03       | 172.29.0.163 | jammy   | 2022-06-19 |  Instalado  |
 |aulapt-04     | aulapt-04       | 172.29.0.164 | jammy   | 2022-06-23 |  Instalado  |
@@ -158,29 +158,30 @@ Rellenar aqui
 #### Aula Informatica 1
 
 
-| Aula | Hostname | IP | Versión | senia-cdd |
-|------|----------|----|---------|-----------|
-|servidor-aula01 |          | 172.29.0.251/192.168.1.254   | focal   | -         |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
+| Aula | Hostname | IP | Versión | senia-cdd | GVAInventario |
+|------|----------|----|---------|-----------|---------------|
+| AulaInf 01  |servidor-aula01 |          | 172.29.0.251/192.168.1.254   | jammy   | -  |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
+| AulaInf 01  | aulainf01-pc        | 192.168.1.    |jammy    | 2022-06-23  | Instalado |
 
 ##### Aula Informatica 2
-
 
 | Aula | Hostname | IP | Versión | senia-cdd | GVAInventario | 
 |------|----------|----|---------|-----------|---------------|
