@@ -89,21 +89,21 @@ Switch distribuidor en la AulaPrefabricada 2
 |salaprofes02  |          |    | jammy   | -         |
 |salaprofes03  |          |    | jammy   | -         |
 |salaprofes04  |          |    | jammy   | -         |
-|conserjeria  |          |    | focal   | -         |
+|conserjeria  |           |    | focal   | -         |
 
 ### Planta 1
 
-| Aula | Hostname |      IP        | Versión | senia-cdd  |GVAInventario|
-|------|----------|----------------|---------|------------|-------------|
-|aula11  | aula11 | 172.29.0.111   | jammy   | 2022-06-19 | Instalado   |
-|aula12  | aula12 | 172.29.0.112   | jammy   | 2022-06-19 | Instalado   |
-|aula13  | aula13 | 172.29.0.113   | jammy   | 2022-06-19 | Instalado   |
-|aula14  | aula14 | 172.29.0.114   | jammy   | 2022-06-19 | Instalado   |
-|aula15  | aula15 | 172.29.0.115   | jammy   | 2022-06-19 | Instalado   |
-|aula16  | aula16 | 172.29.0.116   | jammy   | 2022-06-19 | Instalado   |
-|aula17  | aula17 | 172.29.0.117   | jammy   | 2022-06-19 | Instalado   |
-|aula18  | aula18 | 172.29.0.118   | jammy   | 2022-06-19 | Instalado   |
-|aula19  | aula19 | 172.29.0.119   | jammy   | 2022-06-19 | Instalado   | 
+| Aula | Hostname |      IP        | Versión | senia-cdd  |GVAInventario| Ingles |
+|------|----------|----------------|---------|------------|-------------|--------|
+|aula11  | aula11 | 172.29.0.111   | jammy   | 2022-06-19 | Instalado   |        |
+|aula12  | aula12 | 172.29.0.112   | jammy   | 2022-06-19 | Instalado   |        |
+|aula13  | aula13 | 172.29.0.113   | jammy   | 2022-06-19 | Instalado   |        |
+|aula14  | aula14 | 172.29.0.114   | jammy   | 2022-06-19 | Instalado   |   Si   |
+|aula15  | aula15 | 172.29.0.115   | jammy   | 2022-06-19 | Instalado   |   Si   |
+|aula16  | aula16 | 172.29.0.116   | jammy   | 2022-06-19 | Instalado   |   Si   |
+|aula17  | aula17 | 172.29.0.117   | jammy   | 2022-06-19 | Instalado   |   Si   |
+|aula18  | aula18 | 172.29.0.118   | jammy   | 2022-06-19 | Instalado   |   Si     |
+|aula19  | aula19 | 172.29.0.119   | jammy   | 2022-06-19 | Instalado   |   Si   |
 
 #### Laboratorios 
 
@@ -134,17 +134,17 @@ Aula portátil
 
 ### Planta 2
 
-| Aula             | Hostname     | IP             | Versión | senia-cdd |GVAInventario|
-|------------------|--------------|----------------|---------|-----------|-------------|
-|depmatemticas     |depmatematicas| 172.29.0.230   | focal   | -         |             |
-|deplenguas        |              | 172.29.1.38    | bionic* |           |             |
-|aula21            |              |                | focal   | -         |             |
-|aula23            |              |                | focal   | -         |             |
-|aula24            |              |                | focal   | -         |             |
-|aula25            |              |                | focal   | -         |             |
-|aula26            |              |                | focal   | -         |             |
-|aula27            |              |                | focal   | -         |             |
-|Plastica          |aulaplastica  | 172.29.0.231   | jammy   | -         |             |
+| Aula             | Hostname     | IP             | Versión | senia-cdd |GVAInventario|Ingles| 
+|------------------|--------------|----------------|---------|-----------|-------------|------|
+|depmatemticas     |depmatematicas| 172.29.0.230   | focal   | -         |             |      |
+|deplenguas        |              | 172.29.1.38    | bionic* |           |             |      |
+|aula21            |              |                | jammy   | -         |             |      |
+|aula23            |              |                | jammy   | -         | Instalado   | Si   |
+|aula24            |              |                | jammy   | -         | Instalado   | Si   |
+|aula25            |              |                | jammy   | -         | Instalado   | Si   |
+|aula26            |              |                | jammy   | -         | Instalado   | Si   |
+|aula27            |              |                | jammy   | -         | Instalado   | Si   |
+|Plastica          |aulaplastica  | 172.29.0.231   | jammy   | -         |             |      |
 
 
 #### Servidor Proxmox
