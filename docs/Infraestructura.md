@@ -132,7 +132,7 @@ Aula portátil
 |aulapt-01     | aulapt-01       | 172.29.0.161 | focal   | -          |             |
 |aulapt-02     | aulapt-02       | 172.29.0.162 | jammy   | 2022-06-19 |  Instalado  |
 |aulapt-03     | aulapt-03       | 172.29.0.163 | jammy   | 2022-06-19 |  Instalado  |
-|aulapt-04     | aulapt-04       | 172.29.0.164 | jammy   | 2022-06-19 |  Instalado  |
+|aulapt-04     | aulapt-04       | 172.29.0.164 | jammy   | 2022-06-23 |  Instalado  |
 
 ### Planta 2
 
@@ -182,25 +182,25 @@ Rellenar aqui
 ##### Aula Informatica 2
 
 
-| Aula | Hostname | IP | Versión | senia-cdd |
-|------|----------|----|---------|-----------|
-|servidor-aula02 |          | 172.29.0.252/192.168.2.254   | jammy   | -         |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
-|      |         |     |jammy    |           |
+| Aula | Hostname | IP | Versión | senia-cdd | GVAInventario | 
+|------|----------|----|---------|-----------|---------------|
+| AulaInf 02 | aulainf02-server         | 172.29.0.252/192.168.2.254   | jammy   | 2022-03-23  | Instalado |  
+| AulaInf 02     | aulainf02-pc11        | 192.168.2.11    |jammy    |  2022-06-23          | Instalado|
+| AulaInf 02     | aulainf02-pc12        | 192.168.2.12    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc13        | 192.168.2.13    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc14        | 192.168.2.14    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc15        | 192.168.2.15    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc16        | 192.168.2.16    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc21        | 192.168.2.21    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc22        | 192.168.2.22    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc23        | 192.168.2.23    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc24        | 192.168.2.24    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc25        | 192.168.2.25    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc26        | 192.168.2.26    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc31        | 192.168.2.31    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc32        | 192.168.2.32    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc33        | 192.168.2.33    |jammy    |  2022-06-23          | Instalado |
+| AulaInf 02     | aulainf02-pc34        | 192.168.2.34    |jammy    |  2022-06-23          | Instalado |
 |      |         |     |jammy    |           |
 
 ##### Aula Informatica 3
