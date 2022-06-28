@@ -102,7 +102,7 @@ Switch distribuidor en la AulaPrefabricada 2
 |aula15  | aula15 | 172.29.0.115   | jammy   | 2022-06-19 | Instalado   |   Si   |
 |aula16  | aula16 | 172.29.0.116   | jammy   | 2022-06-19 | Instalado   |   Si   |
 |aula17  | aula17 | 172.29.0.117   | jammy   | 2022-06-19 | Instalado   |   Si   |
-|aula18  | aula18 | 172.29.0.118   | jammy   | 2022-06-19 | Instalado   |   Si     |
+|aula18  | aula18 | 172.29.0.118   | jammy   | 2022-06-19 | Instalado   |   Si   |
 |aula19  | aula19 | 172.29.0.119   | jammy   | 2022-06-19 | Instalado   |   Si   |
 
 #### Laboratorios 
@@ -115,6 +115,8 @@ Switch distribuidor en la AulaPrefabricada 2
 Aula portátil 
 
 #### Dep.Lenguas Extranjeras
+
+#TODO Rellenar esto.
 
 | Aula | Hostname | IP | Versión | senia-cdd |
 |------|----------|----|---------|-----------|

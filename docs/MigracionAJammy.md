@@ -63,7 +63,20 @@ El paquete appstream es una *castaña* y lo mejor es que lo quitemos para siempr
 sudo apt purge appstream
 
 ```
-**Actualización  (21/06/2022)**
+
+### melt y libmlt?-data
+
+¿La versión anterior del Kdenlive al actualizarla da algunos problemas?: no dudéis  en desinstalarla en *focal* y luego ya se instalarán en *jammy* los paquetes adecuados:
+
+
+```shell
+sudo apt purge libmlt-data kdenlive melt
+```
+
+o derivados. (Aquí hay que estar atent@s a las posibles versiones que puedan aparecer).
+
+
+**Actualización  (28/06/2022)**
 
 Si detectamos más problemas colgaremos aquí la solución. En caso de que aparezcan nuevos errores, no hay problema, los arreglamos y punto.
 
